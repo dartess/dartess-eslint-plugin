@@ -1,0 +1,85 @@
+{
+  "name": "@dartess/eslint-plugin",
+  "type": "module",
+  "version": "0.0.1",
+  "description": "A set of rules and configs for various react projects",
+  "keywords": [
+    "eslint",
+    "eslint-plugin"
+  ],
+  "author": "Sergey Kozlov",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "license": "ISC",
+  "exports": {
+    ".": "./dist/index.js",
+    "./recommended": "./dist/configs/recommended.js",
+    "./react": "./dist/configs/react.js",
+    "./next": "./dist/configs/next.js",
+    "./mobx": "./dist/configs/mobx.js",
+    "./storybook": "./dist/configs/storybook.js",
+    "./utils": "./dist/utils/index.js"
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "clean": "rimraf dist",
+    "build": "npm run clean && tsc -p tsconfig.build.json",
+    "test": "node --import ./test-setup.ts --test --experimental-strip-types",
+    "ts": "tsc",
+    "prepare": "husky"
+  },
+  "engines": {
+    "node": ">= 20.0.0"
+  },
+  "files": [
+    "dist",
+    "docs",
+    "CHANGELOG.md"
+  ],
+  "peerDependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.0.0",
+    "@eslint/js": "^9.0.0",
+    "@next/eslint-plugin-next": "^16.0.0",
+    "eslint": "^9.0.0",
+    "eslint-import-resolver-typescript": "^4.0.0",
+    "eslint-plugin-import-x": "^4.1.0",
+    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-mobx": "~0.0.13",
+    "eslint-plugin-react": "^7.37.0",
+    "eslint-plugin-react-hooks": "^7.0.0",
+    "eslint-plugin-storybook": "^10.0.0",
+    "eslint-plugin-unicorn": ">=58.0.0",
+    "typescript-eslint": "^8.15.0"
+  },
+  "devDependencies": {
+    "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
+    "@eslint/js": "^9.39.2",
+    "@types/confusing-browser-globals": "^1.0.3",
+    "@types/eslint": "^9.6.1",
+    "@types/eslint__js": "^8.42.3",
+    "@types/eslint-config-prettier": "^6.11.3",
+    "@types/eslint-plugin-mobx": "~0.0.0",
+    "@types/node": "^25.0.2",
+    "@typescript-eslint/rule-tester": "^8.50.0",
+    "eslint": "^9.39.2",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.4",
+    "eslint-plugin-eslint-plugin": "^7.2.0",
+    "eslint-plugin-import-x": "^4.16.1",
+    "eslint-plugin-prettier": "^5.5.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-unicorn": "^62.0.0",
+    "husky": "^9.1.7",
+    "jiti": "^2.6.1",
+    "rimraf": "^6.1.2",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.50.0"
+  },
+  "dependencies": {
+    "@eslint/compat": "^2.0.0",
+    "@typescript-eslint/utils": "^8.50.0",
+    "confusing-browser-globals": "^1.0.11",
+    "emoji-regex": "^10.6.0",
+    "globals": "^16.5.0"
+  }
+}
