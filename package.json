@@ -26,6 +26,7 @@
     "build": "npm run clean && tsc -p tsconfig.build.json",
     "test": "node --import ./test-setup.ts --test --experimental-strip-types",
     "ts": "tsc",
+    "prepublishOnly": "npm run build",
     "prepare": "husky"
   },
   "engines": {
