@@ -56,6 +56,14 @@
     "eslint-plugin-unicorn": ">=58.0.0",
     "typescript-eslint": "^8.15.0"
   },
+  "peerDependenciesMeta": {
+    "@next/eslint-plugin-next": { "optional": true },
+    "eslint-plugin-jsx-a11y": { "optional": true },
+    "eslint-plugin-mobx": { "optional": true },
+    "eslint-plugin-react": { "optional": true },
+    "eslint-plugin-react-hooks": { "optional": true },
+    "eslint-plugin-storybook": { "optional": true }
+  },
   "devDependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
     "@eslint/js": "^9.39.2",
