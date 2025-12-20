@@ -1,7 +1,7 @@
 {
   "name": "@dartess/eslint-plugin",
   "type": "module",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A set of rules and configs for various react projects",
   "keywords": [
     "eslint",
@@ -57,12 +57,24 @@
     "typescript-eslint": "^8.15.0"
   },
   "peerDependenciesMeta": {
-    "@next/eslint-plugin-next": { "optional": true },
-    "eslint-plugin-jsx-a11y": { "optional": true },
-    "eslint-plugin-mobx": { "optional": true },
-    "eslint-plugin-react": { "optional": true },
-    "eslint-plugin-react-hooks": { "optional": true },
-    "eslint-plugin-storybook": { "optional": true }
+    "@next/eslint-plugin-next": {
+      "optional": true
+    },
+    "eslint-plugin-jsx-a11y": {
+      "optional": true
+    },
+    "eslint-plugin-mobx": {
+      "optional": true
+    },
+    "eslint-plugin-react": {
+      "optional": true
+    },
+    "eslint-plugin-react-hooks": {
+      "optional": true
+    },
+    "eslint-plugin-storybook": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@eslint-community/eslint-plugin-eslint-comments": "^4.5.0",
