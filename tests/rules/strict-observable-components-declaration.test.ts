@@ -3,9 +3,9 @@
  * @author Sergey Kozlov
  */
 
-import { makeRuleTester } from './utils/makeRuleTester.ts';
-
 import rule from '../../src/rules/strict-observable-components-declaration.ts';
+
+import { makeRuleTester } from './utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester();
 ruleTester.run('strict-observable-components-declaration', rule, {

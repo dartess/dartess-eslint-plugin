@@ -12,6 +12,7 @@ import type { Linter } from 'eslint';
 import type { TSESLint } from '@typescript-eslint/utils';
 
 import dartessPlugin from '../index.ts';
+
 import vendorRulesBestPractices from './vendor-rules/best-practices.ts';
 import vendorRulesErrors from './vendor-rules/errors.ts';
 import vendorRulesStyle from './vendor-rules/style.ts';
@@ -21,6 +22,16 @@ import vendorRulesImports from './vendor-rules/imports.ts';
 import vendorRulesStrict from './vendor-rules/strict.ts';
 import vendorRulesTypescriptDisablings from './vendor-rules/typescript-disablings.ts';
 import vendorRulesTypescript from './vendor-rules/typescript.ts';
+
+const NO_MIDDLE_ABBRS = '(?!.*[A-Z]{3})';
+const NO_END_ABBRS = '(?!.*[A-Z]{2}$)';
+const NO_MIDDLE_UNDERSCORE = '(?!.*_{2})';
+const EMPTY = `^$`;
+const anyCamelCase = `^${NO_MIDDLE_ABBRS}${NO_END_ABBRS}[A-Za-z0-9]+$`;
+const lowerCamelCase = `^${NO_MIDDLE_ABBRS}${NO_END_ABBRS}[a-z][A-Za-z0-9]+$`;
+const UpperCamelCase = `^${NO_MIDDLE_ABBRS}${NO_END_ABBRS}[A-Z][A-Za-z0-9]+$`;
+const snake_case = `^${NO_MIDDLE_UNDERSCORE}[a-z_]+$`;
+const UPPER_CASE = `^${NO_MIDDLE_UNDERSCORE}[A-Z0-9_]+$`;
 
 const config: TSESLint.FlatConfig.ConfigArray = [
   {
@@ -35,8 +46,8 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     ...pluginJs.configs.recommended,
   },
 
-  ...(tsEslint.configs.strictTypeChecked as Linter.Config[]),
-  ...(tsEslint.configs.stylisticTypeChecked as Linter.Config[]),
+  ...(tsEslint.configs.strictTypeChecked as Array<Linter.Config>),
+  ...(tsEslint.configs.stylisticTypeChecked as Array<Linter.Config>),
 
   eslintPluginImportX.flatConfigs.recommended as Linter.Config,
   eslintPluginImportX.flatConfigs.typescript as Linter.Config,
@@ -89,6 +100,24 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'unicorn/prefer-node-protocol': 'error',
 
       '@dartess/max-parent-import-depth': 'error',
+
+      curly: ['error', 'all'],
+
+      'import-x/order': [
+        'error',
+        {
+          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
+          'newlines-between': 'always',
+        },
+      ],
+
+      'prefer-arrow-callback': [
+        'error',
+        {
+          allowNamedFunctions: true,
+          allowUnboundThis: true,
+        },
+      ],
     },
   },
 
@@ -125,6 +154,91 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
       /* slow; not much use */
       '@typescript-eslint/no-deprecated': 'off',
+
+      '@typescript-eslint/explicit-member-accessibility': [
+        'error',
+        {
+          overrides: {
+            constructors: 'off',
+            accessors: 'explicit',
+            methods: 'explicit',
+            properties: 'explicit',
+            parameterProperties: 'explicit',
+          },
+        },
+      ],
+
+      /* more strict rules then official options */
+      '@typescript-eslint/naming-convention': [
+        'error',
+        {
+          selector: 'variable',
+          format: null,
+          custom: {
+            regex: `${anyCamelCase}|${UPPER_CASE}`,
+            match: true,
+          },
+        },
+        {
+          selector: 'function',
+          format: null,
+          custom: {
+            regex: anyCamelCase,
+            match: true,
+          },
+        },
+        {
+          selector: 'parameter',
+          format: null,
+          custom: {
+            regex: `${anyCamelCase}|${snake_case}|${EMPTY}`,
+            match: true,
+          },
+          leadingUnderscore: 'allowSingleOrDouble',
+        },
+        {
+          selector: 'method',
+          format: null,
+          custom: {
+            regex: lowerCamelCase,
+            match: true,
+          },
+        },
+        {
+          selector: 'typeLike',
+          format: null,
+          custom: {
+            regex: UpperCamelCase,
+            match: true,
+          },
+        },
+        {
+          selector: 'typeParameter',
+          format: null,
+          custom: {
+            regex: `${UpperCamelCase}|${EMPTY}`,
+            match: true,
+          },
+          prefix: ['T'],
+        },
+      ],
+
+      '@typescript-eslint/restrict-template-expressions': [
+        'error',
+        {
+          allowNumber: true,
+          allowAny: false,
+          allowArray: false,
+          allowBoolean: false,
+          allowNullish: false,
+          allowRegExp: false,
+          allowNever: false,
+        },
+      ],
+
+      '@typescript-eslint/no-import-type-side-effects': 'error', // TODO is enabled by default?
+
+      '@typescript-eslint/array-type': ['error', { default: 'generic' }],
     },
   },
 

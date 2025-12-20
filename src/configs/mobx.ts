@@ -1,8 +1,7 @@
 import type { Linter } from 'eslint';
-
 import pluginMobx from 'eslint-plugin-mobx';
 
-const config: Linter.Config[] = [
+const config: Array<Linter.Config> = [
   pluginMobx.flatConfigs.recommended,
 
   {

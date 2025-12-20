@@ -2,14 +2,30 @@
 // Original author: Jake Teton-Landis (https://twitter.com/@jitl)
 // License: MIT (see LICENSE-eslint-config-airbnb.md file)
 
-import type { Linter } from 'eslint';
+import type { TSESLint } from '@typescript-eslint/utils';
 import reactPlugin from 'eslint-plugin-react';
+import reactHooksPlugin from 'eslint-plugin-react-hooks';
+import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 
 import vendorRulesReact from './vendor-rules/react.ts';
-
 import vendorRulesReactHooks from './vendor-rules/react-hooks.ts';
 
-const config: Linter.Config[] = [
+const config: TSESLint.FlatConfig.ConfigArray = [
+  {
+    name: '@dartess/react-setup',
+
+    plugins: {
+      'react-hooks': reactHooksPlugin,
+      'jsx-a11y': jsxA11yPlugin,
+    },
+
+    settings: {
+      react: {
+        version: 'detect',
+      },
+    },
+  },
+
   reactPlugin.configs.flat.recommended,
 
   {
@@ -39,9 +55,6 @@ const config: Linter.Config[] = [
         node: {
           extensions: ['.mjs', '.js', '.jsx', '.json', '.ts', '.tsx', '.d.ts'],
         },
-      },
-      react: {
-        version: 'detect',
       },
     },
 

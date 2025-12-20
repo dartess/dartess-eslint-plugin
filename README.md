@@ -35,25 +35,17 @@ npm i -D @dartess/eslint-plugin
 
 Shared config based on `eslint-config-airbnb`, `eslint-config-airbnb-typescript`, `eslint-plugin-react/recommended`, `eslint-plugin-react/jsx-runtime`.
 
-```js
-import dartessPlugin from '@dartess/eslint-plugin';
-import importXPlugin from 'eslint-plugin-import-x';
-import tsEslint from 'typescript-eslint';
+Edit or create `eslint.config.ts` (or `eslint.config.mts`). You probably have to install `jiti` for it.
+
+```ts
 import dartessEslintPluginRecommended from '@dartess/eslint-plugin/recommended';
 
 // if `react` is used
-import reactPlugin from 'eslint-plugin-react'; 
-import reactHooksPlugin from 'eslint-plugin-react-hooks';
-import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import dartessEslintPluginReact from '@dartess/eslint-plugin/react';
-
 // if `next.js` is used
-import nextJsPlugin from '@next/eslint-plugin-next';
 import dartessEslintPluginNext from '@dartess/eslint-plugin/next';
-
 // if `mobx` is used
 import dartessEslintPluginMobx from '@dartess/eslint-plugin/mobx';
-
 // if `storybook` is used
 import dartessEslintPluginStorybook from '@dartess/eslint-plugin/storybook';
 
@@ -61,6 +53,7 @@ import { parseGitIgnore } from '@dartess/eslint-plugin/utils';
 
 export default [
   parseGitIgnore(), // the easiest way to ignore all `.gitignore` files
+  
   {
     languageOptions: {
       parserOptions: {
@@ -68,18 +61,7 @@ export default [
       },
     },
   },
-  {
-    plugins: {
-      'import-x': importXPlugin,
-      '@typescript-eslint': tsEslint.plugin,
-      // if `react` is used
-      react: reactPlugin,
-      'react-hooks': reactHooksPlugin,
-      'jsx-a11y': jsxA11yPlugin,
-      // if `next.js` is used
-      '@next/next': nextJsPlugin,
-    },
-  },
+  
   ...dartessEslintPluginRecommended,
   // if `react` is used
   ...dartessEslintPluginReact,
@@ -90,16 +72,20 @@ export default [
   // if `storybook` is used
   ...dartessEslintPluginStorybook,
 ]
-```
 
-If you get a duplicate plugin error, just remove its definition — you are probably
-extending a config where the plugin is already defined.
+```
 
 The package is intended for use with TypeScript.
 
 The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
 
 The package is intended for use only with the `flat` eslint config.
+
+## Next steps
+
+If you'are using React, you also probably will want to add 
+[eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh). 
+This plugin requires manual setup for you build tools.
 
 ## Usage rules
 

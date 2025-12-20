@@ -95,10 +95,6 @@ const rules = {
     },
   ],
 
-  // ensure absolute imports are above relative imports and that unassigned imports are ignored
-  // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/order.md
-  'import-x/order': ['error', { groups: [['builtin', 'external', 'internal']] }],
-
   // Require a newline after the last import/require in a group
   // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/newline-after-import.md
   'import-x/newline-after-import': 'error',
@@ -118,10 +114,6 @@ const rules = {
   // Prevent importing the default as if it were named
   // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-default.md
   'import-x/no-named-default': 'error',
-
-  // forbid default exports. this is a terrible rule, do not use it.
-  // https://github.com/import-js/eslint-plugin-import/blob/44a038c06487964394b1e15b64f3bd34e5d40cde/docs/rules/no-default-export.md
-  'import-x/no-default-export': 'off',
 
   // Forbid a module from importing itself
   // https://github.com/import-js/eslint-plugin-import/blob/44a038c06487964394b1e15b64f3bd34e5d40cde/docs/rules/no-self-import.md

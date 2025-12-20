@@ -8,7 +8,6 @@ const rules = {
   'import-x/no-anonymous-default-export': 'error',
   'react/no-unknown-property': 'off',
   'react/react-in-jsx-scope': 'off',
-  'react/prop-types': 'off',
   'jsx-a11y/alt-text': [
     'error',
     {

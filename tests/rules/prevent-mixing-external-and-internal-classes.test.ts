@@ -3,9 +3,9 @@
  * @author Sergey Kozlov
  */
 
-import { makeRuleTester } from './utils/makeRuleTester.ts';
-
 import rule from '../../src/rules/prevent-mixing-external-and-internal-classes.ts';
+
+import { makeRuleTester } from './utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester();
 ruleTester.run('prevent-mixing-external-and-internal-classes', rule, {

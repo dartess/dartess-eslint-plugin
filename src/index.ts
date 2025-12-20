@@ -1,4 +1,5 @@
 import { ESLint, Rule } from 'eslint';
+
 import packageJson from '../package.json' with { type: 'json' };
 
 import ruleJsxTextAsChildFrom from './rules/jsx-text-as-child.ts';

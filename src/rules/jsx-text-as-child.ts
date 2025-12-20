@@ -1,4 +1,5 @@
 import { ESLintUtils, AST_NODE_TYPES } from '@typescript-eslint/utils';
+// eslint-disable-next-line import-x/order -- TODO false positive? check it
 import type { TSESTree } from '@typescript-eslint/utils';
 
 /**
@@ -13,8 +14,8 @@ type Options = [
     allowDigits?: boolean;
     allowEmoji?: boolean;
     allowSpecialSymbols?: boolean;
-    allowExtraStrings?: string[];
-    disallowedSymbols?: string[];
+    allowExtraStrings?: Array<string>;
+    disallowedSymbols?: Array<string>;
   },
 ];
 type MessageIds = 'textAsChild' | 'disallowedSymbols';
@@ -87,7 +88,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
       ? new RegExp(`(${options.disallowedSymbols.join('|')})+`)
       : null;
 
-    const checkChildren = (children: TSESTree.JSXChild[]) => {
+    const checkChildren = (children: Array<TSESTree.JSXChild>) => {
       children
         .filter((node): node is TSESTree.JSXText => node.type === AST_NODE_TYPES.JSXText)
         .map(node => ({ node, text: node.value.trim() }))

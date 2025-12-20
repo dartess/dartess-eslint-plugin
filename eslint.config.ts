@@ -42,6 +42,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'import-x/extensions': ['error', 'ignorePackages'],
       'func-names': 'off', // can be bad for RuleListener
       'no-continue': 'off', // OK for this package
+      '@typescript-eslint/naming-convention': 'off', // because of required naming
     },
   },
 

@@ -7,8 +7,8 @@ import { ESLintUtils, TSESTree, AST_NODE_TYPES } from '@typescript-eslint/utils'
 
 type Options = [
   {
-    ignoreObserverArg?: string[];
-    allowedHocs?: string[];
+    ignoreObserverArg?: Array<string>;
+    allowedHocs?: Array<string>;
   },
 ];
 type MessageIds =
@@ -58,7 +58,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
   },
 
   create(context) {
-    const getParent = (node: TSESTree.CallExpression, allowedHocs?: string[]) => {
+    const getParent = (node: TSESTree.CallExpression, allowedHocs?: Array<string>) => {
       let { parent } = node;
       if (!allowedHocs) {
         return parent;

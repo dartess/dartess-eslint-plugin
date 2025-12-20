@@ -1,8 +1,7 @@
 import type { TSESLint } from '@typescript-eslint/utils';
-
 import pluginStorybook from 'eslint-plugin-storybook';
 
-const config: TSESLint.FlatConfig.Config[] = [
+const config: Array<TSESLint.FlatConfig.Config> = [
   {
     ignores: ['!.storybook'],
   },

@@ -1,4 +1,5 @@
 import path from 'node:path';
+
 import { includeIgnoreFile } from '@eslint/compat';
 import type { TSESLint } from '@typescript-eslint/utils';
 

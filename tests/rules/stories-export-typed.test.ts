@@ -3,9 +3,9 @@
  * @author Sergey Kozlov
  */
 
-import { makeRuleTester } from './utils/makeRuleTester.ts';
-
 import rule from '../../src/rules/stories-export-typed.ts';
+
+import { makeRuleTester } from './utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester({ parser: 'ts' });
 ruleTester.run('stories-export-typed', rule, {

@@ -14,10 +14,6 @@ const rules = {
   // https://eslint.org/docs/rules/block-scoped-var
   'block-scoped-var': 'error',
 
-  // specify curly brace conventions for all control statements
-  // https://eslint.org/docs/rules/curly
-  curly: ['error', 'multi-line'], // multiline
-
   // require default case in switch statements
   // https://eslint.org/docs/rules/default-case
   'default-case': ['error', { commentPattern: '^no default$' }],

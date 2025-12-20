@@ -25,17 +25,6 @@ const rules = {
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/display-name.md
   'react/display-name': ['off', { ignoreTranspilerName: false }],
 
-  // Forbid certain propTypes (any, array, object)
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/forbid-prop-types.md
-  'react/forbid-prop-types': [
-    'error',
-    {
-      forbid: ['any', 'array', 'object'],
-      checkContextTypes: true,
-      checkChildContextTypes: true,
-    },
-  ],
-
   // Enforce boolean attributes notation in JSX
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-boolean-value.md
   'react/jsx-boolean-value': ['error', 'never', { always: [] }],
@@ -55,11 +44,6 @@ const rules = {
   // Validate props indentation in JSX
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-indent-props.md
   'react/jsx-indent-props': ['error', 2],
-
-  // Validate JSX has key prop when in array or iterator
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-key.md
-  // Turned off because it has too many false positives
-  'react/jsx-key': 'off',
 
   // Limit maximum of props on a single line in JSX
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-max-props-per-line.md
@@ -131,17 +115,6 @@ const rules = {
   // Require stateless functions when not using lifecycle methods, setState or ref
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
   'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
-
-  // Prevent missing props validation in a React component definition
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prop-types.md
-  'react/prop-types': [
-    'error',
-    {
-      ignore: [],
-      customValidators: [],
-      skipUndeclared: false,
-    },
-  ],
 
   // Require render() methods to return something
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
@@ -254,16 +227,6 @@ const rules = {
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
   'react/no-danger-with-children': 'error',
 
-  // Prevent unused propType definitions
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unused-prop-types.md
-  'react/no-unused-prop-types': [
-    'error',
-    {
-      customValidators: [],
-      skipShapeProps: true,
-    },
-  ],
-
   // Require style prop value be an object or var
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
   'react/style-prop-object': 'error',
@@ -297,19 +260,9 @@ const rules = {
     },
   ],
 
-  // Forbids using non-exported propTypes
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/forbid-foreign-prop-types.md
-  // this is intentionally set to "warn". it would be "error",
-  // but it's only critical if you're stripping propTypes in production.
-  'react/forbid-foreign-prop-types': ['error', { allowInPropTypes: true }],
-
   // Prevent void DOM elements from receiving children
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/void-dom-elements-no-children.md
   'react/void-dom-elements-no-children': 'error',
-
-  // Enforce all defaultProps have a corresponding non-required PropType
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/9e13ae2c51e44872b45cc15bf1ac3a72105bdd0e/docs/rules/default-props-match-prop-types.md
-  'react/default-props-match-prop-types': ['error', { allowRequiredDefaults: false }],
 
   // Prevent usage of shouldComponentUpdate when extending React.PureComponent
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/9e13ae2c51e44872b45cc15bf1ac3a72105bdd0e/docs/rules/no-redundant-should-component-update.md

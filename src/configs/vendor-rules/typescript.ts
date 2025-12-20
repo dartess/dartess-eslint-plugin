@@ -4,31 +4,12 @@
 // Permalink: https://github.com/iamturns/eslint-config-airbnb-typescript/blob/303e346214847385bee4016367ff3b1b9978e337/lib/shared.js
 
 import { Linter } from 'eslint';
+
 import baseBestPracticesRules from './best-practices.ts';
 import baseVariablesRules from './variables.ts';
 import baseImportsRules from './imports.ts';
 
 const rules = {
-  // The `@typescript-eslint/naming-convention` rule allows `leadingUnderscore` and `trailingUnderscore` settings. However, the existing `no-underscore-dangle` rule already takes care of this.
-  '@typescript-eslint/naming-convention': [
-    'error',
-    // Allow camelCase variables (23.2), PascalCase variables (23.8), and UPPER_CASE variables (23.10)
-    {
-      selector: 'variable',
-      format: ['camelCase', 'PascalCase', 'UPPER_CASE'],
-    },
-    // Allow camelCase functions (23.2), and PascalCase functions (23.8)
-    {
-      selector: 'function',
-      format: ['camelCase', 'PascalCase'],
-    },
-    // Airbnb recommends PascalCase for classes (23.3), and although Airbnb does not make TypeScript recommendations, we are assuming this rule would similarly apply to anything "type like", including interfaces, type aliases, and enums
-    {
-      selector: 'typeLike',
-      format: ['PascalCase'],
-    },
-  ],
-
   // Replace Airbnb 'default-param-last' rule with '@typescript-eslint' version
   // https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/default-param-last.md
   'default-param-last': 'off',
@@ -89,7 +70,7 @@ const rules = {
       ...baseImportsRules['import-x/no-extraneous-dependencies'][1],
       devDependencies: baseImportsRules[
         'import-x/no-extraneous-dependencies'
-      ][1].devDependencies.reduce<string[]>((result, devDep) => {
+      ][1].devDependencies.reduce<Array<string>>((result, devDep) => {
         const toAppend = [devDep];
         const devDepWithTs = devDep.replace(/\bjs(x?)\b/g, 'ts$1');
         if (devDepWithTs !== devDep) {

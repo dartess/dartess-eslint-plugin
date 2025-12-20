@@ -71,15 +71,6 @@ const rules = {
     },
   ],
 
-  // suggest using arrow functions as callbacks
-  'prefer-arrow-callback': [
-    'error',
-    {
-      allowNamedFunctions: false,
-      allowUnboundThis: true,
-    },
-  ],
-
   // suggest using of const declaration for variables that are never modified after declared
   'prefer-const': [
     'error',

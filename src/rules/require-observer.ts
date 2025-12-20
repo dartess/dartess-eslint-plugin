@@ -41,7 +41,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
   },
   defaultOptions: [],
   create(context) {
-    const mobxSettings = context.settings.mobx as { storeHooks?: string[] } | undefined;
+    const mobxSettings = context.settings.mobx as { storeHooks?: Array<string> } | undefined;
     const hooks = Array.isArray(mobxSettings?.storeHooks) ? mobxSettings.storeHooks : [];
     if (hooks.length === 0) {
       throw new Error('Please fill settings.mobx.storeHooks');
