@@ -83,9 +83,11 @@ The package is intended for use only with the `flat` eslint config.
 
 ## Next steps
 
-If you'are using React, you also probably will want to add 
+If you are using React, you also probably will want to add 
 [eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh). 
 This plugin requires manual setup for you build tools.
+
+If you are using Mobx with legacy decorators, you have to enable rule `mobx/missing-make-observable` manually.
 
 ## Usage rules
 
