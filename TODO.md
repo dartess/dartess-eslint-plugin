@@ -1,5 +1,11 @@
 # TODO
 
+https://www.npmjs.com/package/eslint-plugin-decorator-position
+
+https://www.npmjs.com/package/eslint-plugin-complete
+
+https://www.npmjs.com/package/eslint-plugin-de-morgan
+
 Check next rules and options:
 
 ```ts
