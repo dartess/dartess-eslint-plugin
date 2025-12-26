@@ -3,7 +3,7 @@
 // License: MIT (see LICENSE-eslint-config-airbnb-typescript.md file)
 // Permalink: https://github.com/iamturns/eslint-config-airbnb-typescript/blob/303e346214847385bee4016367ff3b1b9978e337/lib/shared.js
 
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 const rules = {
   // The following rules are enabled in Airbnb config, but are already checked (more thoroughly) by the TypeScript compiler

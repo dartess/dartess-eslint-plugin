@@ -2,7 +2,7 @@
 // License: MIT (see LICENSE-next.js.md file)
 // Permalink: https://github.com/vercel/next.js/blob/23c4cf0c2ff93b37703e62faf7a1d4700834a0f7/packages/eslint-config-next/index.js
 
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 const rules = {
   'import-x/no-anonymous-default-export': 'error',

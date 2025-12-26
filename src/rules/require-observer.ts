@@ -1,4 +1,4 @@
-import { ESLintUtils, TSESTree, AST_NODE_TYPES } from '@typescript-eslint/utils';
+import { ESLintUtils, type TSESTree, AST_NODE_TYPES } from '@typescript-eslint/utils';
 
 /**
  * @fileoverview Require that components using specified store hooks are wrapped in observer().

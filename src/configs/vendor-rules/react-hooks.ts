@@ -2,7 +2,7 @@
 // Original author: Jake Teton-Landis (https://twitter.com/@jitl)
 // License: MIT (see LICENSE-eslint-config-airbnb.md file)
 
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 const rules = {
   /**

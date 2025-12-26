@@ -4,7 +4,7 @@
 // Permalink: https://github.com/airbnb/javascript/blob/c25bce83be4db06e6a221d79686c485cd2ed5d5d/packages/eslint-config-airbnb-base/rules/variables.js
 
 import confusingBrowserGlobals from 'confusing-browser-globals';
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 const rules = {
   // disallow deletion of variables

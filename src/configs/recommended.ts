@@ -236,9 +236,17 @@ const config: TSESLint.FlatConfig.ConfigArray = [
         },
       ],
 
-      '@typescript-eslint/no-import-type-side-effects': 'error', // TODO is enabled by default?
-
       '@typescript-eslint/array-type': ['error', { default: 'generic' }],
+
+      /* this two rules help with three-shaking */
+      '@typescript-eslint/no-import-type-side-effects': 'error',
+      '@typescript-eslint/consistent-type-imports': [
+        'error',
+        {
+          fixStyle: 'inline-type-imports',
+          disallowTypeAnnotations: false,
+        },
+      ],
     },
   },
 

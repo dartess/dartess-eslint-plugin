@@ -1,4 +1,4 @@
-import { ESLint, Rule } from 'eslint';
+import type { ESLint, Rule } from 'eslint';
 
 import packageJson from '../package.json' with { type: 'json' };
 

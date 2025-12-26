@@ -3,19 +3,9 @@
 // License: MIT (see LICENSE-eslint-config-airbnb.md file)
 // Permalink: https://github.com/airbnb/javascript/blob/c25bce83be4db06e6a221d79686c485cd2ed5d5d/packages/eslint-config-airbnb-base/rules/es6.js
 
-import { Linter } from 'eslint';
+import type { Linter } from 'eslint';
 
 const rules = {
-  // enforces no braces where they can be omitted
-  // https://eslint.org/docs/rules/arrow-body-style
-  'arrow-body-style': [
-    'error',
-    'as-needed',
-    {
-      requireReturnForObjectLiteral: false,
-    },
-  ],
-
   // disallow modifying variables of class declarations
   // https://eslint.org/docs/rules/no-class-assign
   'no-class-assign': 'error',

@@ -1,4 +1,4 @@
-import { ESLintUtils, TSESTree, AST_NODE_TYPES } from '@typescript-eslint/utils';
+import { ESLintUtils, type TSESTree, AST_NODE_TYPES } from '@typescript-eslint/utils';
 
 /**
  * @fileoverview The observable component must be an inline function.
