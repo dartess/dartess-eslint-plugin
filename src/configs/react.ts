@@ -26,7 +26,10 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     },
   },
 
-  reactPlugin.configs.flat.recommended,
+  {
+    name: 'react/recommended', // missed name, @see e.g. https://github.com/jsx-eslint/eslint-plugin-react/pull/3882
+    ...reactPlugin.configs.flat.recommended,
+  },
 
   {
     name: '@dartess/eslint-plugin-react/jsx-runtime',

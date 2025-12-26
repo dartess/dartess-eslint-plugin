@@ -1,7 +1,5 @@
 # TODO
 
-prettier
-
 remove all non-actual rules into separated configs.
 
 https://www.npmjs.com/package/eslint-plugin-decorator-position
