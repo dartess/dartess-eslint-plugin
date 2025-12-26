@@ -25,7 +25,7 @@ npm i -D eslint-plugin-mobx
 npm i -D eslint-plugin-storybook
 ```
 
-Next, install `@dartess/eslint-plugin`
+Next, install `@dartess/eslint-plugin` itself.
 
 ```sh
 npm i -D @dartess/eslint-plugin
@@ -75,33 +75,21 @@ export default [
 
 ```
 
-The package is intended for use with TypeScript.
+### Notes
 
-The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
+1. The package is intended for use with TypeScript (it'll be useful for plain JS, but it hasn't been weel-tested).
 
-The package is intended for use only with the `flat` eslint config.
+2. The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
+
+3. The package is intended for use only with the `flat` eslint config.
 
 ## Next steps
 
-If you are using React, you also probably will want to add 
+1. If you are using React, you also probably will want to add 
 [eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh). 
 This plugin requires manual setup for you build tools.
 
-If you are using Mobx with legacy decorators, you have to enable rule `mobx/missing-make-observable` manually.
-
-## Usage rules
-
-Copy example above into your `eslint.config.ts` and remove unnecesary parts.
-
-Then configure the rules you want to use under the rules section.
-
-```json
-{
-    "rules": {
-        "@dartess/strict-observable-components-declaration": "error"
-    }
-}
-```
+2. If you are using Mobx with legacy decorators, you have to enable rule `mobx/missing-make-observable` manually.
 
 ## Supported Rules
 
@@ -113,7 +101,7 @@ Each rule has emojis denoting:
 
 | Name                                                                                                       | Description                                                                   | ✅ | 🔧 | 💡 |
 |:-----------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|:--|:---|:---|
-| [strict-observable-components-declaration](docs/rules/strict-observable-components-declaration.md)         | Wrapping components in `observer` must comply with the regulations.           |   |    |    |
+| [strict-observable-components-declaration](docs/rules/strict-observable-components-declaration.md)         | Wrapping components in `observer` must comply with the regulations.           | ✅ |    |    |
 | [require-observer](docs/rules/require-observer.md)                                                         | Components using the stores must be wrapped in an `observer`                  | ✅ | 🔧 |    |
 | [prevent-mixing-external-and-internal-classes](docs/rules/prevent-mixing-external-and-internal-classes.md) | Prevent mixing of outer and inner classes to avoid dependency on style order. |   |    |    |
 | [jsx-no-text-as-child](docs/rules/jsx-text-as-child.md)                                                    | JSX elements should not have text without translation                         |   |    |    |

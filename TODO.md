@@ -1,10 +1,16 @@
 # TODO
 
+prettier
+
 https://www.npmjs.com/package/eslint-plugin-decorator-position
 
 https://www.npmjs.com/package/eslint-plugin-complete
 
 https://www.npmjs.com/package/eslint-plugin-de-morgan
+
+remove mobx/missing-make-observable from mobx plugin
+
+react/jsx-max-props-per-line,react/jsx-indent-props - can be replaced with prettier?
 
 Check next rules and options:
 
