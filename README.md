@@ -1,10 +1,33 @@
 # @dartess/eslint-plugin
 
-A set of rules for various react projects
+A set of configs and rules for various TypeScript projects.
+Based on outdated or deprecated configs `eslint-config-airbnb` and `eslint-config-airbnb-typescript`.
+Also extends
+* `@eslint/js` — `recommended`
+* `typescript-eslint` — `strictTypeChecked` & `stylisticTypeChecked`
+* `eslint-plugin-import-x` — `recommended` & `typescript`
+* `@eslint-community/eslint-plugin-eslint-comments` — `recommended`
+
+Also can extends (if it is applicable)
+* `eslint-plugin-react` — `recommended` & `jsx-runtime`
+* `@next/eslint-plugin-next` — `recommended` & `core-web-vitals`
+* `eslint-config-next`
+* `eslint-plugin-mobx` — `recommended`
+* `eslint-plugin-storybook` — `recommended` & `csf-strict`
+
+All of it pinched with extra configs, setups and extra rules. Just take it and use it!
+
+### Notes
+
+1. The package is intended for use with TypeScript (it'll be useful for plain JS, but it hasn't been weel-tested).
+
+2. The package is intended for use only with the `flat` eslint config.
+
+3. _(for React users)_ The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
 
 ## Installation
 
-You'll first need to install [ESLint](https://eslint.org/) and common peer deps:
+You'll first need to install [ESLint](https://eslint.org/) and peer deps:
 
 ```sh
 npm i -D eslint eslint-plugin-import-x eslint-import-resolver-typescript @eslint-community/eslint-plugin-eslint-comments typescript-eslint eslint-plugin-unicorn
@@ -52,7 +75,7 @@ import dartessEslintPluginStorybook from '@dartess/eslint-plugin/storybook';
 import { parseGitIgnore } from '@dartess/eslint-plugin/utils';
 
 export default [
-  parseGitIgnore(), // the easiest way to ignore all `.gitignore` files
+  parseGitIgnore(), // (optional) the easiest way to ignore all `.gitignore` files
   
   {
     languageOptions: {
@@ -75,27 +98,41 @@ export default [
 
 ```
 
-### Notes
-
-1. The package is intended for use with TypeScript (it'll be useful for plain JS, but it hasn't been weel-tested).
-
-2. The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
-
-3. The package is intended for use only with the `flat` eslint config.
-
 ## Next steps
 
-1. If you are using React, you also probably will want to add 
+If you're using React, you also probably will want to add 
 [eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh). 
 This plugin requires manual setup for you build tools.
 
-2. If you are using Mobx with legacy decorators, you have to enable rule `mobx/missing-make-observable` manually.
+If you're using Mobx with legacy decorators, you have to enable rule `mobx/missing-make-observable` manually.
+
+### Formatters
+
+If you're want to (and you should to) use formatting tools, you need to additionally install and setup something else.
+
+#### dprint
+
+Use `eslint-plugin-format` with rule `format/dprint` for running `dprint` as eslint rule (you probably will want to add `eslint-config-prettier` for disabling unnecessary rules).
+
+#### Biome
+
+Use `eslint-config-biome` for disabling unnecessary rules.
+
+#### Oxlint
+
+Use `eslint-plugin-oxlint` for disabling unnecessary rules.
+
+#### Prettier (Old School)
+
+* Use `eslint-config-prettier` for disabling unnecessary rules.
+* Use `eslint-plugin-prettier` for running `prettier` as eslint rule.
+* Use `eslint-plugin-format` with rule `format/prettier` for running `prettier` as eslint rule (you probably will want to add `eslint-config-prettier` for disabling unnecessary rules).
 
 ## Supported Rules
 
 Each rule has emojis denoting:
 
-- ✅ if it belongs to the `recommended` configuration
+- ✅ if it belongs to the one of `recommended` configuration
 - 🔧 if some problems reported by the rule are automatically fixable by the `--fix` [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) option
 - 💡 if some problems reported by the rule are manually fixable by editor [suggestions](https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions)
 

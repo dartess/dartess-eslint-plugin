@@ -2,6 +2,8 @@
 
 prettier
 
+remove all non-actual rules into separated configs.
+
 https://www.npmjs.com/package/eslint-plugin-decorator-position
 
 https://www.npmjs.com/package/eslint-plugin-complete
@@ -11,6 +13,8 @@ https://www.npmjs.com/package/eslint-plugin-de-morgan
 remove mobx/missing-make-observable from mobx plugin
 
 react/jsx-max-props-per-line,react/jsx-indent-props - can be replaced with prettier?
+
+src/configs/vendor-rules/react-hooks.ts - can be replaced with recommended? add info to readme 
 
 Check next rules and options:
 
