@@ -5,7 +5,9 @@
   "description": "A set of rules and configs for various react projects",
   "keywords": [
     "eslint",
-    "eslint-plugin"
+    "eslint-plugin",
+    "eslint-config-airbnb",
+    "eslint-config-airbnb-typescript"
   ],
   "author": "Sergey Kozlov",
   "main": "./dist/index.js",
