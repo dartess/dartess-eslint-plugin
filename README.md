@@ -15,6 +15,8 @@ Also can extends (if it is applicable)
 * `eslint-plugin-mobx` — `recommended`
 * `eslint-plugin-storybook` — `recommended` & `csf-strict`
 
+_(We also use `eslint-plugin-unicorn` but only special rules, without `recommended` config)_
+
 All of it pinched with extra configs, setups and extra rules. Just take it and use it!
 
 ### Notes
