@@ -74,3 +74,5 @@ Check next rules and options:
 ```
 
 add `satisfies Linter.Config[];` in example?
+
+TODOs from notes
