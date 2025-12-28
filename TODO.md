@@ -51,19 +51,6 @@ Check next rules and options:
     message: '@action must be synchronous function',
   },
   {
-    selector: 'ImportDeclaration[source.value="remeda"] ImportSpecifier',
-    message: 'Use "import * as R from \'remeda\';" instead',
-  },
-  {
-    selector:
-      "ImportDeclaration[source.value='core/appConfig'] > ImportSpecifier[imported.name='appConfig'][local.name!='appConfig']",
-    message: 'appConfig should not be renamed',
-  },
-  {
-    selector: "ImportDeclaration[source.value='appConfig'] > ImportSpecifier",
-    message: 'appConfig should not be destructured',
-  },
-  {
     selector: [
       "MemberExpression[property.name='Provider']",
       "Property[key.name='Provider']",
