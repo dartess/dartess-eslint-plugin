@@ -15,7 +15,7 @@ Also can extends (if it is applicable)
 * `eslint-plugin-mobx` — `recommended`
 * `eslint-plugin-storybook` — `recommended` & `csf-strict`
 
-_(We also use `eslint-plugin-unicorn` but only special rules, without `recommended` config)_
+_(We also use `eslint-plugin-unicorn` and `eslint-plugin-decorator-position` but only special rules, without `recommended` config)_
 
 All of it pinched with extra configs, setups and extra rules. Just take it and use it!
 
@@ -32,7 +32,7 @@ All of it pinched with extra configs, setups and extra rules. Just take it and u
 You'll first need to install [ESLint](https://eslint.org/) and peer deps:
 
 ```sh
-npm i -D eslint eslint-plugin-import-x eslint-import-resolver-typescript @eslint-community/eslint-plugin-eslint-comments typescript-eslint eslint-plugin-unicorn
+npm i -D eslint eslint-plugin-import-x eslint-import-resolver-typescript @eslint-community/eslint-plugin-eslint-comments typescript-eslint eslint-plugin-unicorn eslint-plugin-decorator-position
 ```
 
 Next, also install the packages that suit your needs.
