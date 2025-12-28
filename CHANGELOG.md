@@ -2,6 +2,10 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.0.7] - 2025-12-28
+
+- update `README`
+
 ## [0.0.6] - 2025-12-28
 
 - cleanup extra overrides
