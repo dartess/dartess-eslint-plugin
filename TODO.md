@@ -2,8 +2,6 @@
 
 remove all non-actual rules into separated configs.
 
-https://www.npmjs.com/package/eslint-plugin-complete
-
 https://www.npmjs.com/package/eslint-plugin-de-morgan
 
 additional paths in import-x/no-extraneous-dependencies
@@ -67,3 +65,20 @@ TODOs from notes
 react compiler rules from eslint-plugin-react-hooks
 
 check unused rules
+
+https://www.npmjs.com/package/eslint-plugin-complete: 
+...esLintPluginComplete.configs.recommended,
+{
+rules: {
+'no-plusplus': 'off', // @see https://complete-ts.github.io/eslint-plugin-complete/rules/prefer-plusplus
+'complete/prefer-readonly-parameter-types': 'off', // can be flase-positive for Built-in methods
+'complete/require-break': 'off', // can be false-positive with TS7027
+'complete/require-variadic-function-argument': 'off', // can be false-positive for third-party libs
+'complete/no-mutable-return': 'off', // can be hamful
+'complete/strict-undefined-functions': 'off', // prefer unicorn/no-useless-undefined
+'complete/no-void-return-type': 'off', // explicit is better than implicit
+'complete/format-line-comments': 'off', // can broke comments with code
+},
+},
++ add names for configs
++ check disabled rules (maybe it is bad because I'm going to disable some rules)
