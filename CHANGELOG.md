@@ -2,7 +2,7 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
-## [0.0.7] - 2025-12-28
+## [0.0.8] - 2025-12-28
 
 - update `README`
 
