@@ -49,10 +49,6 @@ const rules = {
   // https://eslint.org/docs/rules/no-caller
   'no-caller': 'error',
 
-  // disallow lexical declarations in case/default clauses
-  // https://eslint.org/docs/rules/no-case-declarations
-  'no-case-declarations': 'error',
-
   // Disallow returning value in constructor
   // https://eslint.org/docs/rules/no-constructor-return
   'no-constructor-return': 'error',
@@ -70,10 +66,6 @@ const rules = {
     },
   ],
 
-  // disallow empty destructuring patterns
-  // https://eslint.org/docs/rules/no-empty-pattern
-  'no-empty-pattern': 'error',
-
   // disallow use of eval()
   // https://eslint.org/docs/rules/no-eval
   'no-eval': 'error',
@@ -89,14 +81,6 @@ const rules = {
   // disallow Unnecessary Labels
   // https://eslint.org/docs/rules/no-extra-label
   'no-extra-label': 'error',
-
-  // disallow fallthrough of case statements
-  // https://eslint.org/docs/rules/no-fallthrough
-  'no-fallthrough': 'error',
-
-  // disallow reassignments of native objects or read-only globals
-  // https://eslint.org/docs/rules/no-global-assign
-  'no-global-assign': ['error', { exceptions: [] }],
 
   // disallow usage of __iterator__ property
   // https://eslint.org/docs/rules/no-iterator
@@ -126,17 +110,9 @@ const rules = {
   // https://eslint.org/docs/rules/no-new-wrappers
   'no-new-wrappers': 'error',
 
-  // Disallow \8 and \9 escape sequences in string literals
-  // https://eslint.org/docs/rules/no-nonoctal-decimal-escape
-  'no-nonoctal-decimal-escape': 'error',
-
   // Disallow calls to the Object constructor without an argument
   // https://eslint.org/docs/latest/rules/no-object-constructor
   'no-object-constructor': 'error',
-
-  // disallow use of (old style) octal literals
-  // https://eslint.org/docs/rules/no-octal
-  'no-octal': 'error',
 
   // disallow use of octal escape sequences in string literals, such as
   // var foo = 'Copyright \251';
@@ -224,15 +200,6 @@ const rules = {
   // https://eslint.org/docs/rules/no-script-url
   'no-script-url': 'error',
 
-  // disallow self assignment
-  // https://eslint.org/docs/rules/no-self-assign
-  'no-self-assign': [
-    'error',
-    {
-      props: true,
-    },
-  ],
-
   // disallow comparisons where both sides are exactly the same
   // https://eslint.org/docs/rules/no-self-compare
   'no-self-compare': 'error',
@@ -245,21 +212,9 @@ const rules = {
   // https://eslint.org/docs/rules/no-throw-literal
   'no-throw-literal': 'error',
 
-  // disallow unused labels
-  // https://eslint.org/docs/rules/no-unused-labels
-  'no-unused-labels': 'error',
-
-  // Disallow unnecessary catch clauses
-  // https://eslint.org/docs/rules/no-useless-catch
-  'no-useless-catch': 'error',
-
   // disallow useless string concatenation
   // https://eslint.org/docs/rules/no-useless-concat
   'no-useless-concat': 'error',
-
-  // disallow unnecessary string escaping
-  // https://eslint.org/docs/rules/no-useless-escape
-  'no-useless-escape': 'error',
 
   // disallow redundant return; keywords
   // https://eslint.org/docs/rules/no-useless-return

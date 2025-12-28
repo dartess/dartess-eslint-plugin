@@ -2,6 +2,8 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+- cleanup extra overrides
+
 ## [0.0.4] - 2025-12-27
 
 - remove `arrow-body-style` from 'recommeded': not relevant for typed code

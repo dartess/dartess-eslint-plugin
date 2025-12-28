@@ -7,9 +7,6 @@ import confusingBrowserGlobals from 'confusing-browser-globals';
 import type { Linter } from 'eslint';
 
 const rules = {
-  // disallow deletion of variables
-  'no-delete-var': 'error',
-
   // disallow labels that share a name with a variable
   // https://eslint.org/docs/rules/no-label-var
   'no-label-var': 'error',
@@ -35,9 +32,6 @@ const rules = {
 
   // disallow declaration of variables already declared in the outer scope
   'no-shadow': 'error',
-
-  // disallow shadowing of names such as arguments
-  'no-shadow-restricted-names': 'error',
 
   // disallow use of undefined when initializing variables
   'no-undef-init': 'error',

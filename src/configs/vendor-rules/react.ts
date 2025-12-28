@@ -72,17 +72,9 @@ const rules = {
     },
   ],
 
-  // Prevent variables used in JSX to be incorrectly marked as unused
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
-  'react/jsx-uses-vars': 'error',
-
   // Prevent usage of dangerous JSX properties
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-danger.md
   'react/no-danger': 'error',
-
-  // Prevent usage of deprecated methods
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-deprecated.md
-  'react/no-deprecated': ['error'],
 
   // Prevent usage of setState in componentDidUpdate
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md
@@ -96,18 +88,6 @@ const rules = {
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
   'react/no-direct-mutation-state': 'off',
 
-  // Prevent usage of isMounted
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-is-mounted.md
-  'react/no-is-mounted': 'error',
-
-  // Prevent using string references
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-string-refs.md
-  'react/no-string-refs': 'error',
-
-  // Prevent usage of unknown DOM property
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
-  'react/no-unknown-property': 'error',
-
   // Require ES6 class declarations over React.createClass
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prefer-es6-class.md
   'react/prefer-es6-class': ['error', 'always'],
@@ -115,10 +95,6 @@ const rules = {
   // Require stateless functions when not using lifecycle methods, setState or ref
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/prefer-stateless-function.md
   'react/prefer-stateless-function': ['error', { ignorePureComponents: true }],
-
-  // Require render() methods to return something
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/require-render-return.md
-  'react/require-render-return': 'error',
 
   // Prevent extra closing tags for components without children
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/self-closing-comp.md
@@ -211,33 +187,9 @@ const rules = {
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
   'react/jsx-filename-extension': ['error', { extensions: ['.jsx'] }],
 
-  // prevent accidental JS comments from being injected into JSX as text
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/jsx-no-comment-textnodes.md
-  'react/jsx-no-comment-textnodes': 'error',
-
-  // disallow using React.render/ReactDOM.render's return value
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-render-return-value.md
-  'react/no-render-return-value': 'error',
-
-  // warn against using findDOMNode()
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-find-dom-node.md
-  'react/no-find-dom-node': 'error',
-
-  // Prevent problem with children and props.dangerouslySetInnerHTML
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-danger-with-children.md
-  'react/no-danger-with-children': 'error',
-
   // Require style prop value be an object or var
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/style-prop-object.md
   'react/style-prop-object': 'error',
-
-  // Prevent invalid characters from appearing in markup
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-unescaped-entities.md
-  'react/no-unescaped-entities': 'error',
-
-  // Prevent passing of children as props
-  // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/no-children-prop.md
-  'react/no-children-prop': 'error',
 
   // Validate whitespace in and around the JSX opening and closing brackets
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/843d71a432baf0f01f598d7cf1eea75ad6896e4b/docs/rules/jsx-tag-spacing.md

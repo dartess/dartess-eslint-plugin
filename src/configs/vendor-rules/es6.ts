@@ -6,10 +6,6 @@
 import type { Linter } from 'eslint';
 
 const rules = {
-  // disallow modifying variables of class declarations
-  // https://eslint.org/docs/rules/no-class-assign
-  'no-class-assign': 'error',
-
   // Disallow specified names in exports
   // https://eslint.org/docs/rules/no-restricted-exports
   'no-restricted-exports': [
@@ -104,10 +100,6 @@ const rules = {
   // suggest using template literals instead of string concatenation
   // https://eslint.org/docs/rules/prefer-template
   'prefer-template': 'error',
-
-  // disallow generator functions that do not have yield
-  // https://eslint.org/docs/rules/require-yield
-  'require-yield': 'error',
 
   // require a Symbol description
   // https://eslint.org/docs/rules/symbol-description
