@@ -8,6 +8,8 @@ import eslintPluginImportX from 'eslint-plugin-import-x';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import pluginJs from '@eslint/js';
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments/configs';
+// @ts-ignore: https://github.com/NullVoxPopuli/eslint-plugin-decorator-position/issues/778
+import eslintPluginDecoratorPosition from 'eslint-plugin-decorator-position';
 import type { Linter } from 'eslint';
 import type { TSESLint } from '@typescript-eslint/utils';
 
@@ -60,6 +62,8 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     plugins: {
       unicorn: eslintPluginUnicorn,
       '@dartess': dartessPlugin,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- https://github.com/NullVoxPopuli/eslint-plugin-decorator-position/issues/778
+      'decorator-position': eslintPluginDecoratorPosition,
     },
 
     languageOptions: {
@@ -116,6 +120,15 @@ const config: TSESLint.FlatConfig.ConfigArray = [
         {
           allowNamedFunctions: true,
           allowUnboundThis: true,
+        },
+      ],
+
+      /* one line — one decorator */
+      'decorator-position/decorator-position': [
+        'error',
+        {
+          properties: 'above',
+          methods: 'above',
         },
       ],
     },

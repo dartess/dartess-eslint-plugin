@@ -2,7 +2,7 @@
   "name": "@dartess/eslint-plugin",
   "type": "module",
   "version": "0.0.5",
-  "description": "A set of rules and configs for various react projects",
+  "description": "A set of rules and configs for various TypeScript projects",
   "keywords": [
     "eslint",
     "eslint-plugin",
@@ -50,6 +50,7 @@
     "@next/eslint-plugin-next": "^16.0.0",
     "eslint": "^9.0.0",
     "eslint-import-resolver-typescript": "^4.0.0",
+    "eslint-plugin-decorator-position": "^6.0.0",
     "eslint-plugin-import-x": "^4.1.0",
     "eslint-plugin-jsx-a11y": "^6.10.0",
     "eslint-plugin-mobx": "~0.0.13",

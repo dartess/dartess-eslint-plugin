@@ -2,9 +2,12 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
-- cleanup extra overrides
+## [0.0.6] - 2025-12-28
 
-## [0.0.4] - 2025-12-27
+- cleanup extra overrides
+- add `decorator-position/decorator-position` to `recommeded`: one line — one decorator
+
+## [0.0.5] - 2025-12-27
 
 - remove `arrow-body-style` from 'recommeded': not relevant for typed code
 - add `@typescript-eslint/consistent-type-imports` to `recommeded`: it helps with three-shaking
