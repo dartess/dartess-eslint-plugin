@@ -82,3 +82,10 @@ rules: {
 },
 + add names for configs
 + check disabled rules (maybe it is bad because I'm going to disable some rules)
+
+curly-after-prettier fix
+
+browserslist: Chrome 93+ and Safari 15.4+ and Firefox 92+ 
+
+// eslint-recommended only for ts
+// strict-type-checked for all?

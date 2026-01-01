@@ -41,14 +41,9 @@ const rules = {
   '@typescript-eslint/no-use-before-define': baseVariablesRules['no-use-before-define'],
 
   // Replace Airbnb 'require-await' rule with '@typescript-eslint' version
+  // require `await` in `async function` (note: this is a horrible rule that should never be used)
   // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/require-await.md
-  'require-await': 'off',
-  '@typescript-eslint/require-await': baseBestPracticesRules['require-await'],
-
-  // Replace Airbnb 'no-return-await' rule with '@typescript-eslint' version
-  // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/return-await.md
-  'no-return-await': 'off',
-  '@typescript-eslint/return-await': ['error', 'in-try-catch'],
+  '@typescript-eslint/require-await': 'off',
 
   // Append 'ts' and 'tsx' to Airbnb 'import-x/extensions' rule
   // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/extensions.md

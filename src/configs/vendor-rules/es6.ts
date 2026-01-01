@@ -18,16 +18,6 @@ const rules = {
     },
   ],
 
-  // disallow specific imports
-  // https://eslint.org/docs/rules/no-restricted-imports
-  'no-restricted-imports': [
-    'off',
-    {
-      paths: [],
-      patterns: [],
-    },
-  ],
-
   // disallow useless computed property keys
   // https://eslint.org/docs/rules/no-useless-computed-key
   'no-useless-computed-key': 'error',
@@ -42,9 +32,6 @@ const rules = {
       ignoreExport: false,
     },
   ],
-
-  // require let or const instead of var
-  'no-var': 'error',
 
   // require method and property shorthand syntax for object literals
   // https://eslint.org/docs/rules/object-shorthand

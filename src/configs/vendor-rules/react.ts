@@ -21,6 +21,7 @@ const rules = {
     },
   ],
 
+  // TODO check it later
   // Prevent missing displayName in a React component definition
   // https://github.com/jsx-eslint/eslint-plugin-react/blob/master/docs/rules/display-name.md
   'react/display-name': ['off', { ignoreTranspilerName: false }],
@@ -391,15 +392,6 @@ const rules = {
   // properties do not have those attributes.
   // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/aria-unsupported-elements.md
   'jsx-a11y/aria-unsupported-elements': 'error',
-
-  // Ensure the autocomplete attribute is correct and suitable for the form field it is used with
-  // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/29c68596b15c4ff0a40daae6d4a2670e36e37d35/docs/rules/autocomplete-valid.md
-  'jsx-a11y/autocomplete-valid': [
-    'off',
-    {
-      inputComponents: [],
-    },
-  ],
 
   // require onClick be accompanied by onKeyUp/onKeyDown/onKeyPress
   // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/master/docs/rules/click-events-have-key-events.md

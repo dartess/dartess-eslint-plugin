@@ -208,10 +208,6 @@ const rules = {
   // https://eslint.org/docs/rules/no-sequences
   'no-sequences': 'error',
 
-  // restrict what can be thrown as an exception
-  // https://eslint.org/docs/rules/no-throw-literal
-  'no-throw-literal': 'error',
-
   // disallow useless string concatenation
   // https://eslint.org/docs/rules/no-useless-concat
   'no-useless-concat': 'error',
@@ -230,8 +226,7 @@ const rules = {
 
   // Prefer Object.hasOwn() over Object.prototype.hasOwnProperty.call()
   // https://eslint.org/docs/rules/prefer-object-has-own
-  // TODO: enable after browserslist Chrome 93+ and Safari 15.4+ and Firefox 92+
-  'prefer-object-has-own': 'off',
+  'prefer-object-has-own': 'error',
 
   // https://eslint.org/docs/rules/prefer-regex-literals
   'prefer-regex-literals': [
@@ -244,10 +239,6 @@ const rules = {
   // require use of the second argument for parseInt()
   // https://eslint.org/docs/rules/radix
   radix: 'error',
-
-  // require `await` in `async function` (note: this is a horrible rule that should never be used)
-  // https://eslint.org/docs/rules/require-await
-  'require-await': 'off',
 
   // requires to declare all vars on top of their containing scope
   // https://eslint.org/docs/rules/vars-on-top
