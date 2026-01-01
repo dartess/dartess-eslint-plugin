@@ -2,11 +2,15 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.1.0] - 2026-01-02
+
+- add `eslint-plugin-de-morgan` to `recommended` config
+
 ## [0.0.9] - 2026-01-02
 
 - remove overriding `@typescript-eslint/return-await` rule
 - cleanup disabled rules
-- add `prefer-object-has-own` to `recomended`: previously was disabled because of old browsers support
+- add `prefer-object-has-own` to `recommended`: previously was disabled because of old browsers support
 - apply `no-throw-literal` only for `js`-files (for `ts` files already enabled `@typescript-eslint/only-throw-error`)
 
 ## [0.0.8] - 2025-12-28

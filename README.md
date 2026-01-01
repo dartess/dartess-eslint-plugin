@@ -7,6 +7,7 @@ Also extends
 * `typescript-eslint` — `strictTypeChecked` & `stylisticTypeChecked`
 * `eslint-plugin-import-x` — `recommended` & `typescript`
 * `@eslint-community/eslint-plugin-eslint-comments` — `recommended`
+* `eslint-plugin-de-morgan` — `recommended`
 
 Also can extends (if it is applicable)
 * `eslint-plugin-react` — `recommended` & `jsx-runtime`
@@ -32,7 +33,7 @@ All of it pinched with extra configs, setups and extra rules. Just take it and u
 You'll first need to install [ESLint](https://eslint.org/) and peer deps:
 
 ```sh
-npm i -D eslint eslint-plugin-import-x eslint-import-resolver-typescript @eslint-community/eslint-plugin-eslint-comments typescript-eslint eslint-plugin-unicorn eslint-plugin-decorator-position
+npm i -D eslint eslint-plugin-import-x eslint-import-resolver-typescript @eslint-community/eslint-plugin-eslint-comments typescript-eslint eslint-plugin-unicorn eslint-plugin-decorator-position eslint-plugin-de-morgan
 ```
 
 Next, also install the packages that suit your needs.
@@ -127,8 +128,8 @@ Use `eslint-plugin-oxlint` for disabling unnecessary rules.
 #### Prettier (Old School)
 
 * Use `eslint-config-prettier` for disabling unnecessary rules.
-* Use `eslint-plugin-prettier` for running `prettier` as eslint rule.
-* Use `eslint-plugin-format` with rule `format/prettier` for running `prettier` as eslint rule (you probably will want to add `eslint-config-prettier` for disabling unnecessary rules).
+* Or use `eslint-plugin-prettier` for running `prettier` as eslint rule.
+* Or use `eslint-plugin-format` with rule `format/prettier` for running `prettier` as eslint rule (you probably will want to add `eslint-config-prettier` for disabling unnecessary rules).
 
 ## Supported Rules
 

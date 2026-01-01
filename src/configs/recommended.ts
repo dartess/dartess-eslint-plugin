@@ -10,6 +10,7 @@ import pluginJs from '@eslint/js';
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments/configs';
 // @ts-ignore: https://github.com/NullVoxPopuli/eslint-plugin-decorator-position/issues/778
 import eslintPluginDecoratorPosition from 'eslint-plugin-decorator-position';
+import eslintPluginDeMorgan from 'eslint-plugin-de-morgan';
 import type { Linter } from 'eslint';
 import type { TSESLint } from '@typescript-eslint/utils';
 
@@ -55,6 +56,8 @@ const config: TSESLint.FlatConfig.ConfigArray = [
   eslintPluginImportX.flatConfigs.typescript as Linter.Config,
 
   eslintCommentsPlugin.recommended,
+
+  eslintPluginDeMorgan.configs.recommended,
 
   {
     name: '@dartess/recommended',
