@@ -2,6 +2,8 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+- improve `import-x/no-extraneous-dependencies` options
+
 ## [0.1.0] - 2026-01-02
 
 - add `eslint-plugin-de-morgan` to `recommended` config

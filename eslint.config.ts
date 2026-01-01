@@ -1,4 +1,3 @@
-/* eslint-disable import-x/no-extraneous-dependencies -- config file */
 import type { TSESLint } from '@typescript-eslint/utils';
 import tsEslint from 'typescript-eslint';
 import globals from 'globals';

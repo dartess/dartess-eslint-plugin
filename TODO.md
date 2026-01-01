@@ -2,10 +2,6 @@
 
 remove all non-actual rules into separated configs.
 
-https://www.npmjs.com/package/eslint-plugin-de-morgan
-
-additional paths in import-x/no-extraneous-dependencies
-
 remove mobx/missing-make-observable from mobx plugin
 
 react/jsx-max-props-per-line,react/jsx-indent-props - can be replaced with prettier?
