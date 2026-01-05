@@ -9,6 +9,7 @@ import ruleStoriesExportTyped from './rules/stories-export-typed.ts';
 import ruleStrictObservableComponentsDeclaration from './rules/strict-observable-components-declaration.ts';
 import ruleRequireObserver from './rules/require-observer.ts';
 import ruleMaxParentImportDepth from './rules/max-parent-import-depth.ts';
+import ruleTsNamedTupleElements from './rules/ts-named-tuple-elements.ts';
 
 const plugin: ESLint.Plugin = {
   meta: {
@@ -26,6 +27,7 @@ const plugin: ESLint.Plugin = {
       ruleStrictObservableComponentsDeclaration as unknown as Rule.RuleModule,
     'require-observer': ruleRequireObserver as unknown as Rule.RuleModule,
     'max-parent-import-depth': ruleMaxParentImportDepth as unknown as Rule.RuleModule,
+    'ts-named-tuple-elements': ruleTsNamedTupleElements as unknown as Rule.RuleModule,
   },
 };
 
