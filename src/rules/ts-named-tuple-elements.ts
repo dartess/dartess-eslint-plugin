@@ -6,7 +6,7 @@ import { ESLintUtils } from '@typescript-eslint/utils';
  */
 
 type Options = [
-  {
+  mainOptions: {
     mode?: 'always' | 'never';
   },
 ];

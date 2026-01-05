@@ -263,6 +263,9 @@ const config: TSESLint.FlatConfig.ConfigArray = [
           disallowTypeAnnotations: false,
         },
       ],
+
+      // require names for tuple elements
+      '@dartess/ts-named-tuple-elements': 'error',
     },
   },
 

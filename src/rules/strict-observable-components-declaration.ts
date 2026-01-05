@@ -6,7 +6,7 @@ import { ESLintUtils, type TSESTree, AST_NODE_TYPES } from '@typescript-eslint/u
  */
 
 type Options = [
-  {
+  mainOptions: {
     ignoreObserverArg?: Array<string>;
     allowedHocs?: Array<string>;
   },

@@ -2,7 +2,11 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.2.0] - 2026-01-05
+
 - improve `import-x/no-extraneous-dependencies` options
+- add rule `@dartess/ts-named-tuple-elements`
+- add `@dartess/ts-named-tuple-elements` to `recommended` config
 
 ## [0.1.0] - 2026-01-02
 

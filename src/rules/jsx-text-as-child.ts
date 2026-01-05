@@ -10,7 +10,7 @@ import type { TSESTree } from '@typescript-eslint/utils';
 import emojiRegex from 'emoji-regex';
 
 type Options = [
-  {
+  mainOptions: {
     allowDigits?: boolean;
     allowEmoji?: boolean;
     allowSpecialSymbols?: boolean;

@@ -6,7 +6,7 @@ import { ESLintUtils, AST_NODE_TYPES } from '@typescript-eslint/utils';
  */
 
 type Options = [
-  {
+  mainOptions: {
     libName?: string;
   },
 ];
