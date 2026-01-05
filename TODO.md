@@ -81,7 +81,11 @@ rules: {
 
 curly-after-prettier fix
 
-browserslist: Chrome 93+ and Safari 15.4+ and Firefox 92+ 
+browserslist: Chrome 93+ and Safari 15.4+ and Firefox 92+
+
+rename rules by section
+
+check otions / setups
 
 // eslint-recommended only for ts
 // strict-type-checked for all?
