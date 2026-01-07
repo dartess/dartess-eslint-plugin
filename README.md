@@ -30,10 +30,18 @@ All of it pinched with extra configs, setups and extra rules. Just take it and u
 
 ## Installation
 
-You'll first need to install [ESLint](https://eslint.org/) and peer deps:
+You'll first need to install [ESLint](https://eslint.org/), peer deps and this plugin:
 
 ```sh
-npm i -D eslint eslint-plugin-import-x eslint-import-resolver-typescript @eslint-community/eslint-plugin-eslint-comments typescript-eslint eslint-plugin-unicorn eslint-plugin-decorator-position eslint-plugin-de-morgan
+npm i -D eslint \
+  eslint-plugin-import-x \
+  eslint-import-resolver-typescript \
+  eslint-plugin-unicorn \
+  eslint-plugin-decorator-position \
+  eslint-plugin-de-morgan \
+  typescript-eslint \
+  @eslint-community/eslint-plugin-eslint-comments \
+  @dartess/eslint-plugin
 ```
 
 Next, also install the packages that suit your needs.
@@ -49,12 +57,6 @@ npm i -D eslint-plugin-mobx
 ```
 ```sh
 npm i -D eslint-plugin-storybook
-```
-
-Next, install `@dartess/eslint-plugin` itself.
-
-```sh
-npm i -D @dartess/eslint-plugin
 ```
 
 ## Usage configs
