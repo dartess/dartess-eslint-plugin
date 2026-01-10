@@ -2,6 +2,8 @@
 
 remove all non-actual rules into separated configs.
 
+remove non-exist rules
+
 remove mobx/missing-make-observable from mobx plugin
 
 react/jsx-max-props-per-line,react/jsx-indent-props - can be replaced with prettier?
@@ -79,13 +81,13 @@ rules: {
 + add names for configs
 + check disabled rules (maybe it is bad because I'm going to disable some rules)
 
-curly-after-prettier fix
-
 browserslist: Chrome 93+ and Safari 15.4+ and Firefox 92+
 
 rename rules by section
 
 check otions / setups
+
+try to use next plugins directly
 
 // eslint-recommended only for ts
 // strict-type-checked for all?

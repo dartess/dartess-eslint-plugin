@@ -16,6 +16,7 @@
   "exports": {
     ".": "./dist/index.js",
     "./recommended": "./dist/configs/recommended.js",
+    "./recommended-post-format": "./dist/configs/post-format.js",
     "./react": "./dist/configs/react.js",
     "./next": "./dist/configs/next.js",
     "./mobx": "./dist/configs/mobx.js",

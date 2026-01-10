@@ -108,8 +108,6 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
       '@dartess/max-parent-import-depth': 'error',
 
-      curly: ['error', 'all'],
-
       'import-x/order': [
         'error',
         {

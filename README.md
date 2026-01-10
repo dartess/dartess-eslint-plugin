@@ -30,7 +30,7 @@ All of it pinched with extra configs, setups and extra rules. Just take it and u
 
 ## Installation
 
-You'll first need to install [ESLint](https://eslint.org/), peer deps and this plugin:
+Install [ESLint](https://eslint.org/), required peer deps and the plugin itself:
 
 ```sh
 npm i -D eslint \
@@ -67,6 +67,7 @@ Edit or create `eslint.config.ts` (or `eslint.config.mts`). You probably have to
 
 ```ts
 import dartessEslintPluginRecommended from '@dartess/eslint-plugin/recommended';
+import dartessEslintPluginRecommendedPostFormat from '@dartess/eslint-plugin/recommended-post-format';
 
 // if `react` is used
 import dartessEslintPluginReact from '@dartess/eslint-plugin/react';
@@ -91,6 +92,7 @@ export default [
   },
   
   ...dartessEslintPluginRecommended,
+  
   // if `react` is used
   ...dartessEslintPluginReact,
   // if `next.js` is used
@@ -99,21 +101,26 @@ export default [
   ...dartessEslintPluginMobx,
   // if `storybook` is used
   ...dartessEslintPluginStorybook,
+  
+  // <-- Put here your formatters congifs -->
+  // @see `Fine Tuning` -> `Formatters` section below 
+  
+  ...dartessEslintPluginRecommendedPostFormat,
 ]
 
 ```
 
-## Next steps
+## Fine Tuning
 
-If you're using React, you also probably will want to add 
-[eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh). 
-This plugin requires manual setup for you build tools.
-
-If you're using Mobx with legacy decorators, you have to enable rule `mobx/missing-make-observable` manually.
-
-### Formatters
+### Formatting tools
 
 If you're want to (and you should to) use formatting tools, you need to additionally install and setup something else.
+
+Replace the `<-- Put here your formatters congifs -->` comment with the required code, beacuse we have a special config
+that fine-tunes formatter behavior and should be applied afterward.
+
+In case you for some reason don't want to use any formatting tools, you still have to put 
+`...dartessEslintPluginRecommendedPostFormat` in any place of your config.
 
 #### dprint
 
@@ -132,6 +139,16 @@ Use `eslint-plugin-oxlint` for disabling unnecessary rules.
 * Use `eslint-config-prettier` for disabling unnecessary rules.
 * Or use `eslint-plugin-prettier` for running `prettier` as eslint rule.
 * Or use `eslint-plugin-format` with rule `format/prettier` for running `prettier` as eslint rule (you probably will want to add `eslint-config-prettier` for disabling unnecessary rules).
+
+### (for React users)
+
+If you're using React, you also probably will want to add 
+[eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh). 
+This plugin requires manual setup for you build tools.
+
+### (for Mobx users)
+
+If you're using Mobx with legacy decorators, you have to enable rule `mobx/missing-make-observable` manually.
 
 ## Supported Rules
 

@@ -2,6 +2,10 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.2.1] - 2026-01-10
+
+- add `recommended-post-format` config for using after formatting tools
+
 ## [0.2.0] - 2026-01-05
 
 - improve `import-x/no-extraneous-dependencies` options
