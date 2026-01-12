@@ -11,12 +11,11 @@ Also extends
 
 Also can extends (if it is applicable)
 * `eslint-plugin-react` — `recommended` & `jsx-runtime`
+* `eslint-plugin-react-hooks` — `recommended`
 * `@next/eslint-plugin-next` — `recommended` & `core-web-vitals`
 * `eslint-config-next`
 * `eslint-plugin-mobx` — `recommended`
 * `eslint-plugin-storybook` — `recommended` & `csf-strict`
-
-_(We also use `eslint-plugin-unicorn` and `eslint-plugin-decorator-position` but only special rules, without `recommended` config)_
 
 All of it pinched with extra configs, setups and extra rules. Just take it and use it!
 

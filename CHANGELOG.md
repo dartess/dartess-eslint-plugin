@@ -2,6 +2,10 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.3.0] - 2026-01-12
+
+- add `eslint-plugin-react-hooks:recommended` config to `react` config
+
 ## [0.2.1] - 2026-01-10
 
 - add `recommended-post-format` config for using after formatting tools

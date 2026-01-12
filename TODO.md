@@ -8,8 +8,6 @@ remove mobx/missing-make-observable from mobx plugin
 
 react/jsx-max-props-per-line,react/jsx-indent-props - can be replaced with prettier?
 
-src/configs/vendor-rules/react-hooks.ts - can be replaced with recommended? add info to readme 
-
 Check next rules and options:
 
 ```ts
@@ -60,8 +58,6 @@ add `satisfies Linter.Config[];` in example?
 
 TODOs from notes
 
-react compiler rules from eslint-plugin-react-hooks
-
 check unused rules
 
 https://www.npmjs.com/package/eslint-plugin-complete: 
@@ -89,5 +85,4 @@ check otions / setups
 
 try to use next plugins directly
 
-// eslint-recommended only for ts
-// strict-type-checked for all?
+mobx w/o hooks?

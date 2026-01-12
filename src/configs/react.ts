@@ -8,7 +8,6 @@ import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 
 import vendorRulesReact from './vendor-rules/react.ts';
-import vendorRulesReactHooks from './vendor-rules/react-hooks.ts';
 
 const config: TSESLint.FlatConfig.ConfigArray = [
   {
@@ -25,6 +24,8 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       },
     },
   },
+
+  reactHooksPlugin.configs.flat.recommended,
 
   {
     name: 'react/recommended', // missed name, @see e.g. https://github.com/jsx-eslint/eslint-plugin-react/pull/3882
@@ -87,14 +88,6 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       // overrides
       'react/jsx-no-duplicate-props': 'off', // checked by typescript
       'react/jsx-no-undef': 'off', // checked by typescript
-    },
-  },
-
-  {
-    name: '@dartess/react-hooks',
-
-    rules: {
-      ...vendorRulesReactHooks,
     },
   },
 ];
