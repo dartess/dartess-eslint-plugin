@@ -11,6 +11,7 @@ const config: Array<Linter.Config> = [
       'mobx/missing-make-observable': 'off', // useless with modern decorators syntax
       '@dartess/strict-observable-components-declaration': 'error',
       '@dartess/require-observer': 'error',
+      '@dartess/mobx-sync-autorun': 'error',
     },
   },
 ];
