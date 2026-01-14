@@ -11,15 +11,6 @@ react/jsx-max-props-per-line,react/jsx-indent-props - can be replaced with prett
 Check next rules and options:
 
 ```ts
-'react/jsx-key': [
-'error',
-{
-  checkFragmentShorthand: true,
-},
-],
-```
-
-```ts
 @typescript-eslint/explicit-member-accessibility // default options?
 ```
 
@@ -28,28 +19,12 @@ Check next rules and options:
   'error',
   {
     selector: [
-      'CallExpression[callee.name="autorun"] > ArrowFunctionExpression[async="true"]',
-      'CallExpression[callee.name="autorun"] > FunctionExpression[async="true"]',
-    ].join(', '),
-    message: 'autorun() only accepts synchronous functions',
-  },
-  {
-    selector: [
       'MethodDefinition[value.async="true"] Decorator[expression.object.name="action"]',
       'MethodDefinition[value.async="true"] Decorator[expression.name="action"]',
       'PropertyDefinition[value.type="ArrowFunctionExpression"][value.async="true"] Decorator[expression.object.name="action"]',
       'PropertyDefinition[value.type="ArrowFunctionExpression"][value.async="true"] Decorator[expression.name="action"]',
     ].join(', '),
     message: '@action must be synchronous function',
-  },
-  {
-    selector: [
-      "MemberExpression[property.name='Provider']",
-      "Property[key.name='Provider']",
-      "JSXMemberExpression[property.name='Provider']",
-      "ImportSpecifier[imported.name='Provider']",
-    ].join(', '),
-    message: 'Prefer use Context as Provider',
   },
 ],
 ```
@@ -90,3 +65,5 @@ check otions / setups
 try to use next plugins directly
 
 mobx w/o hooks?
+
+https://www.eslint-react.xyz/docs/migration

@@ -167,6 +167,7 @@ Each rule has emojis denoting:
 | [stories-export-typed](docs/rules/stories-export-typed.md)                                                 | Storybook's Stories should be typed                                           | ✅ |    |    |
 | [max-parent-import-depth](docs/rules/max-parent-import-depth.md)                                           | Limit relative imports to a maximum parent depth.                             | ✅ |    |    |
 | [ts-named-tuple-elements](docs/rules/ts-named-tuple-elements.md)                                           | Enforce (or forbid) named tuple elements                                      | ✅ |    |    |
+| [mobx-sync-autorun](docs/rules/mobx-sync-autorun.md)                                           | Enforce synchronous autorun callback                                          |    |    |    |
 
 ## Code Reuse Policy
 
