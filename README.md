@@ -159,15 +159,20 @@ Each rule has emojis denoting:
 
 | Name                                                                                                       | Description                                                                   | ✅ | 🔧 | 💡 |
 |:-----------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|:--|:---|:---|
-| [strict-observable-components-declaration](docs/rules/strict-observable-components-declaration.md)         | Wrapping components in `observer` must comply with the regulations.           | ✅ |    |    |
-| [require-observer](docs/rules/require-observer.md)                                                         | Components using the stores must be wrapped in an `observer`                  | ✅ | 🔧 |    |
-| [prevent-mixing-external-and-internal-classes](docs/rules/prevent-mixing-external-and-internal-classes.md) | Prevent mixing of outer and inner classes to avoid dependency on style order. |   |    |    |
+| **imports**                                                                                                | _config: recommended_                                                         |   |    |    |
+| [max-parent-import-depth](docs/rules/max-parent-import-depth.md)                                           | Limit relative imports to a maximum parent depth.                             | ✅ |    |    |
+| **TypeScript**                                                                                             | _config: recommended_                                                         |   |    |    |
+| [ts-named-tuple-elements](docs/rules/ts-named-tuple-elements.md)                                           | Enforce (or forbid) named tuple elements                                      | ✅ |    |    |
+| **React**                                                                                                  | _config: react_                                                               |   |    |    |
 | [jsx-no-text-as-child](docs/rules/jsx-text-as-child.md)                                                    | JSX elements should not have text without translation                         |   |    |    |
+| [prevent-mixing-external-and-internal-classes](docs/rules/prevent-mixing-external-and-internal-classes.md) | Prevent mixing of outer and inner classes to avoid dependency on style order. |   |    |    |
+| **Storybook**                                                                                              | _config: storybook_                                                           |   |    |    |
 | [stories-export-meta](docs/rules/stories-export-meta.md)                                                   | Storybook's Meta should be typed                                              | ✅ |    |    |
 | [stories-export-typed](docs/rules/stories-export-typed.md)                                                 | Storybook's Stories should be typed                                           | ✅ |    |    |
-| [max-parent-import-depth](docs/rules/max-parent-import-depth.md)                                           | Limit relative imports to a maximum parent depth.                             | ✅ |    |    |
-| [ts-named-tuple-elements](docs/rules/ts-named-tuple-elements.md)                                           | Enforce (or forbid) named tuple elements                                      | ✅ |    |    |
-| [mobx-sync-autorun](docs/rules/mobx-sync-autorun.md)                                           | Enforce synchronous autorun callback                                          | ✅ |    |    |
+| **MobX**                                                                                                   | _config: mobx_                                                                |   |    |    |
+| [strict-observable-components-declaration](docs/rules/strict-observable-components-declaration.md)         | Wrapping components in `observer` must comply with the regulations.           | ✅ |    |    |
+| [require-observer](docs/rules/require-observer.md)                                                         | Components using the stores must be wrapped in an `observer`                  | ✅ | 🔧 |    |
+| [mobx-sync-autorun](docs/rules/mobx-sync-autorun.md)                                                       | Enforce synchronous autorun callback                                          | ✅ |    |    |
 
 ## Code Reuse Policy
 
