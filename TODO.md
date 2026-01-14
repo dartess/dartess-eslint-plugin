@@ -60,6 +60,10 @@ TODOs from notes
 
 check unused rules
 
+action.bound 
+
+@flow
+
 https://www.npmjs.com/package/eslint-plugin-complete: 
 ...esLintPluginComplete.configs.recommended,
 {
