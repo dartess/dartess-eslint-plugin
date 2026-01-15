@@ -60,8 +60,6 @@ npm i -D eslint-plugin-storybook
 
 ## Usage configs
 
-Shared config based on `eslint-config-airbnb`, `eslint-config-airbnb-typescript`, `eslint-plugin-react/recommended`, `eslint-plugin-react/jsx-runtime`.
-
 Edit or create `eslint.config.ts` (or `eslint.config.mts`). You probably have to install `jiti` for it.
 
 ```ts

@@ -4,10 +4,6 @@ remove all non-actual rules into separated configs.
 
 remove non-exist rules
 
-remove mobx/missing-make-observable from mobx plugin
-
-react/jsx-max-props-per-line,react/jsx-indent-props - can be replaced with prettier?
-
 Check next rules and options:
 
 ```ts
@@ -33,7 +29,7 @@ add `satisfies Linter.Config[];` in example?
 
 TODOs from notes
 
-check unused rules
+[eslint-react.xyz] check unused rules
 
 action.bound 
 
@@ -67,3 +63,5 @@ try to use next plugins directly
 mobx w/o hooks?
 
 https://www.eslint-react.xyz/docs/migration
+
+make constructor

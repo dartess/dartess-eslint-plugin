@@ -8,7 +8,7 @@ const config: Array<Linter.Config> = [
     name: '@dartess/mobx',
     rules: {
       'mobx/missing-observer': 'off', // replaced by the neater "@dartess/require-observer"
-      'mobx/missing-make-observable': 'off', // useless with modern decorators syntax
+      'mobx/missing-make-observable': 'off', // useless with modern decorators syntax. TODO check original plugin?
       '@dartess/strict-observable-components-declaration': 'error',
       '@dartess/require-observer': 'error',
       '@dartess/mobx-sync-autorun': 'error',
