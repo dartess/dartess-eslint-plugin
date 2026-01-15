@@ -11,6 +11,7 @@ import ruleRequireObserver from './rules/require-observer.ts';
 import ruleMaxParentImportDepth from './rules/max-parent-import-depth.ts';
 import ruleTsNamedTupleElements from './rules/ts-named-tuple-elements.ts';
 import ruleMobxSyncAutorun from './rules/mobx-sync-autorun.ts';
+import ruleMobxSyncAction from './rules/mobx-sync-action.ts';
 
 const plugin: ESLint.Plugin = {
   meta: {
@@ -30,6 +31,7 @@ const plugin: ESLint.Plugin = {
     'max-parent-import-depth': ruleMaxParentImportDepth as unknown as Rule.RuleModule,
     'ts-named-tuple-elements': ruleTsNamedTupleElements as unknown as Rule.RuleModule,
     'mobx-sync-autorun': ruleMobxSyncAutorun as unknown as Rule.RuleModule,
+    'mobx-sync-action': ruleMobxSyncAction as unknown as Rule.RuleModule,
   },
 };
 

@@ -10,21 +10,6 @@ Check next rules and options:
 @typescript-eslint/explicit-member-accessibility // default options?
 ```
 
-```ts
-      'no-restricted-syntax': [
-  'error',
-  {
-    selector: [
-      'MethodDefinition[value.async="true"] Decorator[expression.object.name="action"]',
-      'MethodDefinition[value.async="true"] Decorator[expression.name="action"]',
-      'PropertyDefinition[value.type="ArrowFunctionExpression"][value.async="true"] Decorator[expression.object.name="action"]',
-      'PropertyDefinition[value.type="ArrowFunctionExpression"][value.async="true"] Decorator[expression.name="action"]',
-    ].join(', '),
-    message: '@action must be synchronous function',
-  },
-],
-```
-
 add `satisfies Linter.Config[];` in example?
 
 TODOs from notes
