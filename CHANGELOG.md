@@ -2,6 +2,10 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.5.0] - 2026-01-16
+- add rule `@dartess/mobx-sync-action`
+- add `@dartess/mobx-sync-action` to `mobx` config
+
 ## [0.4.0] - 2026-01-15
 - add rule `@dartess/mobx-sync-autorun`
 - add `@dartess/mobx-sync-autorun` to `mobx` config
