@@ -171,7 +171,7 @@ Each rule has emojis denoting:
 | [strict-observable-components-declaration](docs/rules/strict-observable-components-declaration.md)         | Wrapping components in `observer` must comply with the regulations.           | ✅ |    |    |
 | [require-observer](docs/rules/require-observer.md)                                                         | Components using the stores must be wrapped in an `observer`                  | ✅ | 🔧 |    |
 | [mobx-sync-autorun](docs/rules/mobx-sync-autorun.md)                                                       | Enforce synchronous autorun callback                                          | ✅ |    |    |
-| [mobx-sync-action](docs/rules/mobx-sync-action.md)                                                         | Enforce synchronous actions                                                   |   |    |    |
+| [mobx-sync-action](docs/rules/mobx-sync-action.md)                                                         | Enforce synchronous actions                                                   | ✅ |    |    |
 
 ## Code Reuse Policy
 
