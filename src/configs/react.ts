@@ -1,13 +1,8 @@
-// This file contains code from the `eslint-config-airbnb` project
-// Original author: Jake Teton-Landis (https://twitter.com/@jitl)
-// License: MIT (see LICENSE-eslint-config-airbnb.md file)
-
 import type { TSESLint } from '@typescript-eslint/utils';
-import reactPlugin from 'eslint-plugin-react';
+import eslintReact from '@eslint-react/eslint-plugin';
+import stylisticPlugin from '@stylistic/eslint-plugin';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
-
-import vendorRulesReact from './vendor-rules/react.ts';
 
 const config: TSESLint.FlatConfig.ConfigArray = [
   {
@@ -16,27 +11,19 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     plugins: {
       'react-hooks': reactHooksPlugin,
       'jsx-a11y': jsxA11yPlugin,
+      '@stylistic': stylisticPlugin,
     },
 
     settings: {
-      react: {
+      'react-x': {
         version: 'detect',
       },
     },
   },
 
+  eslintReact.configs['strict-type-checked'],
+
   reactHooksPlugin.configs.flat.recommended,
-
-  {
-    name: 'react/recommended', // missed name, @see e.g. https://github.com/jsx-eslint/eslint-plugin-react/pull/3882
-    ...reactPlugin.configs.flat.recommended,
-  },
-
-  {
-    name: '@dartess/eslint-plugin-react/jsx-runtime',
-    files: ['**/*.{jsx,tsx}'],
-    ...reactPlugin.configs.flat['jsx-runtime'],
-  },
 
   {
     name: '@dartess/react',
@@ -63,14 +50,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     },
 
     rules: {
-      ...vendorRulesReact,
-
-      // too hard for fixing, TODO maybe try later?
-      'react/jsx-props-no-spreading': 'off',
-
       // TODO: try to enable this rules later (if needed)
-      'react/require-default-props': 'off',
-      'react/no-unstable-nested-components': 'off',
       'jsx-a11y/click-events-have-key-events': 'off',
       'jsx-a11y/anchor-is-valid': 'off',
       'jsx-a11y/interactive-supports-focus': 'off',
@@ -81,13 +61,32 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'jsx-a11y/no-noninteractive-element-interactions': 'off', // TODO enable later
       'jsx-a11y/label-has-associated-control': 'off', // TODO enable later but with `assert`=`either`
 
-      // Append 'tsx' to Airbnb 'react/jsx-filename-extension' rule
-      // Original: ['.jsx']
-      'react/jsx-filename-extension': ['error', { extensions: ['.jsx', '.tsx'] }],
+      '@eslint-react/naming-convention/filename': 'error', // enforce corrent filename
 
-      // overrides
-      'react/jsx-no-duplicate-props': 'off', // checked by typescript
-      'react/jsx-no-undef': 'off', // checked by typescript
+      // disable some recommended rules
+      '@eslint-react/prefer-destructuring-assignment': 'off', // can break discriminated union types
+
+      // mark some recommended warns as errors
+      '@eslint-react/dom/no-missing-button-type': 'error',
+      '@eslint-react/naming-convention/use-state': 'error',
+      '@eslint-react/naming-convention/ref-name': 'error',
+      '@eslint-react/naming-convention/context-name': 'error',
+      '@eslint-react/dom/no-missing-iframe-sandbox': 'error',
+      '@eslint-react/dom/no-unsafe-iframe-sandbox': 'error',
+      '@eslint-react/jsx-no-comment-textnodes': 'error',
+      '@eslint-react/no-unstable-context-value': 'error',
+      '@eslint-react/dom/no-script-url': 'error',
+      '@eslint-react/dom/no-unsafe-target-blank': 'error',
+      '@eslint-react/no-useless-fragment': 'error',
+      '@eslint-react/dom/no-dangerously-set-innerhtml': 'error',
+      '@eslint-react/no-forward-ref': 'error',
+
+      // enable airbnb-style rules
+      '@eslint-react/jsx-shorthand-boolean': 'error',
+      '@eslint-react/jsx-shorthand-fragment': 'error',
+      '@eslint-react/naming-convention/component-name': 'error',
+      '@stylistic/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
+      '@stylistic/jsx-self-closing-comp': 'error',
     },
   },
 ];

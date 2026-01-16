@@ -49,4 +49,8 @@ mobx w/o hooks?
 
 https://www.eslint-react.xyz/docs/migration
 
-make constructor
+make constructor -> eslint-plugin-react-refresh
+
+react-hooks/exhaustive-deps should be error
+
+replace jsx-a11y with -x ?

@@ -2,6 +2,11 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.6.0] - 2026-01-17
+- replace legacy `eslint-plugin-react` with modern `@eslint-react/eslint-plugin`
+
+If you're using React: uninstall `eslint-plugin-react`, then install `@eslint-react/eslint-plugin` and `@stylistic/eslint-plugin`.
+
 ## [0.5.0] - 2026-01-16
 - add rule `@dartess/mobx-sync-action`
 - add `@dartess/mobx-sync-action` to `mobx` config

@@ -10,7 +10,7 @@ Also extends
 * `eslint-plugin-de-morgan` — `recommended`
 
 Also can extends (if it is applicable)
-* `eslint-plugin-react` — `recommended` & `jsx-runtime`
+* `@eslint-react/eslint-plugin` — `strict-type-checked`
 * `eslint-plugin-react-hooks` — `recommended`
 * `@next/eslint-plugin-next` — `recommended` & `core-web-vitals`
 * `eslint-config-next`
@@ -25,7 +25,7 @@ All of it pinched with extra configs, setups and extra rules. Just take it and u
 
 2. The package is intended for use only with the `flat` eslint config.
 
-3. _(for React users)_ The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
+3. _(for React users)_ The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) and React 19+.
 
 ## Installation
 
@@ -46,7 +46,10 @@ npm i -D eslint \
 Next, also install the packages that suit your needs.
 
 ```sh
-npm i -D eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-jsx-a11y
+npm i -D eslint-plugin-react-hooks \
+  eslint-plugin-jsx-a11y \
+  @eslint-react/eslint-plugin \
+  @stylistic/eslint-plugin
 ```
 ```sh
 npm i -D @next/eslint-plugin-next
