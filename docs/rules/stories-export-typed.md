@@ -1,4 +1,4 @@
-# Makes stories typing mandatory
+# Makes stories typing mandatory (stories-export-typed)
 
 Forces typing of exported stories.
 

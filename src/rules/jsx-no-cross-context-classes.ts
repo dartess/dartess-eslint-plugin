@@ -13,7 +13,7 @@ type Options = [
 type MessageIds = 'avoidMix' | 'avoidRenaming';
 
 export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
-  name: 'prevent-mixing-external-and-internal-classes',
+  name: 'jsx-no-cross-context-classes',
   defaultOptions: [{}],
   meta: {
     type: 'suggestion',

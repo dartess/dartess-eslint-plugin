@@ -1,4 +1,4 @@
-# Enforce synchronous actions
+# Enforce synchronous actions (mobx-sync-action)
 
 Mobx methods marked as `@action` must be synchronous: https://mobx.js.org/actions.html#asynchronous-actions
 

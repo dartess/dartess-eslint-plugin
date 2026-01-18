@@ -4,8 +4,7 @@
  */
 
 import rule from '../../src/rules/stories-export-meta.ts';
-
-import { makeRuleTester } from './utils/makeRuleTester.ts';
+import { makeRuleTester } from '../utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester({ parser: 'ts' });
 ruleTester.run('stories-export-meta', rule, {

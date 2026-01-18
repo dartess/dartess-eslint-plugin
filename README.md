@@ -158,23 +158,23 @@ Each rule has emojis denoting:
 - 🔧 if some problems reported by the rule are automatically fixable by the `--fix` [command line](https://eslint.org/docs/user-guide/command-line-interface#fixing-problems) option
 - 💡 if some problems reported by the rule are manually fixable by editor [suggestions](https://eslint.org/docs/developer-guide/working-with-rules#providing-suggestions)
 
-| Name                                                                                                       | Description                                                                   | ✅ | 🔧 | 💡 |
-|:-----------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|:--|:---|:---|
-| **imports**                                                                                                | _config: recommended_                                                         |   |    |    |
-| [max-parent-import-depth](docs/rules/max-parent-import-depth.md)                                           | Limit relative imports to a maximum parent depth.                             | ✅ |    |    |
-| **TypeScript**                                                                                             | _config: recommended_                                                         |   |    |    |
-| [ts-named-tuple-elements](docs/rules/ts-named-tuple-elements.md)                                           | Enforce (or forbid) named tuple elements                                      | ✅ |    |    |
-| **React**                                                                                                  | _config: react_                                                               |   |    |    |
-| [jsx-no-text-as-child](docs/rules/jsx-text-as-child.md)                                                    | JSX elements should not have text without translation                         |   |    |    |
-| [prevent-mixing-external-and-internal-classes](docs/rules/prevent-mixing-external-and-internal-classes.md) | Prevent mixing of outer and inner classes to avoid dependency on style order. |   |    |    |
-| **Storybook**                                                                                              | _config: storybook_                                                           |   |    |    |
-| [stories-export-meta](docs/rules/stories-export-meta.md)                                                   | Storybook's Meta should be typed                                              | ✅ |    |    |
-| [stories-export-typed](docs/rules/stories-export-typed.md)                                                 | Storybook's Stories should be typed                                           | ✅ |    |    |
-| **MobX**                                                                                                   | _config: mobx_                                                                |   |    |    |
-| [strict-observable-components-declaration](docs/rules/strict-observable-components-declaration.md)         | Wrapping components in `observer` must comply with the regulations.           | ✅ |    |    |
-| [require-observer](docs/rules/require-observer.md)                                                         | Components using the stores must be wrapped in an `observer`                  | ✅ | 🔧 |    |
-| [mobx-sync-autorun](docs/rules/mobx-sync-autorun.md)                                                       | Enforce synchronous autorun callback                                          | ✅ |    |    |
-| [mobx-sync-action](docs/rules/mobx-sync-action.md)                                                         | Enforce synchronous actions                                                   | ✅ |    |    |
+| Name                                                                                                         | Description                                                                   | ✅ | 🔧 | 💡 |
+|:-------------------------------------------------------------------------------------------------------------|:------------------------------------------------------------------------------|:--|:---|:---|
+| **imports**                                                                                                  | _config: recommended_                                                         |   |    |    |
+| [imports-max-parent-depth](docs/rules/imports-max-parent-depth.md)                                           | Limit relative imports to a maximum parent depth.                             | ✅ |    |    |
+| **TypeScript**                                                                                               | _config: recommended_                                                         |   |    |    |
+| [ts-named-tuple-elements](docs/rules/ts-named-tuple-elements.md)                                             | Enforce (or forbid) named tuple elements                                      | ✅ |    |    |
+| **React**                                                                                                    | _config: react_                                                               |   |    |    |
+| [jsx-no-text-as-child](docs/rules/jsx-no-text-as-child.md)                                                   | JSX elements should not have text without translation                         |   |    |    |
+| [jsx-no-cross-context-classes](docs/rules/jsx-no-cross-context-classes.md)                                   | Prevent mixing of outer and inner classes to avoid dependency on style order. |   |    |    |
+| **Storybook**                                                                                                | _config: storybook_                                                           |   |    |    |
+| [stories-export-meta](docs/rules/stories-export-meta.md)                                                     | Storybook's Meta should be typed                                              | ✅ |    |    |
+| [stories-export-typed](docs/rules/stories-export-typed.md)                                                   | Storybook's Stories should be typed                                           | ✅ |    |    |
+| **MobX**                                                                                                     | _config: mobx_                                                                |   |    |    |
+| [mobx-strict-observable-components-declaration](docs/rules/mobx-strict-observable-components-declaration.md) | Wrapping components in `observer` must comply with the regulations.           | ✅ |    |    |
+| [mobx-require-observer](docs/rules/mobx-require-observer.md)                                                 | Components using the stores must be wrapped in an `observer`                  | ✅ | 🔧 |    |
+| [mobx-sync-autorun](docs/rules/mobx-sync-autorun.md)                                                         | Enforce synchronous autorun callback                                          | ✅ |    |    |
+| [mobx-sync-action](docs/rules/mobx-sync-action.md)                                                           | Enforce synchronous actions                                                   | ✅ |    |    |
 
 ## Code Reuse Policy
 

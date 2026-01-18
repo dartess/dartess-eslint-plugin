@@ -1,4 +1,4 @@
-# Enforce synchronous autorun callback
+# Enforce synchronous autorun callback (mobx-sync-autorun)
 
 Mobx `autorun` function must accept only synchronous `effect` callback.
 This follows from the rules from official documentation, https://mobx.js.org/reactions.html#rules #2:  

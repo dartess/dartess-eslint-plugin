@@ -4,8 +4,7 @@
  */
 
 import rule from '../../src/rules/ts-named-tuple-elements.ts';
-
-import { makeRuleTester } from './utils/makeRuleTester.ts';
+import { makeRuleTester } from '../utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester();
 ruleTester.run('ts-named-tuple-elements', rule, {

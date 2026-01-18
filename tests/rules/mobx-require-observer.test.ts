@@ -1,6 +1,5 @@
-import rule from '../../src/rules/require-observer.ts';
-
-import { makeRuleTester } from './utils/makeRuleTester.ts';
+import rule from '../../src/rules/mobx-require-observer.ts';
+import { makeRuleTester } from '../utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester({
   jsx: true,
@@ -9,7 +8,7 @@ const ruleTester = makeRuleTester({
   },
 });
 
-ruleTester.run('require-observer', rule, {
+ruleTester.run('mobx-require-observer', rule, {
   valid: [
     {
       code: `

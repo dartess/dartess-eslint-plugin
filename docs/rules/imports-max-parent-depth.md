@@ -1,4 +1,4 @@
-# Disallow relative imports going up more than a specified number of parent directories (max-parent-import-depth)
+# Disallow relative imports going up more than a specified number of parent directories (imports-max-parent-depth)
 
 This rule limits the number of parent directory (../) levels allowed in import and export statements to enforce a flatter and more maintainable project structure.
 

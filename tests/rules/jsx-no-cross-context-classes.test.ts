@@ -3,12 +3,11 @@
  * @author Sergey Kozlov
  */
 
-import rule from '../../src/rules/prevent-mixing-external-and-internal-classes.ts';
-
-import { makeRuleTester } from './utils/makeRuleTester.ts';
+import rule from '../../src/rules/jsx-no-cross-context-classes.ts';
+import { makeRuleTester } from '../utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester();
-ruleTester.run('prevent-mixing-external-and-internal-classes', rule, {
+ruleTester.run('jsx-no-cross-context-classes', rule, {
   valid: [
     {
       code: 'cn(className, anotherClassName)',

@@ -106,7 +106,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'unicorn/no-useless-undefined': 'error',
       'unicorn/prefer-node-protocol': 'error',
 
-      '@dartess/max-parent-import-depth': 'error',
+      '@dartess/imports-max-parent-depth': 'error',
 
       'import-x/order': [
         'error',

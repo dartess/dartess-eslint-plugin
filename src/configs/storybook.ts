@@ -15,7 +15,7 @@ const config: Array<TSESLint.FlatConfig.Config> = [
       '@dartess/stories-export-meta': 'error', // TODO can be replaced with native storybook/meta-satisfies-type ?
       '@dartess/stories-export-typed': 'error',
       '@typescript-eslint/no-explicit-any': 'off', // can be hard for typing in stories
-      '@dartess/jsx-text-as-child': 'off', // not necessary in stories
+      '@dartess/jsx-no-text-as-child': 'off', // not necessary in stories
     },
   },
 ];

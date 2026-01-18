@@ -4,8 +4,7 @@
  */
 
 import rule from '../../src/rules/mobx-sync-action.ts';
-
-import { makeRuleTester } from './utils/makeRuleTester.ts';
+import { makeRuleTester } from '../utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester();
 ruleTester.run('mobx-sync-action', rule, {

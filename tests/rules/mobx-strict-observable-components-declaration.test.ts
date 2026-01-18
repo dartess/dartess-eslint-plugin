@@ -3,12 +3,11 @@
  * @author Sergey Kozlov
  */
 
-import rule from '../../src/rules/strict-observable-components-declaration.ts';
-
-import { makeRuleTester } from './utils/makeRuleTester.ts';
+import rule from '../../src/rules/mobx-strict-observable-components-declaration.ts';
+import { makeRuleTester } from '../utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester();
-ruleTester.run('strict-observable-components-declaration', rule, {
+ruleTester.run('mobx-strict-observable-components-declaration', rule, {
   valid: [
     'const Component = observer(function Component() {})',
     {

@@ -1,4 +1,4 @@
-# Wrapping components in `observer` must comply with the regulations (strict-observable-components-declaration)
+# Wrapping components in `observer` must comply with the regulations (mobx-strict-observable-components-declaration)
 
 For more convenient work and debugging, several factors must be agreed upon:
 the component that is passed to the observer must have the same name as
@@ -44,7 +44,7 @@ const Component = observer(function Component() {})
 
 ```json
 {
-  "@dartess/strict-observable-components-declaration": ["error", {"ignoreObserverArg": ["forwardRef"]}]
+  "@dartess/mobx-strict-observable-components-declaration": ["error", {"ignoreObserverArg": ["forwardRef"]}]
 }
 ```
 
@@ -52,6 +52,6 @@ const Component = observer(function Component() {})
 
 ```json
 {
-  "@dartess/strict-observable-components-declaration": ["error", {"allowedHocs": ["someHocName"]}]
+  "@dartess/mobx-strict-observable-components-declaration": ["error", {"allowedHocs": ["someHocName"]}]
 }
 ```

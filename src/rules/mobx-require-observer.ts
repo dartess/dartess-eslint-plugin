@@ -26,7 +26,7 @@ function isCustomHook(fn: TSESTree.Node): boolean {
 }
 
 export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
-  name: 'require-observer',
+  name: 'mobx-require-observer',
   meta: {
     type: 'problem',
     docs: {

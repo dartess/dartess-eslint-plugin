@@ -1,12 +1,11 @@
-import rule from '../../src/rules/max-parent-import-depth.ts';
-
-import { makeRuleTester } from './utils/makeRuleTester.ts';
+import rule from '../../src/rules/imports-max-parent-depth.ts';
+import { makeRuleTester } from '../utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester({
   jsx: true,
 });
 
-ruleTester.run('max-parent-import-depth', rule, {
+ruleTester.run('imports-max-parent-depth', rule, {
   valid: [
     {
       code: "import a from './local';",

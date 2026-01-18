@@ -2,6 +2,17 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.7.0] - 2026-01-18
+- rename some rules for more clear naming and consistency:
+
+* `jsx-text-as-child` -> `jsx-no-text-as-child`
+* `prevent-mixing-external-and-internal-classes` -> `jsx-no-cross-context-classes`
+* `max-parent-import-depth` -> `imports-max-parent-depth`
+* `strict-observable-components-declaration` -> `mobx-strict-observable-components-declaration`
+* `require-observer` -> `mobx-require-observer`
+
+Please, rename rules in your config, if you're using them directly
+
 ## [0.6.0] - 2026-01-17
 - replace legacy `eslint-plugin-react` with modern `@eslint-react/eslint-plugin`
 

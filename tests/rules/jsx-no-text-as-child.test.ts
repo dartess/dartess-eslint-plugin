@@ -3,12 +3,11 @@
  * @author Sergey Kozlov
  */
 
-import rule from '../../src/rules/jsx-text-as-child.ts';
-
-import { makeRuleTester } from './utils/makeRuleTester.ts';
+import rule from '../../src/rules/jsx-no-text-as-child.ts';
+import { makeRuleTester } from '../utils/makeRuleTester.ts';
 
 const ruleTester = makeRuleTester({ jsx: true });
-ruleTester.run('jsx-text-as-child', rule, {
+ruleTester.run('jsx-no-text-as-child', rule, {
   valid: [
     '<div>{t(some)}</div>',
     '<div/>',

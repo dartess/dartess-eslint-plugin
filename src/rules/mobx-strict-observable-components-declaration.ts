@@ -20,7 +20,7 @@ type MessageIds =
   | 'componentIsNamedAsObserved';
 
 export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
-  name: 'strict-observable-components-declaration',
+  name: 'mobx-strict-observable-components-declaration',
   defaultOptions: [{}],
   meta: {
     type: 'suggestion',

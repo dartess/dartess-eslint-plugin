@@ -14,8 +14,6 @@ add `satisfies Linter.Config[];` in example?
 
 TODOs from notes
 
-[eslint-react.xyz] check unused rules
-
 action.bound 
 
 @flow
@@ -39,12 +37,6 @@ rules: {
 
 browserslist: Chrome 93+ and Safari 15.4+ and Firefox 92+
 
-rename rules by section
-
-check otions / setups
-
-try to use next plugins directly
-
 mobx w/o hooks?
 
 https://www.eslint-react.xyz/docs/migration
@@ -52,5 +44,7 @@ https://www.eslint-react.xyz/docs/migration
 make constructor -> eslint-plugin-react-refresh
 
 react-hooks/exhaustive-deps should be error
+
+revert jsx-a11y config removing
 
 replace jsx-a11y with -x ?

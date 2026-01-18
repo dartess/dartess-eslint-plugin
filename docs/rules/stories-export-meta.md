@@ -1,4 +1,4 @@
-# Makes meta-information typing mandatory
+# Makes meta-information typing mandatory (stories-export-meta)
 
 Storybook stories should contain meta information. Thanks to this rule, meta-information will always be typed.
 

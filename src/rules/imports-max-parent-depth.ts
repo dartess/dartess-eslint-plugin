@@ -10,7 +10,7 @@ type Options = [];
 type MessageIds = 'tooDeep';
 
 export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
-  name: 'max-parent-import-depth',
+  name: 'imports-max-parent-depth',
   defaultOptions: [],
   meta: {
     type: 'problem',

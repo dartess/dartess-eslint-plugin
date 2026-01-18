@@ -1,4 +1,4 @@
-# Prevent mixing of outer and inner classes to avoid dependency on style order (prevent-mixing-external-and-internal-classes)
+# Prevent mixing of outer and inner classes to avoid dependency on style order (jsx-no-cross-context-classes)
 
 Avoid mixing outer and inner classes on the same element. The import order of the style is not guaranteed,
 so the order in which the style is applied is also not guaranteed.

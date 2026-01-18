@@ -1,4 +1,4 @@
-# Require wrap components in observer if needed (require-observer)
+# Require wrap components in observer if needed (mobx-require-observer)
 
 This rule requires that React components using specified store hooks are wrapped in `observer()` from `mobx-react-lite`.
 

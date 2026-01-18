@@ -21,7 +21,7 @@ type Options = [
 type MessageIds = 'textAsChild' | 'disallowedSymbols';
 
 export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
-  name: 'jsx-text-as-child',
+  name: 'jsx-no-text-as-child',
   defaultOptions: [{}],
   meta: {
     type: 'problem',
