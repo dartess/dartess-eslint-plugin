@@ -2,7 +2,7 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
-## [0.7.0] - 2026-01-18
+## [0.7.1] - 2026-01-18
 - rename some rules for more clear naming and consistency:
 
 * `jsx-text-as-child` -> `jsx-no-text-as-child`
