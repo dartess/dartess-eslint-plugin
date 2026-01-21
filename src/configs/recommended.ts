@@ -24,6 +24,7 @@ import vendorRulesImports from './vendor-rules/imports.ts';
 import vendorRulesStrict from './vendor-rules/strict.ts';
 import vendorRulesTypescriptDisablings from './vendor-rules/typescript-disablings.ts';
 import vendorRulesTypescript from './vendor-rules/typescript.ts';
+import { convertWarnsToErrorsIfNeeded } from './utils/convertWarnsToErrorsIfNeeded.ts';
 
 const NO_MIDDLE_ABBRS = '(?!.*[A-Z]{3})';
 const NO_END_ABBRS = '(?!.*[A-Z]{2}$)';
@@ -45,18 +46,18 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
   {
     name: '@eslint/js/recommended',
-    ...pluginJs.configs.recommended,
+    ...convertWarnsToErrorsIfNeeded(pluginJs.configs.recommended),
   },
 
-  ...tsEslint.configs.strictTypeChecked,
-  ...tsEslint.configs.stylisticTypeChecked,
+  ...convertWarnsToErrorsIfNeeded(tsEslint.configs.strictTypeChecked),
+  ...convertWarnsToErrorsIfNeeded(tsEslint.configs.stylisticTypeChecked),
 
-  eslintPluginImportX.flatConfigs.recommended,
-  eslintPluginImportX.flatConfigs.typescript,
+  convertWarnsToErrorsIfNeeded(eslintPluginImportX.flatConfigs.recommended),
+  convertWarnsToErrorsIfNeeded(eslintPluginImportX.flatConfigs.typescript),
 
-  eslintCommentsPlugin.recommended,
+  convertWarnsToErrorsIfNeeded(eslintCommentsPlugin.recommended),
 
-  eslintPluginDeMorgan.configs.recommended,
+  convertWarnsToErrorsIfNeeded(eslintPluginDeMorgan.configs.recommended),
 
   {
     name: '@dartess/recommended',
@@ -267,7 +268,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
   {
     files: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx'],
-    ...tsEslint.configs.disableTypeChecked,
+    ...convertWarnsToErrorsIfNeeded(tsEslint.configs.disableTypeChecked),
   },
 
   {

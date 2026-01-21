@@ -1,12 +1,14 @@
 import type { TSESLint } from '@typescript-eslint/utils';
 import pluginStorybook from 'eslint-plugin-storybook';
 
+import { convertWarnsToErrorsIfNeeded } from './utils/convertWarnsToErrorsIfNeeded.ts';
+
 const config: TSESLint.FlatConfig.ConfigArray = [
   {
     ignores: ['!.storybook'],
   },
-  ...pluginStorybook.configs['flat/recommended'],
-  ...pluginStorybook.configs['flat/csf-strict'],
+  ...convertWarnsToErrorsIfNeeded(pluginStorybook.configs['flat/recommended']),
+  ...convertWarnsToErrorsIfNeeded(pluginStorybook.configs['flat/csf-strict']),
   {
     name: '@dartess/storybook',
     files: ['**/*.stories.tsx'],

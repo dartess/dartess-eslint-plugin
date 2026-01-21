@@ -2,6 +2,10 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.8.0] - 2026-01-22
+
+- All recommended warnings are converted to errors because warnings are useless.
+
 ## [0.7.1] - 2026-01-18
 - rename some rules for more clear naming and consistency:
 

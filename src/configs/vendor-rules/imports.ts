@@ -21,10 +21,6 @@ const rules = {
 
   // Helpful warnings:
 
-  // do not allow a default import name to match a named export
-  // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-named-as-default.md
-  'import-x/no-named-as-default': 'error',
-
   // Forbid the use of extraneous packages
   // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-extraneous-dependencies.md
   // paths are treated both as absolute paths, and relative to process.cwd()
@@ -73,10 +69,6 @@ const rules = {
   // disallow non-import statements appearing before import statements
   // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/first.md
   'import-x/first': 'error',
-
-  // disallow duplicate imports
-  // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/no-duplicates.md
-  'import-x/no-duplicates': 'error',
 
   // Ensure consistent use of file extension within the import path
   // https://github.com/import-js/eslint-plugin-import/blob/master/docs/rules/extensions.md

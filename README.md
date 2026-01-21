@@ -17,6 +17,8 @@ Also can extends (if it is applicable)
 * `eslint-plugin-mobx` — `recommended`
 * `eslint-plugin-storybook` — `recommended` & `csf-strict`
 
+_Note: all recommended warnings are converted to errors because warnings are useless._
+
 All of it pinched with extra configs, setups and extra rules. Just take it and use it!
 
 ### Notes

@@ -45,6 +45,12 @@ make constructor -> eslint-plugin-react-refresh
 
 react-hooks/exhaustive-deps should be error
 
-revert jsx-a11y config removing
+revert jsx-a11y airbnb config removing
 
 replace jsx-a11y with -x ?
+
+make styles as separated group
+
+eslint no comma operator
+
+react-hooks/set-state-in-effect vs @eslint-react/hooks-extra/no-direct-set-state-in-use-effect

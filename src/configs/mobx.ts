@@ -1,8 +1,10 @@
 import type { TSESLint } from '@typescript-eslint/utils';
 import pluginMobx from 'eslint-plugin-mobx';
 
+import { convertWarnsToErrorsIfNeeded } from './utils/convertWarnsToErrorsIfNeeded.ts';
+
 const config: TSESLint.FlatConfig.ConfigArray = [
-  pluginMobx.flatConfigs.recommended,
+  convertWarnsToErrorsIfNeeded(pluginMobx.flatConfigs.recommended),
 
   {
     name: '@dartess/mobx',

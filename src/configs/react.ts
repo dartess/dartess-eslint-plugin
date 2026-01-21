@@ -4,6 +4,8 @@ import stylisticPlugin from '@stylistic/eslint-plugin';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
 import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 
+import { convertWarnsToErrorsIfNeeded } from './utils/convertWarnsToErrorsIfNeeded.ts';
+
 const config: TSESLint.FlatConfig.ConfigArray = [
   {
     name: '@dartess/react-setup',
@@ -21,9 +23,9 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     },
   },
 
-  eslintReact.configs['strict-type-checked'],
+  convertWarnsToErrorsIfNeeded(eslintReact.configs['strict-type-checked']),
 
-  reactHooksPlugin.configs.flat.recommended,
+  convertWarnsToErrorsIfNeeded(reactHooksPlugin.configs.flat.recommended),
 
   {
     name: '@dartess/react',
@@ -65,21 +67,6 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
       // disable some recommended rules
       '@eslint-react/prefer-destructuring-assignment': 'off', // can break discriminated union types
-
-      // mark some recommended warns as errors
-      '@eslint-react/dom/no-missing-button-type': 'error',
-      '@eslint-react/naming-convention/use-state': 'error',
-      '@eslint-react/naming-convention/ref-name': 'error',
-      '@eslint-react/naming-convention/context-name': 'error',
-      '@eslint-react/dom/no-missing-iframe-sandbox': 'error',
-      '@eslint-react/dom/no-unsafe-iframe-sandbox': 'error',
-      '@eslint-react/jsx-no-comment-textnodes': 'error',
-      '@eslint-react/no-unstable-context-value': 'error',
-      '@eslint-react/dom/no-script-url': 'error',
-      '@eslint-react/dom/no-unsafe-target-blank': 'error',
-      '@eslint-react/no-useless-fragment': 'error',
-      '@eslint-react/dom/no-dangerously-set-innerhtml': 'error',
-      '@eslint-react/no-forward-ref': 'error',
 
       // enable airbnb-style rules
       '@eslint-react/jsx-shorthand-boolean': 'error',
