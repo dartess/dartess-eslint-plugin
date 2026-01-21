@@ -1,6 +1,6 @@
 import type { TSESLint } from '@typescript-eslint/utils';
 
-const config: Array<TSESLint.FlatConfig.Config> = [
+const config: TSESLint.FlatConfig.ConfigArray = [
   {
     name: '@dartess/recommended-post-format',
     rules: {

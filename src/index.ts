@@ -1,4 +1,4 @@
-import type { ESLint, Rule } from 'eslint';
+import type { Linter } from '@typescript-eslint/utils/ts-eslint';
 
 import packageJson from '../package.json' with { type: 'json' };
 
@@ -13,24 +13,23 @@ import ruleTsNamedTupleElements from './rules/ts-named-tuple-elements.ts';
 import ruleMobxSyncAutorun from './rules/mobx-sync-autorun.ts';
 import ruleMobxSyncAction from './rules/mobx-sync-action.ts';
 
-const plugin: ESLint.Plugin = {
+const plugin: Linter.Plugin = {
   meta: {
     name: packageJson.name,
     version: packageJson.version,
   },
   processors: {},
   rules: {
-    'imports-max-parent-depth': ruleImportsMaxParentDepth as unknown as Rule.RuleModule,
-    'jsx-no-cross-context-classes': ruleJsxNoCrossContextClasses as unknown as Rule.RuleModule,
-    'jsx-no-text-as-child': ruleJsxNoTextAsChild as unknown as Rule.RuleModule,
-    'mobx-strict-observable-components-declaration':
-      ruleMobxStrictObservableComponentsDeclaration as unknown as Rule.RuleModule,
-    'mobx-sync-action': ruleMobxSyncAction as unknown as Rule.RuleModule,
-    'mobx-sync-autorun': ruleMobxSyncAutorun as unknown as Rule.RuleModule,
-    'mobx-require-observer': ruleMobxRequireObserver as unknown as Rule.RuleModule,
-    'stories-export-typed': ruleStoriesExportTyped as unknown as Rule.RuleModule,
-    'stories-export-meta': ruleStoriesExportMeta as unknown as Rule.RuleModule,
-    'ts-named-tuple-elements': ruleTsNamedTupleElements as unknown as Rule.RuleModule,
+    'imports-max-parent-depth': ruleImportsMaxParentDepth,
+    'jsx-no-cross-context-classes': ruleJsxNoCrossContextClasses,
+    'jsx-no-text-as-child': ruleJsxNoTextAsChild,
+    'mobx-strict-observable-components-declaration': ruleMobxStrictObservableComponentsDeclaration,
+    'mobx-sync-action': ruleMobxSyncAction,
+    'mobx-sync-autorun': ruleMobxSyncAutorun,
+    'mobx-require-observer': ruleMobxRequireObserver,
+    'stories-export-typed': ruleStoriesExportTyped,
+    'stories-export-meta': ruleStoriesExportMeta,
+    'ts-named-tuple-elements': ruleTsNamedTupleElements,
   },
 };
 

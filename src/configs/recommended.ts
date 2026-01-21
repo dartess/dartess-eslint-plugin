@@ -11,7 +11,6 @@ import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comment
 // @ts-ignore: https://github.com/NullVoxPopuli/eslint-plugin-decorator-position/issues/778
 import eslintPluginDecoratorPosition from 'eslint-plugin-decorator-position';
 import eslintPluginDeMorgan from 'eslint-plugin-de-morgan';
-import type { Linter } from 'eslint';
 import type { TSESLint } from '@typescript-eslint/utils';
 
 import dartessPlugin from '../index.ts';
@@ -49,11 +48,11 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     ...pluginJs.configs.recommended,
   },
 
-  ...(tsEslint.configs.strictTypeChecked as Array<Linter.Config>),
-  ...(tsEslint.configs.stylisticTypeChecked as Array<Linter.Config>),
+  ...tsEslint.configs.strictTypeChecked,
+  ...tsEslint.configs.stylisticTypeChecked,
 
-  eslintPluginImportX.flatConfigs.recommended as Linter.Config,
-  eslintPluginImportX.flatConfigs.typescript as Linter.Config,
+  eslintPluginImportX.flatConfigs.recommended,
+  eslintPluginImportX.flatConfigs.typescript,
 
   eslintCommentsPlugin.recommended,
 
@@ -65,12 +64,11 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     plugins: {
       unicorn: eslintPluginUnicorn,
       '@dartess': dartessPlugin,
-
       'decorator-position': eslintPluginDecoratorPosition,
     },
 
     languageOptions: {
-      parser: tsEslint.parser as Linter.Parser,
+      parser: tsEslint.parser,
       globals: {
         ...globals.browser,
       },
@@ -269,7 +267,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
   {
     files: ['**/*.js', '**/*.mjs', '**/*.cjs', '**/*.jsx'],
-    ...(tsEslint.configs.disableTypeChecked as Linter.Config),
+    ...tsEslint.configs.disableTypeChecked,
   },
 
   {

@@ -1,9 +1,9 @@
-import type { Linter } from 'eslint';
+import type { TSESLint } from '@typescript-eslint/utils';
 import nextPlugin from '@next/eslint-plugin-next';
 
 import vendorRulesNextConfig from './vendor-rules/next-config.ts';
 
-const config: Array<Linter.Config> = [
+const config: TSESLint.FlatConfig.ConfigArray = [
   {
     name: '@dartess/nextjs',
 

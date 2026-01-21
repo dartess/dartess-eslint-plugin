@@ -1,7 +1,7 @@
-import type { Linter } from 'eslint';
+import type { TSESLint } from '@typescript-eslint/utils';
 import pluginMobx from 'eslint-plugin-mobx';
 
-const config: Array<Linter.Config> = [
+const config: TSESLint.FlatConfig.ConfigArray = [
   pluginMobx.flatConfigs.recommended,
 
   {
