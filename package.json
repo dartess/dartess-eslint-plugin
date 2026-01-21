@@ -1,7 +1,7 @@
 {
   "name": "@dartess/eslint-plugin",
   "type": "module",
-  "version": "0.7.1",
+  "version": "0.8.0",
   "description": "A set of rules and configs for various TypeScript projects",
   "keywords": [
     "eslint",
