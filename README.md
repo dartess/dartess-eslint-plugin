@@ -23,7 +23,7 @@ All of it pinched with extra configs, setups and extra rules. Just take it and u
 
 ### Notes
 
-1. The package is intended for use with TypeScript (it'll be useful for plain JS, but it hasn't been weel-tested).
+1. The package is intended for use with TypeScript (it'll be useful for plain JS, but it hasn't been well-tested).
 
 2. The package is intended for use only with the `flat` eslint config.
 
