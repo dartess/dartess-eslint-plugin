@@ -54,3 +54,5 @@ make styles as separated group
 eslint no comma operator
 
 react-hooks/set-state-in-effect vs @eslint-react/hooks-extra/no-direct-set-state-in-use-effect
+
+mobx-require-observer autofix with generics
