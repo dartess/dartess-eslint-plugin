@@ -2,6 +2,11 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.8.1] - 2026-01-24
+
+- fix `mobx-require-observer`: now it doesn't lose generics
+- fix `mobx-require-observer`: now it respects directives like `'use client'`
+
 ## [0.8.0] - 2026-01-22
 
 - All recommended warnings are converted to errors because warnings are useless.

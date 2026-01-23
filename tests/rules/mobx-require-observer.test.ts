@@ -12,9 +12,8 @@ ruleTester.run('mobx-require-observer', rule, {
   valid: [
     {
       code: `
-        import React from 'react';
         const Foo = () => {
-          const [count, setCount] = React.useState(0);
+          const [count, setCount] = useState(0);
           return <div>{count}</div>;
         };
       `,
@@ -41,16 +40,14 @@ ruleTester.run('mobx-require-observer', rule, {
   invalid: [
     {
       code: `
-import { useFeature } from 'features';
-export const Foo = () => {
+export function Foo() {
   useFeature();
   return <div/>;
-};
+}
       `,
       errors: [{ messageId: 'requireObserver', data: { hooks: 'useFeature' } }],
       output: `
 import { observer } from 'mobx-react-lite';
-import { useFeature } from 'features';
 export const Foo = observer(function Foo() {
   useFeature();
   return <div/>;
@@ -59,7 +56,40 @@ export const Foo = observer(function Foo() {
     },
     {
       code: `
-import { useStore } from 'store';
+'use client';
+export function Foo() {
+  useFeature();
+  return <div/>;
+}
+      `,
+      errors: [{ messageId: 'requireObserver', data: { hooks: 'useFeature' } }],
+      output: `
+'use client';
+import { observer } from 'mobx-react-lite';
+export const Foo = observer(function Foo() {
+  useFeature();
+  return <div/>;
+});
+      `,
+    },
+    {
+      code: `
+export const Foo = () => {
+  useFeature();
+  return <div/>;
+};
+      `,
+      errors: [{ messageId: 'requireObserver', data: { hooks: 'useFeature' } }],
+      output: `
+import { observer } from 'mobx-react-lite';
+export const Foo = observer(function Foo() {
+  useFeature();
+  return <div/>;
+});
+      `,
+    },
+    {
+      code: `
 const Bar = () => {
   useStore();
   return <span/>;
@@ -68,7 +98,6 @@ const Bar = () => {
       errors: [{ messageId: 'requireObserver', data: { hooks: 'useStore' } }],
       output: `
 import { observer } from 'mobx-react-lite';
-import { useStore } from 'store';
 const Bar = observer(function Bar() {
   useStore();
   return <span/>;
@@ -77,22 +106,66 @@ const Bar = observer(function Bar() {
     },
     {
       code: `
-import { useFeature } from 'features';
-import { useStore } from 'store';
 export default () => {
   useFeature();
   useStore();
   return <div/>;
 };
       `,
-      errors: [{ messageId: 'requireObserver', data: { hooks: 'useFeature, useStore' } }],
       output: `
 import { observer } from 'mobx-react-lite';
-import { useFeature } from 'features';
-import { useStore } from 'store';
 export default observer(function() {
   useFeature();
   useStore();
+  return <div/>;
+});
+      `,
+      errors: [{ messageId: 'requireObserver', data: { hooks: 'useFeature, useStore' } }],
+    },
+    {
+      code: `
+export function Foo<T extends string>() {
+  useFeature();
+  return <div/>;
+}
+      `,
+      errors: [{ messageId: 'requireObserver', data: { hooks: 'useFeature' } }],
+      output: `
+import { observer } from 'mobx-react-lite';
+export const Foo = observer(function Foo<T extends string>() {
+  useFeature();
+  return <div/>;
+});
+      `,
+    },
+    {
+      code: `
+export const Foo = <T extends string>() => {
+  useFeature();
+  return <div/>;
+};
+      `,
+      errors: [{ messageId: 'requireObserver', data: { hooks: 'useFeature' } }],
+      output: `
+import { observer } from 'mobx-react-lite';
+export const Foo = observer(function Foo<T extends string>() {
+  useFeature();
+  return <div/>;
+});
+      `,
+    },
+    {
+      code: `
+export function Foo<TFoo extends string, TBar extends number>() {
+  useFeature();
+  return <div/>;
+}
+      `,
+      errors: [{ messageId: 'requireObserver', data: { hooks: 'useFeature' } }],
+      output: `
+import { observer } from 'mobx-react-lite';
+export const Foo = observer(function Foo<TFoo extends string, TBar extends number>() {
+  useFeature();
   return <div/>;
 });
       `,

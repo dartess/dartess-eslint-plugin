@@ -51,8 +51,8 @@ replace jsx-a11y with -x ?
 
 make styles as separated group
 
+replace throwing errors with Program(node) { context.report({ node, message }) };
+
 eslint no comma operator
 
 react-hooks/set-state-in-effect vs @eslint-react/hooks-extra/no-direct-set-state-in-use-effect
-
-mobx-require-observer autofix with generics

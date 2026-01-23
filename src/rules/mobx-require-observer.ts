@@ -1,4 +1,9 @@
-import { ESLintUtils, type TSESTree, AST_NODE_TYPES } from '@typescript-eslint/utils';
+import {
+  ESLintUtils,
+  AST_NODE_TYPES,
+  type TSESTree,
+  type TSESLint,
+} from '@typescript-eslint/utils';
 
 /**
  * @fileoverview Require that components using specified store hooks are wrapped in observer().
@@ -23,6 +28,42 @@ function isCustomHook(fn: TSESTree.Node): boolean {
     return true;
   }
   return false;
+}
+
+function getTypeParamsText(
+  fn: TSESTree.FunctionDeclaration | TSESTree.FunctionExpression | TSESTree.ArrowFunctionExpression,
+  sourceCode: TSESLint.SourceCode,
+) {
+  return fn.typeParameters ? sourceCode.getText(fn.typeParameters) : '';
+}
+
+function getObserverImportAnchor(program: TSESTree.Program): {
+  anchor: TSESTree.Node;
+  method: 'insertTextBefore' | 'insertTextAfter';
+} {
+  const firstImport = program.body.find(n => n.type === AST_NODE_TYPES.ImportDeclaration);
+  if (firstImport) {
+    return { anchor: firstImport, method: 'insertTextBefore' };
+  }
+
+  let lastPrologue: TSESTree.Node | null = null;
+  for (const node of program.body) {
+    if (
+      node.type === AST_NODE_TYPES.ExpressionStatement &&
+      node.expression.type === AST_NODE_TYPES.Literal &&
+      typeof node.expression.value === 'string'
+    ) {
+      lastPrologue = node;
+      continue;
+    }
+    break;
+  }
+
+  if (lastPrologue) {
+    return { anchor: lastPrologue, method: 'insertTextAfter' };
+  }
+
+  return { anchor: program.body[0], method: 'insertTextBefore' };
 }
 
 export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
@@ -137,10 +178,13 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
             fix(fixer) {
               const fixes = [];
               if (!hasObserverImport) {
+                const { anchor, method } = getObserverImportAnchor(program);
+                const nBefore = method === 'insertTextAfter' ? '\n' : '';
+                const nAfter = method === 'insertTextBefore' ? '\n' : '';
                 fixes.push(
-                  fixer.insertTextBefore(
-                    program.body[0],
-                    "import { observer } from 'mobx-react-lite';\n",
+                  fixer[method](
+                    anchor,
+                    `${nBefore}import { observer } from 'mobx-react-lite';${nAfter}`,
                   ),
                 );
               }
@@ -168,7 +212,8 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
                 const id = (fn.parent as TSESTree.VariableDeclarator).id as TSESTree.Identifier;
                 const { name } = id;
                 const isExport = exportDecl?.type === AST_NODE_TYPES.ExportNamedDeclaration;
-                const funcExpression = `function ${name}(${paramsText}) ${bodyText}`;
+                const typeParamsText = getTypeParamsText(fn, sourceCode);
+                const funcExpression = `function ${name}${typeParamsText}(${paramsText}) ${bodyText}`;
                 const replacementNodeText = `${isExport ? 'export ' : ''}const ${name} = observer(${funcExpression});`;
                 fixes.push(fixer.replaceText(exportDecl || varDecl, replacementNodeText));
               } else {

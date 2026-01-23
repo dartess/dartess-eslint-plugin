@@ -6,6 +6,7 @@ import eslintPluginPrettierRecommended from 'eslint-plugin-prettier/recommended'
 import eslintConfigPrettier from 'eslint-config-prettier';
 
 import dartessEslintPluginRecommended from './src/configs/recommended.ts';
+import dartessEslintPluginPostFormat from './src/configs/post-format.ts';
 
 const config: TSESLint.FlatConfig.ConfigArray = [
   {
@@ -35,6 +36,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     },
   },
   eslintConfigPrettier,
+  ...dartessEslintPluginPostFormat,
   {
     rules: {
       'import-x/no-nodejs-modules': 'off', // it's node.js project
