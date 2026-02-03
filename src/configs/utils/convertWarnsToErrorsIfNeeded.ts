@@ -7,8 +7,10 @@ function updateRuleLevel(ruleLevel: FlatConfig.RuleLevel): FlatConfig.RuleLevel 
   switch (ruleLevel) {
     case 1:
       return 2;
+
     case 'warn':
       return 'error';
+
     default:
       return ruleLevel;
   }

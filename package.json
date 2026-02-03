@@ -53,6 +53,7 @@
     "@stylistic/eslint-plugin": "^5.7.0",
     "eslint": "^9.0.0",
     "eslint-import-resolver-typescript": "^4.0.0",
+    "eslint-plugin-complete": "^1.2.0",
     "eslint-plugin-de-morgan": "^2.0.0",
     "eslint-plugin-decorator-position": "^6.0.0",
     "eslint-plugin-import-x": "^4.1.0",

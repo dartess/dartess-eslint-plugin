@@ -11,6 +11,7 @@ import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comment
 // @ts-ignore: https://github.com/NullVoxPopuli/eslint-plugin-decorator-position/issues/778
 import eslintPluginDecoratorPosition from 'eslint-plugin-decorator-position';
 import eslintPluginDeMorgan from 'eslint-plugin-de-morgan';
+import esLintPluginComplete from 'eslint-plugin-complete';
 import type { TSESLint } from '@typescript-eslint/utils';
 
 import dartessPlugin from '../index.ts';
@@ -58,6 +59,8 @@ const config: TSESLint.FlatConfig.ConfigArray = [
   convertWarnsToErrorsIfNeeded(eslintCommentsPlugin.recommended),
 
   convertWarnsToErrorsIfNeeded(eslintPluginDeMorgan.configs.recommended),
+
+  ...convertWarnsToErrorsIfNeeded(esLintPluginComplete.configs.recommended),
 
   {
     name: '@dartess/recommended',
@@ -263,6 +266,13 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
       // require names for tuple elements
       '@dartess/ts-named-tuple-elements': 'error',
+
+      // disable some recommended rules
+      'complete/prefer-readonly-parameter-types': 'off', // can be flase-positive for Built-in methods
+      'complete/no-mutable-return': 'off', // can be hamful
+      'complete/strict-undefined-functions': 'off', // prefer unicorn/no-useless-undefined
+      'complete/require-break': 'off', // can be false-positive with TS7027
+      'complete/no-void-return-type': 'off', // conflict with @typescript-eslint/explicit-module-boundary-types
     },
   },
 

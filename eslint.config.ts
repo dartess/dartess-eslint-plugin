@@ -44,6 +44,10 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'func-names': 'off', // can be bad for RuleListener
       'no-continue': 'off', // OK for this package
       '@typescript-eslint/naming-convention': 'off', // because of required naming
+      'complete/complete-sentences-jsdoc': 'off',
+      'complete/complete-sentences-line-comments': 'off',
+      'complete/format-line-comments': 'off',
+      'complete/format-jsdoc-comments': 'off',
     },
   },
 

@@ -50,10 +50,6 @@ const rules = {
   // disallow nested ternary expressions
   'no-nested-ternary': 'error',
 
-  // disallow use of unary operators, ++ and --
-  // https://eslint.org/docs/rules/no-plusplus
-  'no-plusplus': 'error',
-
   // disallow dangling underscores in identifiers
   // https://eslint.org/docs/rules/no-underscore-dangle
   'no-underscore-dangle': [

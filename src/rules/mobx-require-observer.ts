@@ -176,7 +176,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
             messageId: 'requireObserver',
             data: { hooks: Array.from(used).join(', ') },
             fix(fixer) {
-              const fixes = [];
+              const fixes: Array<TSESLint.RuleFix> = [];
               if (!hasObserverImport) {
                 const { anchor, method } = getObserverImportAnchor(program);
                 const nBefore = method === 'insertTextAfter' ? '\n' : '';
@@ -207,7 +207,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
                 const original = sourceCode.getText(fn);
                 const replacement = `const ${name} = observer(${original});`;
                 fixes.push(fixer.replaceText(fn, replacement));
-              } else if (varDecl && varDecl.type === AST_NODE_TYPES.VariableDeclaration) {
+              } else if (varDecl?.type === AST_NODE_TYPES.VariableDeclaration) {
                 // const Name = () => {} or function expression
                 const id = (fn.parent as TSESTree.VariableDeclarator).id as TSESTree.Identifier;
                 const { name } = id;

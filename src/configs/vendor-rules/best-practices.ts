@@ -25,10 +25,6 @@ const rules = {
   // https://eslint.org/docs/rules/default-param-last
   'default-param-last': 'error',
 
-  // require the use of === and !==
-  // https://eslint.org/docs/rules/eqeqeq
-  eqeqeq: ['error', 'always', { null: 'ignore' }],
-
   // Require grouped accessor pairs in object literals and classes
   // https://eslint.org/docs/rules/grouped-accessor-pairs
   'grouped-accessor-pairs': 'error',
@@ -211,10 +207,6 @@ const rules = {
   // disallow useless string concatenation
   // https://eslint.org/docs/rules/no-useless-concat
   'no-useless-concat': 'error',
-
-  // disallow redundant return; keywords
-  // https://eslint.org/docs/rules/no-useless-return
-  'no-useless-return': 'error',
 
   // disallow use of void operator
   // https://eslint.org/docs/rules/no-void

@@ -2,6 +2,10 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.9.0] - 2026-02-03
+
+- add `eslint-plugin-complete` to `recommended` config
+
 ## [0.8.1] - 2026-01-24
 
 - fix `mobx-require-observer`: now it doesn't lose generics

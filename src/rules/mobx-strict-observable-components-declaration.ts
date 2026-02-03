@@ -98,6 +98,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
             });
             break;
           }
+
           case AST_NODE_TYPES.CallExpression: {
             if (options?.ignoreObserverArg) {
               if ('name' in arg.callee && !options.ignoreObserverArg.includes(arg.callee.name)) {
@@ -112,6 +113,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
             }
             break;
           }
+
           case AST_NODE_TYPES.FunctionExpression: {
             if (arg.id === null) {
               context.report({
@@ -136,6 +138,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
             }
             break;
           }
+
           default: {
             wrongArgType();
           }

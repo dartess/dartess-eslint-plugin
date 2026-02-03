@@ -8,6 +8,7 @@ Also extends
 * `eslint-plugin-import-x` — `recommended` & `typescript`
 * `@eslint-community/eslint-plugin-eslint-comments` — `recommended`
 * `eslint-plugin-de-morgan` — `recommended`
+* `eslint-plugin-complete` — `recommended`
 
 Also can extends (if it is applicable)
 * `@eslint-react/eslint-plugin` — `strict-type-checked`
@@ -38,6 +39,7 @@ npm i -D eslint \
   eslint-plugin-import-x \
   eslint-import-resolver-typescript \
   eslint-plugin-unicorn \
+  eslint-plugin-complete \
   eslint-plugin-decorator-position \
   eslint-plugin-de-morgan \
   typescript-eslint \

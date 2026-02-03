@@ -49,12 +49,14 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
             context.report({ node, messageId: 'requireNames' });
           },
         };
+
       case 'never':
         return {
           'TSTupleType > TSNamedTupleMember': node => {
             context.report({ node, messageId: 'forbidNames' });
           },
         };
+
       default:
         throw new Error(`Invalig mode value: ${String(mode)}`);
     }

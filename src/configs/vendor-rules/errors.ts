@@ -20,10 +20,6 @@ const rules = {
   // https://eslint.org/docs/rules/no-promise-executor-return
   'no-promise-executor-return': 'error',
 
-  // Disallow template literal placeholder syntax in regular strings
-  // https://eslint.org/docs/rules/no-template-curly-in-string
-  'no-template-curly-in-string': 'error',
-
   // Disallow loops with a body that allows only one iteration
   // https://eslint.org/docs/rules/no-unreachable-loop
   'no-unreachable-loop': [
