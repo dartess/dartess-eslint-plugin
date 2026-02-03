@@ -56,3 +56,7 @@ replace throwing errors with Program(node) { context.report({ node, message }) }
 eslint no comma operator
 
 react-hooks/set-state-in-effect vs @eslint-react/hooks-extra/no-direct-set-state-in-use-effect
+
+https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/numeric-separators-style.md
+
+eslint-plugin-oxfmt and test other options
