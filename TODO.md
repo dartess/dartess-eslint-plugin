@@ -6,8 +6,6 @@ remove non-exist rules
 @typescript-eslint/explicit-member-accessibility // default options?
 ```
 
-add `satisfies Linter.Config[];` in example?
-
 TODOs from notes
 
 action.bound 
@@ -15,8 +13,6 @@ action.bound
 @flow
 
 mobx w/o hooks?
-
-https://www.eslint-react.xyz/docs/migration
 
 make constructor -> eslint-plugin-react-refresh
 
