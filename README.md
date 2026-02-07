@@ -70,6 +70,7 @@ npm i -D eslint-plugin-storybook
 Edit or create `eslint.config.ts` (or `eslint.config.mts`). You probably have to install `jiti` for it.
 
 ```ts
+import type { TSESLint } from '@typescript-eslint/utils';
 import dartessEslintPluginRecommended from '@dartess/eslint-plugin/recommended';
 import dartessEslintPluginRecommendedPostFormat from '@dartess/eslint-plugin/recommended-post-format';
 
@@ -110,7 +111,7 @@ export default [
   // @see `Fine Tuning` -> `Formatters` section below 
   
   ...dartessEslintPluginRecommendedPostFormat,
-]
+] satisfies TSESLint.FlatConfig.ConfigArray;
 
 ```
 
