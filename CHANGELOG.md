@@ -5,6 +5,7 @@
 ## [0.9.1] - TODO (test first)
 
 - change `no-sequences` option `allowInParentheses` from `true` to `false`
+- allow `mobx-require-observer` without settings because `mobx` can be used without hooks
 
 ## [0.9.0] - 2026-02-03
 

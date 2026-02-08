@@ -155,6 +155,8 @@ This plugin requires manual setup for you build tools.
 
 If you're using Mobx with legacy decorators, you have to enable rule `mobx/missing-make-observable` manually.
 
+if you're using Mobx stores with your custom hooks, set `settings.mobx.storeHooks` [by docs](docs/rules/mobx-require-observer.md). 
+
 ## Supported Rules
 
 Each rule has emojis denoting:

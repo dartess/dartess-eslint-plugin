@@ -4,13 +4,13 @@
 @typescript-eslint/explicit-member-accessibility // default options?
 ```
 
+TODOs from project
+
 TODOs from notes
 
 action.bound 
 
 @flow
-
-mobx w/o hooks?
 
 make constructor -> eslint-plugin-react-refresh
 
