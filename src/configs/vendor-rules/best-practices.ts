@@ -200,10 +200,6 @@ const rules = {
   // https://eslint.org/docs/rules/no-self-compare
   'no-self-compare': 'error',
 
-  // disallow use of comma operator
-  // https://eslint.org/docs/rules/no-sequences
-  'no-sequences': 'error',
-
   // disallow useless string concatenation
   // https://eslint.org/docs/rules/no-useless-concat
   'no-useless-concat': 'error',

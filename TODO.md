@@ -22,8 +22,6 @@ make styles as separated group
 
 replace throwing errors with Program(node) { context.report({ node, message }) };
 
-eslint: no comma operator
-
 https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/numeric-separators-style.md
 
 eslint-plugin-oxfmt and test other options

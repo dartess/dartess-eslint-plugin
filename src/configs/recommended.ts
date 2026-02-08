@@ -134,6 +134,9 @@ const config: TSESLint.FlatConfig.ConfigArray = [
           methods: 'above',
         },
       ],
+
+      // totally disable comma operator
+      'no-sequences': ['error', { allowInParentheses: false }],
     },
   },
 

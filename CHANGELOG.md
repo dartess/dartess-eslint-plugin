@@ -2,6 +2,10 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.9.1] - TODO (test first)
+
+- change `no-sequences` option `allowInParentheses` from `true` to `false`
+
 ## [0.9.0] - 2026-02-03
 
 - add `eslint-plugin-complete` to `recommended` config
