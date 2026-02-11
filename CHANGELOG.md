@@ -5,6 +5,7 @@
 ## [0.10.0] - TODO (test first)
 
 - add rule `@dartess/mobx-no-action-bound`
+- add `@dartess/mobx-no-action-bound` to `mobx` config
 - change `no-sequences` option `allowInParentheses` from `true` to `false`
 - allow `mobx-require-observer` without settings because `mobx` can be used without hooks
 
