@@ -8,6 +8,7 @@ import ruleStoriesExportMeta from './rules/stories-export-meta.ts';
 import ruleStoriesExportTyped from './rules/stories-export-typed.ts';
 import ruleMobxStrictObservableComponentsDeclaration from './rules/mobx-strict-observable-components-declaration.ts';
 import ruleMobxRequireObserver from './rules/mobx-require-observer.ts';
+import ruleMobxNoActionBound from './rules/mobx-no-action-bound.ts';
 import ruleImportsMaxParentDepth from './rules/imports-max-parent-depth.ts';
 import ruleTsNamedTupleElements from './rules/ts-named-tuple-elements.ts';
 import ruleMobxSyncAutorun from './rules/mobx-sync-autorun.ts';
@@ -27,6 +28,7 @@ const plugin: Linter.Plugin = {
     'mobx-sync-action': ruleMobxSyncAction,
     'mobx-sync-autorun': ruleMobxSyncAutorun,
     'mobx-require-observer': ruleMobxRequireObserver,
+    'mobx-no-action-bound': ruleMobxNoActionBound,
     'stories-export-typed': ruleStoriesExportTyped,
     'stories-export-meta': ruleStoriesExportMeta,
     'ts-named-tuple-elements': ruleTsNamedTupleElements,

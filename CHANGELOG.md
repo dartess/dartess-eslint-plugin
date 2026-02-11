@@ -2,8 +2,9 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
-## [0.9.1] - TODO (test first)
+## [0.10.0] - TODO (test first)
 
+- add rule `@dartess/mobx-no-action-bound`
 - change `no-sequences` option `allowInParentheses` from `true` to `false`
 - allow `mobx-require-observer` without settings because `mobx` can be used without hooks
 

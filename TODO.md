@@ -8,8 +8,6 @@ TODOs from project
 
 TODOs from notes
 
-action.bound 
-
 @flow
 
 make constructor -> eslint-plugin-react-refresh
@@ -25,3 +23,5 @@ replace throwing errors with Program(node) { context.report({ node, message }) }
 https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/numeric-separators-style.md
 
 eslint-plugin-oxfmt and test other options
+
+autofixes when possible

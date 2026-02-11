@@ -182,6 +182,7 @@ Each rule has emojis denoting:
 | [mobx-require-observer](docs/rules/mobx-require-observer.md)                                                 | Components using the stores must be wrapped in an `observer`                  | ✅ | 🔧 |    |
 | [mobx-sync-autorun](docs/rules/mobx-sync-autorun.md)                                                         | Enforce synchronous autorun callback                                          | ✅ |    |    |
 | [mobx-sync-action](docs/rules/mobx-sync-action.md)                                                           | Enforce synchronous actions                                                   | ✅ |    |    |
+| [mobx-no-action-bound](docs/rules/mobx-no-action-bound.md)                                                   | Enforce using arrow functions for binging `this` to actions                   | ✅ |    |    |
 
 ## Code Reuse Policy
 
