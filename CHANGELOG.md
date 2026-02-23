@@ -2,7 +2,7 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
-## [0.10.0] - TODO (test first)
+## [0.10.0] - 2026-02-23
 
 - add rule `@dartess/mobx-no-action-bound`
 - add `@dartess/mobx-no-action-bound` to `mobx` config
