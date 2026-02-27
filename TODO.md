@@ -18,10 +18,10 @@ revert jsx-a11y airbnb config removing -> replace jsx-a11y with -x ? -> remove n
 
 make styles as separated group
 
-replace throwing errors with Program(node) { context.report({ node, message }) };
-
 https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/numeric-separators-style.md
 
 eslint-plugin-oxfmt and test other options
 
 autofixes when possible
+
+libName -> libFn

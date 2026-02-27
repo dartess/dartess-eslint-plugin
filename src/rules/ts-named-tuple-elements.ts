@@ -1,5 +1,7 @@
 import { ESLintUtils } from '@typescript-eslint/utils';
 
+import { exhaustiveCheck } from './utils/exhaustiveCheck.ts';
+
 /**
  * @fileoverview Enforce (or forbid) named tuple elements
  * @author Sergey Kozlov
@@ -58,7 +60,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
         };
 
       default:
-        throw new Error(`Invalig mode value: ${String(mode)}`);
+        exhaustiveCheck(mode);
     }
   },
 });

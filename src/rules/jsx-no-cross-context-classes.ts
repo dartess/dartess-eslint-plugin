@@ -7,14 +7,14 @@ import { ESLintUtils, AST_NODE_TYPES } from '@typescript-eslint/utils';
 
 type Options = [
   mainOptions: {
-    libName?: string;
+    libName: string;
   },
 ];
 type MessageIds = 'avoidMix' | 'avoidRenaming';
 
 export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
   name: 'jsx-no-cross-context-classes',
-  defaultOptions: [{}],
+  defaultOptions: [{ libName: 'clsx' }],
   meta: {
     type: 'suggestion',
     docs: {
@@ -42,11 +42,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
 
   create(context) {
     const [options] = context.options;
-    const libName = options?.libName;
-
-    if (!libName || typeof libName !== 'string') {
-      throw new Error('libName option is required and must be a string');
-    }
+    const { libName } = options;
 
     const isClassLike = (string: string) => /class/i.exec(string);
     return {

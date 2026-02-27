@@ -2,6 +2,10 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## 
+
+- remove throwing errors from rules
+
 ## [0.10.0] - 2026-02-23
 
 - add rule `@dartess/mobx-no-action-bound`
