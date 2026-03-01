@@ -5,6 +5,7 @@
 ## 
 
 - remove throwing errors from rules
+- add `unicorn/numeric-separators-style` to `recommended` config 
 
 ## [0.10.0] - 2026-02-23
 

@@ -1,9 +1,5 @@
 # TODO
 
-```ts
-@typescript-eslint/explicit-member-accessibility // default options?
-```
-
 TODOs from project
 
 TODOs from notes
@@ -17,8 +13,6 @@ react-hooks/exhaustive-deps should be error
 revert jsx-a11y airbnb config removing -> replace jsx-a11y with -x ? -> remove non-exist rules
 
 make styles as separated group
-
-https://github.com/sindresorhus/eslint-plugin-unicorn/blob/main/docs/rules/numeric-separators-style.md
 
 eslint-plugin-oxfmt and test other options
 

@@ -107,6 +107,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
       'unicorn/no-useless-undefined': 'error',
       'unicorn/prefer-node-protocol': 'error',
+      'unicorn/numeric-separators-style': 'error',
 
       '@dartess/imports-max-parent-depth': 'error',
 
