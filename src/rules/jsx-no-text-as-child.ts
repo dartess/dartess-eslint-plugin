@@ -1,12 +1,10 @@
-import { ESLintUtils, AST_NODE_TYPES } from '@typescript-eslint/utils';
-// eslint-disable-next-line import-x/order -- TODO false positive? check it
-import type { TSESTree } from '@typescript-eslint/utils';
-
 /**
  * @fileoverview Disallows text as child in JSX elements, except specified characters like emojis, digits, special symbols and extra strings
  * @author Sergey Kozlov
  */
 
+import { ESLintUtils, AST_NODE_TYPES } from '@typescript-eslint/utils';
+import type { TSESTree } from '@typescript-eslint/utils';
 import emojiRegex from 'emoji-regex';
 
 type Options = [

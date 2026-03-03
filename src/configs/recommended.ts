@@ -12,6 +12,7 @@ import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comment
 import eslintPluginDecoratorPosition from 'eslint-plugin-decorator-position';
 import eslintPluginDeMorgan from 'eslint-plugin-de-morgan';
 import esLintPluginComplete from 'eslint-plugin-complete';
+import esLintPluginPerfectionist from 'eslint-plugin-perfectionist';
 import type { TSESLint } from '@typescript-eslint/utils';
 
 import dartessPlugin from '../index.ts';
@@ -69,6 +70,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       unicorn: eslintPluginUnicorn,
       '@dartess': dartessPlugin,
       'decorator-position': eslintPluginDecoratorPosition,
+      perfectionist: esLintPluginPerfectionist,
     },
 
     languageOptions: {
@@ -111,11 +113,18 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
       '@dartess/imports-max-parent-depth': 'error',
 
-      'import-x/order': [
+      'perfectionist/sort-imports': [
         'error',
         {
-          groups: ['builtin', 'external', 'internal', 'parent', 'sibling', 'index'],
-          'newlines-between': 'always',
+          type: 'unsorted',
+          groups: [
+            'side-effect',
+            ...['builtin', 'external', 'internal', 'parent', 'sibling', 'index'].map(group => [
+              `type-${group}`,
+              `value-${group}`,
+            ]),
+            'style',
+          ],
         },
       ],
 

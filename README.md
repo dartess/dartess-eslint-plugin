@@ -42,6 +42,7 @@ npm i -D eslint \
   eslint-plugin-complete \
   eslint-plugin-decorator-position \
   eslint-plugin-de-morgan \
+  eslint-plugin-perfectionist \
   typescript-eslint \
   @eslint-community/eslint-plugin-eslint-comments \
   @dartess/eslint-plugin
