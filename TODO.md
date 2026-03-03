@@ -6,7 +6,7 @@ TODOs from notes
 
 @flow
 
-make constructor -> eslint-plugin-react-refresh
+make constructor -> eslint-plugin-react-refresh -> check plugins availability
 
 react-hooks/exhaustive-deps should be error
 

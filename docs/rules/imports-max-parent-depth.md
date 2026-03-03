@@ -20,7 +20,7 @@ import a from '../../two-up';
 
 ## Options
 
-This rule does not accept inline options, but requires a global ESLint setting:
+This rule does not accept inline options, but allows a global ESLint setting:
 
 ```json
 {
