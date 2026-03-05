@@ -170,5 +170,21 @@ export const Foo = observer(function Foo<TFoo extends string, TBar extends numbe
 });
       `,
     },
+    /*
+    TODO
+    const decorators = [
+      (Story) => {
+        const { toggleTheme } = useService('settings');
+        const isDark = useDarkMode();
+        useEffect(() => toggleTheme(isDark ? 'night' : 'day'), [isDark, toggleTheme]);
+
+        return <Story />;
+      },
+    ]
+     */
+    /*
+    TODO
+    memo(...)
+     */
   ],
 });
