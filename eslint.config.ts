@@ -7,11 +7,10 @@ import eslintConfigPrettier from 'eslint-config-prettier';
 
 import dartessEslintPluginRecommended from './src/configs/recommended.ts';
 import dartessEslintPluginPostFormat from './src/configs/post-format.ts';
+import { parseGitIgnore } from './src/utils/parse-git-ignore.ts';
 
 const config: TSESLint.FlatConfig.ConfigArray = [
-  {
-    ignores: ['dist/**/*'],
-  },
+  parseGitIgnore(),
   {
     plugins: {
       '@typescript-eslint': tsEslint.plugin,

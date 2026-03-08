@@ -69,6 +69,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     plugins: {
       unicorn: eslintPluginUnicorn,
       '@dartess': dartessPlugin,
+      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- https://github.com/NullVoxPopuli/eslint-plugin-decorator-position/issues/778
       'decorator-position': eslintPluginDecoratorPosition,
       perfectionist: esLintPluginPerfectionist,
     },
