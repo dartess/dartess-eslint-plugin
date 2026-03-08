@@ -287,6 +287,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'complete/strict-undefined-functions': 'off', // prefer unicorn/no-useless-undefined
       'complete/require-break': 'off', // can be false-positive with TS7027
       'complete/no-void-return-type': 'off', // conflict with @typescript-eslint/explicit-module-boundary-types
+      'complete/require-ascii': 'off', // absoule useless
     },
   },
 
