@@ -7,6 +7,7 @@
 - remove throwing errors from rules
 - add `unicorn/numeric-separators-style` to `recommended` config
 - replace `import-x/order` with `perfectionist/sort-imports`: now sort side-effects as first group and styles as last group
+- update deps
 
 ## [0.10.0] - 2026-02-23
 
