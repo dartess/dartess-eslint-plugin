@@ -13,6 +13,7 @@ import ruleImportsMaxParentDepth from './rules/imports-max-parent-depth.ts';
 import ruleTsNamedTupleElements from './rules/ts-named-tuple-elements.ts';
 import ruleMobxSyncAutorun from './rules/mobx-sync-autorun.ts';
 import ruleMobxSyncAction from './rules/mobx-sync-action.ts';
+import ruleNoPropsWithChildrenType from './rules/no-props-with-children-type.ts';
 
 const plugin: Linter.Plugin = {
   meta: {
@@ -32,6 +33,7 @@ const plugin: Linter.Plugin = {
     'stories-export-typed': ruleStoriesExportTyped,
     'stories-export-meta': ruleStoriesExportMeta,
     'ts-named-tuple-elements': ruleTsNamedTupleElements,
+    'no-props-with-children-type': ruleNoPropsWithChildrenType,
   },
 };
 

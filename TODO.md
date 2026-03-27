@@ -20,6 +20,8 @@ const linkType = 'router' as const; - no useless as const?
 
 jsx-no-text-as-child - maybe rename and check aria-related attr by option (aria-label, aria-valuetext, aria-roledescription, aria-description)
 
-ban PropsWithChildren ? see https://dev.to/maafaishal/unsafe-propswithchildren-utility-type-in-react-typescript-app-3bd3
-
 https://eslint.org/docs/latest/use/configure/ignore#include-gitignore-files
+
+check deprecated defaultOptions
+
+function getTypeName(tsEntityName: TSESTree.EntityName) { - require type?
