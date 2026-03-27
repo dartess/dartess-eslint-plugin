@@ -74,6 +74,8 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       '@eslint-react/naming-convention/component-name': 'error',
       '@stylistic/jsx-curly-brace-presence': ['error', { props: 'never', children: 'never' }],
       '@stylistic/jsx-self-closing-comp': 'error',
+
+      '@dartess/no-props-with-children-type': 'error',
     },
   },
 ];

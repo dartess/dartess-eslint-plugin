@@ -175,7 +175,7 @@ Each rule has emojis denoting:
 | **React**                                                                                                    | _config: react_                                                               |   |    |    |
 | [jsx-no-text-as-child](docs/rules/jsx-no-text-as-child.md)                                                   | JSX elements should not have text without translation                         |   |    |    |
 | [jsx-no-cross-context-classes](docs/rules/jsx-no-cross-context-classes.md)                                   | Prevent mixing of outer and inner classes to avoid dependency on style order. |   |    |    |
-| [no-props-with-children-type](docs/rules/no-props-with-children-type.md)                                     | Disallow the use of `PropsWithChildren` utility type in favor explicit types. |   |    |    |
+| [no-props-with-children-type](docs/rules/no-props-with-children-type.md)                                     | Disallow the use of `PropsWithChildren` utility type in favor explicit types. | ✅ |    |    |
 | **Storybook**                                                                                                | _config: storybook_                                                           |   |    |    |
 | [stories-export-meta](docs/rules/stories-export-meta.md)                                                     | Storybook's Meta should be typed                                              | ✅ |    |    |
 | [stories-export-typed](docs/rules/stories-export-typed.md)                                                   | Storybook's Stories should be typed                                           | ✅ |    |    |
