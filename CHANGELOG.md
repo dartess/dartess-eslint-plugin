@@ -2,7 +2,7 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
-##  [0.11.0] - 2026-03-27
+##  [0.11.2] - 2026-03-27
 
 - remove throwing errors from rules
 - add `unicorn/numeric-separators-style` to `recommended` config
