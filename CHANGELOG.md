@@ -2,14 +2,14 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
-##  [0.11.0] -
+##  [0.11.0] - 2026-03-27
 
 - remove throwing errors from rules
 - add `unicorn/numeric-separators-style` to `recommended` config
 - replace `import-x/order` with `perfectionist/sort-imports`: now sort side-effects as first group and styles as last group; please, install `eslint-plugin-perfectionist` 
-- update deps
 - add rule `@dartess/no-props-with-children-type`: Disallow the use of PropsWithChildren utility type. Prefer explicit children prop typing instead.
 - add `@dartess/no-props-with-children-type` to `react` config
+- update deps
 
 ## [0.10.0] - 2026-02-23
 
