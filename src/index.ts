@@ -2,7 +2,6 @@ import type { Linter } from '@typescript-eslint/utils/ts-eslint';
 
 import packageJson from '../package.json' with { type: 'json' };
 
-import ruleJsxNoTextAsChild from './rules/jsx-no-text-as-child.ts';
 import ruleJsxNoCrossContextClasses from './rules/jsx-no-cross-context-classes.ts';
 import ruleStoriesExportMeta from './rules/stories-export-meta.ts';
 import ruleStoriesExportTyped from './rules/stories-export-typed.ts';
@@ -24,7 +23,6 @@ const plugin: Linter.Plugin = {
   rules: {
     'imports-max-parent-depth': ruleImportsMaxParentDepth,
     'jsx-no-cross-context-classes': ruleJsxNoCrossContextClasses,
-    'jsx-no-text-as-child': ruleJsxNoTextAsChild,
     'mobx-strict-observable-components-declaration': ruleMobxStrictObservableComponentsDeclaration,
     'mobx-sync-action': ruleMobxSyncAction,
     'mobx-sync-autorun': ruleMobxSyncAutorun,

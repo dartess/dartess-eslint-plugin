@@ -173,7 +173,6 @@ Each rule has emojis denoting:
 | **TypeScript**                                                                                               | _config: recommended_                                                         |   |    |    |
 | [ts-named-tuple-elements](docs/rules/ts-named-tuple-elements.md)                                             | Enforce (or forbid) named tuple elements                                      | ✅ |    |    |
 | **React**                                                                                                    | _config: react_                                                               |   |    |    |
-| [jsx-no-text-as-child](docs/rules/jsx-no-text-as-child.md)                                                   | JSX elements should not have text without translation                         |   |    |    |
 | [jsx-no-cross-context-classes](docs/rules/jsx-no-cross-context-classes.md)                                   | Prevent mixing of outer and inner classes to avoid dependency on style order. |   |    |    |
 | [no-props-with-children-type](docs/rules/no-props-with-children-type.md)                                     | Disallow the use of `PropsWithChildren` utility type in favor explicit types. | ✅ |    |    |
 | **Storybook**                                                                                                | _config: storybook_                                                           |   |    |    |

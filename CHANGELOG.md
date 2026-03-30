@@ -2,7 +2,11 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
-##  [0.11.2] - 2026-03-27
+## [0.12.0]
+
+- delete rule `@dartess/jsx-no-text-as-child` as overcomplicated: use e.g. `@shopify/eslint-plugin` `jsx-no-hardcoded-content` rule instead.
+
+## [0.11.2] - 2026-03-27
 
 - remove throwing errors from rules
 - add `unicorn/numeric-separators-style` to `recommended` config

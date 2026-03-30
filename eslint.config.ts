@@ -47,6 +47,8 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'complete/complete-sentences-line-comments': 'off',
       'complete/format-line-comments': 'off',
       'complete/format-jsdoc-comments': 'off',
+      'complete/require-capital-const-assertions': 'off', // TODO do look hamful?
+      'complete/require-capital-read-only': 'off', // TODO do look hamful?
     },
   },
 
