@@ -25,3 +25,7 @@ https://eslint.org/docs/latest/use/configure/ignore#include-gitignore-files
 check deprecated defaultOptions
 
 function getTypeName(tsEntityName: TSESTree.EntityName) { - require type?
+
+ci tests
+
+check https://gist.github.com/kettanaito/debde3cabfae4f68d37cf0f8f3a6a666
