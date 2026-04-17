@@ -28,3 +28,5 @@ ci tests
 
 check https://gist.github.com/kettanaito/debde3cabfae4f68d37cf0f8f3a6a666
 
+https://beta.eslint-react.xyz/docs/migrating-from-eslint-plugin-react-hooks
+
