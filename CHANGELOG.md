@@ -4,6 +4,8 @@
 
 ## [0.12.0]
 
+- add support for `eslint@10`. you can use both `9` and `10` versions — but choosing compatible plugin versions is up to you.
+- note: some rules in new verion `@eslint-react/eslint-plugin` were disabled.
 - delete rule `@dartess/jsx-no-text-as-child` as overcomplicated: use e.g. `@shopify/eslint-plugin` `jsx-no-hardcoded-content` rule instead.
 
 ## [0.11.2] - 2026-03-27

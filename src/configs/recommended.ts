@@ -8,7 +8,6 @@ import eslintPluginImportX from 'eslint-plugin-import-x';
 import eslintPluginUnicorn from 'eslint-plugin-unicorn';
 import pluginJs from '@eslint/js';
 import eslintCommentsPlugin from '@eslint-community/eslint-plugin-eslint-comments/configs';
-// @ts-ignore: https://github.com/NullVoxPopuli/eslint-plugin-decorator-position/issues/778
 import eslintPluginDecoratorPosition from 'eslint-plugin-decorator-position';
 import eslintPluginDeMorgan from 'eslint-plugin-de-morgan';
 import esLintPluginComplete from 'eslint-plugin-complete';
@@ -69,7 +68,6 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     plugins: {
       unicorn: eslintPluginUnicorn,
       '@dartess': dartessPlugin,
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment -- https://github.com/NullVoxPopuli/eslint-plugin-decorator-position/issues/778
       'decorator-position': eslintPluginDecoratorPosition,
       perfectionist: esLintPluginPerfectionist,
     },
@@ -288,6 +286,13 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'complete/require-break': 'off', // can be false-positive with TS7027
       'complete/no-void-return-type': 'off', // conflict with @typescript-eslint/explicit-module-boundary-types
       'complete/require-ascii': 'off', // absoule useless
+
+      /*
+      1. Array.isArray makes `any` only for `unknown` input or something like that. This is a rare case.
+      2. Using third-party utilities becuase of lint is bad
+      3. Anyway we have @typescript-eslint/no-unsafe-* rules, so using `any` will be unavailable.
+       */
+      'complete/prefer-is-array': 'off',
     },
   },
 
