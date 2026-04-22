@@ -2,7 +2,7 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
-## [0.12.0]
+## [0.12.0] - 2026-04-22
 
 - add support for `eslint@10`. you can use both `9` and `10` versions — but choosing compatible plugin versions is up to you.
 - note: some rules in new verion `@eslint-react/eslint-plugin` were disabled.
