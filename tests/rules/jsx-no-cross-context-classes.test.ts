@@ -11,53 +11,47 @@ ruleTester.run('jsx-no-cross-context-classes', rule, {
   valid: [
     {
       code: 'cn(className, anotherClassName)',
-      options: [{ libName: 'classnames' }],
+      options: [{ fn: 'cn' }],
+    },
+    {
+      code: 'clsx(className, anotherClassName)',
+      options: [{ fn: 'clsx' }],
     },
     {
       code: 'cn(styles.root, styles.classItem)',
-      options: [{ libName: 'classnames' }],
+      options: [{ fn: 'cn' }],
     },
     {
       code: "import cn from 'classnames'",
-      options: [{ libName: 'classnames' }],
+      options: [{ fn: 'cn' }],
     },
   ],
 
   invalid: [
     {
       code: 'cn(styles.root, className)',
-      options: [{ libName: 'classnames' }],
+      options: [{ fn: 'cn' }],
       errors: [{ messageId: 'avoidMix' }],
     },
     {
       code: 'cn(styles.root, someItemClassName)',
-      options: [{ libName: 'classnames' }],
+      options: [{ fn: 'cn' }],
       errors: [{ messageId: 'avoidMix' }],
     },
     {
       code: 'cn(styles.root, props.className)',
-      options: [{ libName: 'classnames' }],
+      options: [{ fn: 'cn' }],
       errors: [{ messageId: 'avoidMix' }],
     },
     {
       code: 'cn(styles.root, props.obj.className)',
-      options: [{ libName: 'classnames' }],
+      options: [{ fn: 'cn' }],
       errors: [{ messageId: 'avoidMix' }],
     },
     {
       code: 'cn(styles.root, props.someItemClassName)',
-      options: [{ libName: 'classnames' }],
+      options: [{ fn: 'cn' }],
       errors: [{ messageId: 'avoidMix' }],
-    },
-    {
-      code: "import classnames from 'classnames'",
-      options: [{ libName: 'classnames' }],
-      errors: [{ messageId: 'avoidRenaming' }],
-    },
-    {
-      code: "import classnames from 'clsx'",
-      options: [{ libName: 'clsx' }],
-      errors: [{ messageId: 'avoidRenaming' }],
     },
   ],
 });

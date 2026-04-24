@@ -14,8 +14,6 @@ eslint-plugin-oxfmt and test other options
 
 autofixes when possible
 
-libName -> libFn
-
 const linkType = 'router' as const; - no useless as const?
 
 https://eslint.org/docs/latest/use/configure/ignore#include-gitignore-files
@@ -25,8 +23,6 @@ check deprecated defaultOptions
 function getTypeName(tsEntityName: TSESTree.EntityName) { - require type?
 
 ci tests
-
-check https://gist.github.com/kettanaito/debde3cabfae4f68d37cf0f8f3a6a666
 
 https://beta.eslint-react.xyz/docs/migrating-from-eslint-plugin-react-hooks
 

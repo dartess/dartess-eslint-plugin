@@ -7,14 +7,14 @@ import { ESLintUtils, AST_NODE_TYPES } from '@typescript-eslint/utils';
 
 type Options = [
   mainOptions: {
-    libName: string;
+    fn: string;
   },
 ];
-type MessageIds = 'avoidMix' | 'avoidRenaming';
+type MessageIds = 'avoidMix';
 
 export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
   name: 'jsx-no-cross-context-classes',
-  defaultOptions: [{ libName: 'clsx' }],
+  defaultOptions: [{ fn: 'clsx' }],
   meta: {
     type: 'suggestion',
     docs: {
@@ -24,17 +24,16 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
     messages: {
       avoidMix:
         'Avoid mixing outer and inner classes on the same element. The import order of the style is not guaranteed, so the order in which the style is applied is also not guaranteed.',
-      avoidRenaming: "'{{ libName }}' must be imported as 'cn'",
     },
     schema: [
       {
         type: 'object',
         properties: {
-          libName: {
+          fn: {
             type: 'string',
           },
         },
-        required: ['libName'],
+        required: ['fn'],
         additionalProperties: false,
       },
     ],
@@ -42,12 +41,12 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
 
   create(context) {
     const [options] = context.options;
-    const { libName } = options;
+    const { fn } = options;
 
     const isClassLike = (string: string) => /class/i.exec(string);
     return {
       CallExpression(node) {
-        if (!('name' in node.callee) || node.callee.name !== 'cn') {
+        if (!('name' in node.callee) || node.callee.name !== fn) {
           return;
         }
         const hasStylesItem = node.arguments.some(
@@ -72,19 +71,6 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
             messageId: 'avoidMix',
           });
         }
-      },
-      ImportDeclaration(node) {
-        if (node.source.value !== libName) {
-          return;
-        }
-        if (node.specifiers[0].local.name === 'cn') {
-          return;
-        }
-        context.report({
-          node,
-          messageId: 'avoidRenaming',
-          data: { libName },
-        });
       },
     };
   },

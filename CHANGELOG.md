@@ -2,6 +2,13 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.13.0]
+
+- change `jsx-no-cross-context-classes` options: before you have to set package name with option `libName`, e.g. `classname`. 
+So, you also have to import function only through default export and only with name `cn`.
+Now you have to set option `fn` with name of your function, no matter where from you've got it.
+For example, now you can set option like `fn: 'clsx'` and use named import like `import { clsx } from 'clsx'`.  
+
 ## [0.12.0] - 2026-04-22
 
 - add support for `eslint@10`. you can use both `9` and `10` versions — but choosing compatible plugin versions is up to you.

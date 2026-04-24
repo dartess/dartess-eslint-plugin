@@ -39,4 +39,4 @@ cn(styles.root, styles.classItem)
 
 ## Options
 
-`libName` _(required)_: your classname-like package name, like `classnames` or `clsx`
+`fn` _(required)_: your classname function name, like `cn` or `clsx`
