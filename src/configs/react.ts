@@ -17,7 +17,6 @@ const getEslintReactRules = () => {
   if (semver.satisfies(version, '^4.0.0')) {
     return {
       '@eslint-react/naming-convention-filename': 'error', // enforce corrent filename // v4 rename
-      // '@eslint-react/naming-convention/component-name': 'error', // TODO how to re-implement? was removed in v3 https://github.com/Rel1cx/eslint-react/releases/tag/v3.0.0-rc.0
       // '@eslint-react/jsx-shorthand-boolean': 'error', // TODO how to re-implement? was removed in v4 https://github.com/Rel1cx/eslint-react/issues/1243
       // '@eslint-react/jsx-shorthand-fragment': 'error', // TODO how to re-implement? was removed in v4 https://github.com/Rel1cx/eslint-react/issues/1243
     } as const;
@@ -25,14 +24,13 @@ const getEslintReactRules = () => {
   if (semver.satisfies(version, '^3.0.0')) {
     return {
       '@eslint-react/naming-convention/filename': 'error', // enforce corrent filename
-      // '@eslint-react/naming-convention/component-name': 'error', // TODO how to re-implement? was removed in v3 https://github.com/Rel1cx/eslint-react/releases/tag/v3.0.0-rc.0
       '@eslint-react/jsx-shorthand-boolean': 'error',
       '@eslint-react/jsx-shorthand-fragment': 'error',
     } as const;
   }
   // ^2.0.0
   return {
-    '@eslint-react/naming-convention/filename': 'error', // enforce corrent filename
+    '@eslint-react/naming-convention/filename': 'error',
     '@eslint-react/naming-convention/component-name': 'error',
     '@eslint-react/jsx-shorthand-boolean': 'error',
     '@eslint-react/jsx-shorthand-fragment': 'error',
