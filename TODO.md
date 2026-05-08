@@ -6,9 +6,7 @@ TODOs from project
 
 make constructor -> eslint-plugin-react-refresh -> check plugins availability -> overloads for dev scripts
 
-react-hooks/exhaustive-deps should be error
-
-revert jsx-a11y airbnb config removing -> replace jsx-a11y with -x ? -> remove non-exist rules
+replace jsx-a11y with -x ? -> remove non-exist rules
 
 eslint-plugin-oxfmt and test other options
 

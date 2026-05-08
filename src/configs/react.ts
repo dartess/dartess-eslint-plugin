@@ -8,6 +8,7 @@ import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
 import type { PackageJson } from 'type-fest';
 import semver from 'semver';
 
+import vendorRulesReact from './vendor-rules/react-a11y.ts';
 import { convertWarnsToErrorsIfNeeded } from './utils/convertWarnsToErrorsIfNeeded.ts';
 
 const require = createRequire(import.meta.url);
@@ -23,7 +24,7 @@ const getEslintReactRules = () => {
   }
   if (semver.satisfies(version, '^3.0.0')) {
     return {
-      '@eslint-react/naming-convention/filename': 'error', // enforce corrent filename
+      '@eslint-react/naming-convention/filename': 'error',
       '@eslint-react/jsx-shorthand-boolean': 'error',
       '@eslint-react/jsx-shorthand-fragment': 'error',
     } as const;
@@ -83,6 +84,8 @@ const config: TSESLint.FlatConfig.ConfigArray = [
     },
 
     rules: {
+      ...vendorRulesReact,
+
       // TODO: try to enable this rules later (if needed)
       'jsx-a11y/click-events-have-key-events': 'off',
       'jsx-a11y/anchor-is-valid': 'off',
