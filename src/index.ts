@@ -13,6 +13,7 @@ import ruleTsNamedTupleElements from './rules/ts-named-tuple-elements.ts';
 import ruleMobxSyncAutorun from './rules/mobx-sync-autorun.ts';
 import ruleMobxSyncAction from './rules/mobx-sync-action.ts';
 import ruleNoPropsWithChildrenType from './rules/no-props-with-children-type.ts';
+import ruleMobxNoFlow from './rules/mobx-no-flow.ts';
 
 const plugin: Linter.Plugin = {
   meta: {
@@ -28,6 +29,7 @@ const plugin: Linter.Plugin = {
     'mobx-sync-autorun': ruleMobxSyncAutorun,
     'mobx-require-observer': ruleMobxRequireObserver,
     'mobx-no-action-bound': ruleMobxNoActionBound,
+    'mobx-no-flow': ruleMobxNoFlow,
     'stories-export-typed': ruleStoriesExportTyped,
     'stories-export-meta': ruleStoriesExportMeta,
     'ts-named-tuple-elements': ruleTsNamedTupleElements,

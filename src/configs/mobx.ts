@@ -14,6 +14,7 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       '@dartess/mobx-strict-observable-components-declaration': 'error',
       '@dartess/mobx-require-observer': 'error',
       '@dartess/mobx-no-action-bound': 'error',
+      '@dartess/mobx-no-flow': 'error',
       '@dartess/mobx-sync-autorun': 'error', // TODO implement it by types?
       '@dartess/mobx-sync-action': 'error', // TODO implement it by types?
     },

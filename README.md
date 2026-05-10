@@ -184,6 +184,7 @@ Each rule has emojis denoting:
 | [mobx-sync-autorun](docs/rules/mobx-sync-autorun.md)                                                         | Enforce synchronous autorun callback                                          | ✅ |    |    |
 | [mobx-sync-action](docs/rules/mobx-sync-action.md)                                                           | Enforce synchronous actions                                                   | ✅ |    |    |
 | [mobx-no-action-bound](docs/rules/mobx-no-action-bound.md)                                                   | Enforce using arrow functions for binging `this` to actions                   | ✅ |    |    |
+| [mobx-no-flow](docs/rules/mobx-no-flow.md)                                                                   | Disallow the use of MobX `flow` in favor of `async`/`await` with actions      | ✅ |    |    |
 
 ## Code Reuse Policy
 
