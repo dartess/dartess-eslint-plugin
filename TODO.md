@@ -2,8 +2,6 @@
 
 TODOs from project
 
-@flow
-
 make constructor -> eslint-plugin-react-refresh -> check plugins availability -> overloads for dev scripts
 
 replace jsx-a11y with -x ? -> remove non-exist rules
