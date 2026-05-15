@@ -52,7 +52,7 @@ Next, also install the packages that suit your needs.
 
 ```sh
 npm i -D eslint-plugin-react-hooks \
-  eslint-plugin-jsx-a11y \
+  eslint-plugin-jsx-a11y-x \
   @eslint-react/eslint-plugin \
   @stylistic/eslint-plugin
 ```
@@ -151,6 +151,10 @@ Use `eslint-plugin-oxlint` for disabling unnecessary rules.
 If you're using React, you also probably will want to add 
 [eslint-plugin-react-refresh](https://www.npmjs.com/package/eslint-plugin-react-refresh). 
 This plugin requires manual setup for you build tools.
+
+If you care about accessibility, a linter isn't enough
+to detect runtime issues. Use it in combination
+with [@axe-core/react](https://github.com/dequelabs/axe-core-npm/tree/develop/packages/react).
 
 ### (for Mobx users)
 

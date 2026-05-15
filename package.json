@@ -57,7 +57,7 @@
     "eslint-plugin-de-morgan": "^2.0.0",
     "eslint-plugin-decorator-position": "^6.0.0",
     "eslint-plugin-import-x": "^4.1.0",
-    "eslint-plugin-jsx-a11y": "^6.10.0",
+    "eslint-plugin-jsx-a11y-x": "~0.2.0",
     "eslint-plugin-mobx": "~0.0.13",
     "eslint-plugin-perfectionist": "^5.6.0",
     "eslint-plugin-react-hooks": "^7.0.0",
@@ -75,7 +75,7 @@
     "@stylistic/eslint-plugin": {
       "optional": true
     },
-    "eslint-plugin-jsx-a11y": {
+    "eslint-plugin-jsx-a11y-x": {
       "optional": true
     },
     "eslint-plugin-mobx": {
@@ -95,7 +95,6 @@
     "@next/eslint-plugin-next": "^16.2.4",
     "@stylistic/eslint-plugin": "^5.10.0",
     "@types/confusing-browser-globals": "^1.0.3",
-    "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/eslint-plugin-mobx": "~0.0.0",
     "@types/node": "^25.6.0",
     "@types/semver": "^7.7.1",
@@ -108,6 +107,7 @@
     "eslint-plugin-decorator-position": "^6.1.0",
     "eslint-plugin-eslint-plugin": "^7.3.2",
     "eslint-plugin-import-x": "^4.16.2",
+    "eslint-plugin-jsx-a11y-x": "~0.2.0",
     "eslint-plugin-perfectionist": "^5.8.0",
     "eslint-plugin-prettier": "^5.5.5",
     "eslint-plugin-react-hooks": "^7.1.0",

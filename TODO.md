@@ -4,8 +4,6 @@ TODOs from project
 
 make constructor -> eslint-plugin-react-refresh -> check plugins availability -> overloads for dev scripts
 
-replace jsx-a11y with -x ? -> remove non-exist rules
-
 eslint-plugin-oxfmt and test other options
 
 autofixes when possible
@@ -21,4 +19,3 @@ function getTypeName(tsEntityName: TSESTree.EntityName) { - require type?
 ci tests
 
 https://beta.eslint-react.xyz/docs/migrating-from-eslint-plugin-react-hooks
-

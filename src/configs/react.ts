@@ -4,7 +4,7 @@ import type { TSESLint } from '@typescript-eslint/utils';
 import eslintReact from '@eslint-react/eslint-plugin';
 import stylisticPlugin from '@stylistic/eslint-plugin';
 import reactHooksPlugin from 'eslint-plugin-react-hooks';
-import jsxA11yPlugin from 'eslint-plugin-jsx-a11y';
+import jsxA11yXPlugin from 'eslint-plugin-jsx-a11y-x';
 import type { PackageJson } from 'type-fest';
 import semver from 'semver';
 
@@ -44,7 +44,6 @@ const config: TSESLint.FlatConfig.ConfigArray = [
 
     plugins: {
       'react-hooks': reactHooksPlugin,
-      'jsx-a11y': jsxA11yPlugin,
       '@stylistic': stylisticPlugin,
     },
 
@@ -58,6 +57,8 @@ const config: TSESLint.FlatConfig.ConfigArray = [
   convertWarnsToErrorsIfNeeded(eslintReact.configs['strict-type-checked']),
 
   convertWarnsToErrorsIfNeeded(reactHooksPlugin.configs.flat.recommended),
+
+  convertWarnsToErrorsIfNeeded(jsxA11yXPlugin.configs.recommended),
 
   {
     name: '@dartess/react',
@@ -87,15 +88,15 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       ...vendorRulesReact,
 
       // TODO: try to enable this rules later (if needed)
-      'jsx-a11y/click-events-have-key-events': 'off',
-      'jsx-a11y/anchor-is-valid': 'off',
-      'jsx-a11y/interactive-supports-focus': 'off',
+      'jsx-a11y-x/click-events-have-key-events': 'off',
+      'jsx-a11y-x/anchor-is-valid': 'off',
+      'jsx-a11y-x/interactive-supports-focus': 'off',
       // TODO END: try to enable this rules later (if needed)
 
-      'jsx-a11y/no-static-element-interactions': 'off', // TODO enable later
-      'jsx-a11y/no-noninteractive-tabindex': 'off', // TODO enable later
-      'jsx-a11y/no-noninteractive-element-interactions': 'off', // TODO enable later
-      'jsx-a11y/label-has-associated-control': 'off', // TODO enable later but with `assert`=`either`
+      'jsx-a11y-x/no-static-element-interactions': 'off', // TODO enable later
+      'jsx-a11y-x/no-noninteractive-tabindex': 'off', // TODO enable later
+      'jsx-a11y-x/no-noninteractive-element-interactions': 'off', // TODO enable later
+      'jsx-a11y-x/label-has-associated-control': 'off', // TODO enable later but with `assert`=`either`
 
       // disable some recommended rules
       '@eslint-react/prefer-destructuring-assignment': 'off', // can break discriminated union types

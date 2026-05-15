@@ -8,18 +8,18 @@ const rules = {
   'import-x/no-anonymous-default-export': 'error',
   'react/no-unknown-property': 'off',
   'react/react-in-jsx-scope': 'off',
-  'jsx-a11y/alt-text': [
+  'jsx-a11y-x/alt-text': [
     'error',
     {
       elements: ['img'],
       img: ['Image'],
     },
   ],
-  'jsx-a11y/aria-props': 'error',
-  'jsx-a11y/aria-proptypes': 'error',
-  'jsx-a11y/aria-unsupported-elements': 'error',
-  'jsx-a11y/role-has-required-aria-props': 'error',
-  'jsx-a11y/role-supports-aria-props': 'error',
+  'jsx-a11y-x/aria-props': 'error',
+  'jsx-a11y-x/aria-proptypes': 'error',
+  'jsx-a11y-x/aria-unsupported-elements': 'error',
+  'jsx-a11y-x/role-has-required-aria-props': 'error',
+  'jsx-a11y-x/role-supports-aria-props': 'error',
   'react/jsx-no-target-blank': 'off',
 } satisfies Linter.RulesRecord;
 
