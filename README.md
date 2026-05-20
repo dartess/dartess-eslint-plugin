@@ -28,7 +28,7 @@ All of it pinched with extra configs, setups and extra rules. Just take it and u
 
 1. The package is intended for use only with the `flat` eslint config.
 
-1. Compatible with both `eslint@9` and `eslint@10` 
+1. Compatible with both `eslint@9` and `eslint@10`. If you're using it with `eslint@9`, please, also install `@eslint/js@9` 
 
 1. _(for React users)_ The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) and React 19+.
 
