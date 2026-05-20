@@ -2,7 +2,7 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
-## [0.13.0]
+## [0.13.0] - 2026-05-20
 
 - change `jsx-no-cross-context-classes` options: before you have to set package name with option `libName`, e.g. `classname`. 
 So, you also have to import function only through default export and only with name `cn`.
