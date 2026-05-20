@@ -26,9 +26,11 @@ All of it pinched with extra configs, setups and extra rules. Just take it and u
 
 1. The package is intended for use with TypeScript (it'll be useful for plain JS, but it hasn't been well-tested).
 
-2. The package is intended for use only with the `flat` eslint config.
+1. The package is intended for use only with the `flat` eslint config.
 
-3. _(for React users)_ The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) and React 19+.
+1. Compatible with both `eslint@9` and `eslint@10` 
+
+1. _(for React users)_ The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) and React 19+.
 
 ## Installation
 
@@ -87,7 +89,7 @@ import dartessEslintPluginStorybook from '@dartess/eslint-plugin/storybook';
 import { parseGitIgnore } from '@dartess/eslint-plugin/utils';
 
 export default [
-  parseGitIgnore(), // (optional) the easiest way to ignore all `.gitignore` files
+  ...parseGitIgnore(), // (optional) the easiest way to ignore files from `.gitignore` 
   
   {
     languageOptions: {
@@ -189,6 +191,36 @@ Each rule has emojis denoting:
 | [mobx-sync-action](docs/rules/mobx-sync-action.md)                                                           | Enforce synchronous actions                                                   | ✅ |    |    |
 | [mobx-no-action-bound](docs/rules/mobx-no-action-bound.md)                                                   | Enforce using arrow functions for binging `this` to actions                   | ✅ |    |    |
 | [mobx-no-flow](docs/rules/mobx-no-flow.md)                                                                   | Disallow the use of MobX `flow` in favor of `async`/`await` with actions      | ✅ |    |    |
+
+## Additional helpers
+
+### `parseGitIgnore`
+
+Includes patterns from `.gitignore` files (or any files with gitignore-style syntax) into an ESLint flat config.
+
+```ts
+function parseGitIgnore(paths?: string[]): TSESLint.FlatConfig.Config[]
+```
+
+Where paths is `['.gitignore']` by default.
+
+Example 
+
+```ts
+export default defineConfig([
+  ...parseGitIgnore(), // or parseGitIgnore(['.gitignore', 'nested/extra/.gitignore']) 
+  // ...other configs
+]);
+```
+
+Paths are resolved relative to `process.cwd()`.
+
+Patterns are interpreted **relative to the ignore file's location** (git-style),
+so `build/` in `packages/lib/.gitignore` becomes `packages/lib/build/`, not the root `build/`.
+
+## Compatibility
+
+Works with any ESLint version supporting flat config (9.x and 10.x). Built on `@eslint/config-helpers`, which has no dependency on ESLint internals.
 
 ## Code Reuse Policy
 

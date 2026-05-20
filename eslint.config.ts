@@ -10,7 +10,7 @@ import dartessEslintPluginPostFormat from './src/configs/post-format.ts';
 import { parseGitIgnore } from './src/utils/parse-git-ignore.ts';
 
 const config: TSESLint.FlatConfig.ConfigArray = [
-  parseGitIgnore(),
+  ...parseGitIgnore(),
   {
     plugins: {
       '@typescript-eslint': tsEslint.plugin,
