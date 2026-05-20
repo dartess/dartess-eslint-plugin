@@ -11,7 +11,7 @@ For example, now you can set option like `fn: 'clsx'` and use named import like 
 - restore removed `jsx-a11y` aribnb config
 - add rule `@dartess/mobx-no-flow`: Disallow the use of MobX `flow` in favor of `async`/`await` with actions
 - add `@dartess/mobx-no-flow` to `mobx` config
-- replace rule `eslint-plugin-jsx-a11y` with `eslint-plugin-jsx-a11y-x`
+- replace plugin `eslint-plugin-jsx-a11y` with `eslint-plugin-jsx-a11y-x`
 - replace dependency `@eslint/compat` with `@eslint/config-helpers`
 - `parseGitIgnore` now can accept array of `.gitignore` files and always return array.
 
