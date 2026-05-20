@@ -2,6 +2,10 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.13.1] - 2026-05-20
+
+- minor fixes README and CHANGELOG
+
 ## [0.13.0] - 2026-05-20
 
 - change `jsx-no-cross-context-classes` options: before you have to set package name with option `libName`, e.g. `classname`. 
