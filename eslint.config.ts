@@ -44,8 +44,6 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'no-continue': 'off', // OK for this package
       '@typescript-eslint/naming-convention': 'off', // because of required naming
       'complete/complete-sentences-jsdoc': 'off',
-      'complete/complete-sentences-line-comments': 'off',
-      'complete/format-line-comments': 'off',
       'complete/format-jsdoc-comments': 'off',
       'complete/require-capital-const-assertions': 'off', // TODO do look hamful?
       'complete/require-capital-read-only': 'off', // TODO do look hamful?

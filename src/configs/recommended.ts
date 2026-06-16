@@ -286,6 +286,8 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'complete/require-break': 'off', // can be false-positive with TS7027
       'complete/no-void-return-type': 'off', // conflict with @typescript-eslint/explicit-module-boundary-types
       'complete/require-ascii': 'off', // absoule useless
+      'complete/complete-sentences-line-comments': 'off', // can be annoyed
+      'complete/format-line-comments': 'off', // can just broke automated commented block of code
 
       /*
       1. Array.isArray makes `any` only for `unknown` input or something like that. This is a rare case.

@@ -2,6 +2,10 @@
 
 [//]: # (https://keepachangelog.com/en/1.1.0/)
 
+## [0.13.2] - TODO
+
+- disable `complete/complete-sentences-line-comments` and `complete/format-line-comments` as too strict and inconvenient.
+
 ## [0.13.1] - 2026-05-20
 
 - minor fixes README and CHANGELOG
