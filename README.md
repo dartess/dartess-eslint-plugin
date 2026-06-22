@@ -25,11 +25,8 @@ All of it pinched with extra configs, setups and extra rules. Just take it and u
 ### Notes
 
 1. The package is intended for use with TypeScript (it'll be useful for plain JS, but it hasn't been well-tested).
-
 1. The package is intended for use only with the `flat` eslint config.
-
-1. Compatible with both `eslint@9` and `eslint@10`. If you're using it with `eslint@9`, please, also install `@eslint/js@9` 
-
+1. Compatible with both `eslint@9` and `eslint@10`. If you're using it with `eslint@9`, please, also install `@eslint/js@9`
 1. _(for React users)_ The package is intended for use with [React New JSX Transform](https://legacy.reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html) and React 19+.
 
 ## Installation
@@ -123,30 +120,9 @@ export default [
 ### Formatting tools
 
 If you're want to (and you should to) use formatting tools, you need to additionally install and setup something else.
-
-Replace the `<-- Put here your formatters congifs -->` comment with the required code, beacuse we have a special config
-that fine-tunes formatter behavior and should be applied afterward.
-
-In case you for some reason don't want to use any formatting tools, you still have to put 
-`...dartessEslintPluginRecommendedPostFormat` in any place of your config.
-
-#### dprint
-
-Use `eslint-plugin-format` with rule `format/dprint` for running `dprint` as eslint rule (you probably will want to add `eslint-config-prettier` for disabling unnecessary rules).
-
-#### Biome
-
-Use `eslint-config-biome` for disabling unnecessary rules.
-
-#### Oxlint
-
-Use `eslint-plugin-oxlint` for disabling unnecessary rules.
-
-#### Prettier (Old School)
-
-* Use `eslint-config-prettier` for disabling unnecessary rules.
-* Or use `eslint-plugin-prettier` for running `prettier` as eslint rule.
-* Or use `eslint-plugin-format` with rule `format/prettier` for running `prettier` as eslint rule (you probably will want to add `eslint-config-prettier` for disabling unnecessary rules).
+For details and examples, see [FORMATTING_TOOLS.md](FORMATTING_TOOLS.md). In case you for some reason don't want
+to use any formatting tools, you still have to put `...dartessEslintPluginRecommendedPostFormat`
+in any place of your config.
 
 ### (for React users)
 

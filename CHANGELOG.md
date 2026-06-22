@@ -5,6 +5,7 @@
 ## [0.13.2] - TODO
 
 - disable `complete/complete-sentences-line-comments` and `complete/format-line-comments` as too strict and inconvenient.
+- rework formatting tools documentation.
 
 ## [0.13.1] - 2026-05-20
 
