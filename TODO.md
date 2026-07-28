@@ -8,8 +8,6 @@ autofixes when possible
 
 check deprecated defaultOptions
 
-function getTypeName(tsEntityName: TSESTree.EntityName) { - require type?
-
 ci tests
 
 usage with other eslint-like tools (oxlint, biome?)

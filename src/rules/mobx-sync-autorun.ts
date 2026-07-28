@@ -29,7 +29,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
       'CallExpression[callee.name="autorun"] > FunctionExpression[async="true"]',
     ].join(', ');
     return {
-      [selector]: node => {
+      [selector]: (node): void => {
         context.report({ node, messageId: 'requireSyncAutorun' });
       },
     };

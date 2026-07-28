@@ -43,9 +43,9 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
     const [options] = context.options;
     const { fn } = options;
 
-    const isClassLike = (string: string) => /class/i.exec(string);
+    const isClassLike = (string: string): RegExpExecArray | null => /class/i.exec(string);
     return {
-      CallExpression(node) {
+      CallExpression(node): void {
         if (!('name' in node.callee) || node.callee.name !== fn) {
           return;
         }

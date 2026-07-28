@@ -22,7 +22,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
     const flowLocalNames = new Set<string>();
     const mobxNamespaces = new Set<string>();
 
-    function isMobxSource(source: string) {
+    function isMobxSource(source: string): source is 'mobx' {
       return source === 'mobx';
     }
 
@@ -30,7 +30,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
       // import { flow } from 'mobx'
       // import { flow as f } from 'mobx'
       // import { action, flow } from 'mobx'
-      ImportDeclaration(node) {
+      ImportDeclaration(node): void {
         if (!isMobxSource(node.source.value)) {
           return;
         }
@@ -53,7 +53,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
 
       // mobx.flow(...)
       // mobx.flow used as value (e.g. makeObservable annotation)
-      MemberExpression(node) {
+      MemberExpression(node): void {
         if (
           node.object.type === AST_NODE_TYPES.Identifier &&
           mobxNamespaces.has(node.object.name) &&
@@ -66,7 +66,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
 
       // const { flow } = mobx
       // const { flow: f } = mobx  — not common but safe to handle
-      VariableDeclarator(node) {
+      VariableDeclarator(node): void {
         if (
           node.init?.type === AST_NODE_TYPES.Identifier &&
           mobxNamespaces.has(node.init.name) &&

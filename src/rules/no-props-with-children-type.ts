@@ -11,7 +11,7 @@ import { exhaustiveCheck } from './utils/exhaustiveCheck.ts';
 type Options = [];
 type MessageIds = 'unexpectedPropsWithChildren';
 
-function getTypeName(tsEntityName: TSESTree.EntityName) {
+function getTypeName(tsEntityName: TSESTree.EntityName): string | null {
   switch (tsEntityName.type) {
     case AST_NODE_TYPES.Identifier:
       return tsEntityName.name;
@@ -45,7 +45,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
 
   create(context) {
     return {
-      TSTypeReference(node) {
+      TSTypeReference(node): void {
         const name = getTypeName(node.typeName);
 
         if (name === 'PropsWithChildren') {

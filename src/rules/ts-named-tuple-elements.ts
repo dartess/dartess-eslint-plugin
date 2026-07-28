@@ -47,14 +47,14 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
     switch (mode) {
       case 'always':
         return {
-          'TSTupleType > :not(TSNamedTupleMember)': node => {
+          'TSTupleType > :not(TSNamedTupleMember)': (node): void => {
             context.report({ node, messageId: 'requireNames' });
           },
         };
 
       case 'never':
         return {
-          'TSTupleType > TSNamedTupleMember': node => {
+          'TSTupleType > TSNamedTupleMember': (node): void => {
             context.report({ node, messageId: 'forbidNames' });
           },
         };

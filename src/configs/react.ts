@@ -14,7 +14,7 @@ import { convertWarnsToErrorsIfNeeded } from './utils/convertWarnsToErrorsIfNeed
 const require = createRequire(import.meta.url);
 const { version = '0.0.0' } = require('@eslint-react/eslint-plugin/package.json') as PackageJson;
 
-const getEslintReactRules = () => {
+const getEslintReactRules = (): TSESLint.FlatConfig.Rules => {
   if (semver.satisfies(version, '^4.0.0')) {
     return {
       '@eslint-react/naming-convention-filename': 'error', // enforce corrent filename // v4 rename
@@ -101,6 +101,10 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       '@stylistic/jsx-self-closing-comp': 'error',
 
       '@dartess/no-props-with-children-type': 'error',
+
+      // disabled for components
+      '@typescript-eslint/explicit-module-boundary-types': 'off',
+      '@typescript-eslint/explicit-function-return-type': 'off',
 
       ...getEslintReactRules(),
     },

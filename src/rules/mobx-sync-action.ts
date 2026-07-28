@@ -30,7 +30,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
       'PropertyDefinition[value.type="ArrowFunctionExpression"][value.async="true"] Decorator[expression.name="action"]',
     ].join(', ');
     return {
-      [selector]: node => {
+      [selector]: (node): void => {
         context.report({ node, messageId: 'requireSyncAction' });
       },
     };

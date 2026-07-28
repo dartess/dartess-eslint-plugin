@@ -27,7 +27,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
 
   create(context) {
     return {
-      ExportNamedDeclaration: node => {
+      ExportNamedDeclaration: (node): void => {
         if (!node.declaration || !('declarations' in node.declaration)) {
           return;
         }

@@ -35,7 +35,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
         | TSESTree.ExportNamedDeclaration
         | TSESTree.ImportExpression,
       source: TSESTree.StringLiteral,
-    ) => {
+    ): void => {
       const importPath = source.value;
 
       if (!importPath.startsWith('../')) {
@@ -54,18 +54,18 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
     };
 
     return {
-      ImportDeclaration(node) {
+      ImportDeclaration(node): void {
         checkSource(node, node.source);
       },
-      ExportAllDeclaration(node) {
+      ExportAllDeclaration(node): void {
         checkSource(node, node.source);
       },
-      ExportNamedDeclaration(node) {
+      ExportNamedDeclaration(node): void {
         if (node.source) {
           checkSource(node, node.source);
         }
       },
-      ImportExpression(node) {
+      ImportExpression(node): void {
         if (node.source.type === AST_NODE_TYPES.Literal) {
           checkSource(node, node.source as TSESTree.StringLiteral);
         }

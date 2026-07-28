@@ -26,7 +26,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
     return {
       "Decorator[expression.object.name='action'][expression.property.name='bound']": function (
         node,
-      ) {
+      ): void {
         context.report({
           node,
           messageId: 'noActionBound',

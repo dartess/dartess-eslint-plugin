@@ -7,6 +7,7 @@
 - disable `complete/complete-sentences-line-comments` and `complete/format-line-comments` as too strict and inconvenient.
 - rework formatting tools documentation.
 - re-enable previously disabled `jsx-a11y-x/no-static-element-interactions`, `jsx-a11y-x/no-noninteractive-tabindex`, `jsx-a11y-x/no-noninteractive-element-interactions`, `jsx-a11y-x/label-has-associated-control`
+- add `@typescript-eslint/explicit-module-boundary-types` and `@typescript-eslint/explicit-function-return-type` to `recommended` config (and removed from `react` config)
 
 ## [0.13.1] - 2026-05-20
 

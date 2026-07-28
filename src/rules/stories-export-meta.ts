@@ -24,7 +24,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
 
   create(context) {
     return {
-      ExportDefaultDeclaration(node) {
+      ExportDefaultDeclaration(node): void {
         const { declaration } = node;
 
         const hasSatisfies = declaration.type === AST_NODE_TYPES.TSSatisfiesExpression;

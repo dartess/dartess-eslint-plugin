@@ -43,7 +43,7 @@ function convertWarnsToErrorsIfNeeded(
 ): TSESLint.FlatConfig.ConfigArray;
 function convertWarnsToErrorsIfNeeded(
   configs: TSESLint.FlatConfig.Config | TSESLint.FlatConfig.ConfigArray,
-) {
+): TSESLint.FlatConfig.Config | TSESLint.FlatConfig.ConfigArray {
   if (!FORCE_ERRORS_INSTEAD_OF_WARNS) {
     return configs;
   }

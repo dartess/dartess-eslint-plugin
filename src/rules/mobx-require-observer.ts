@@ -33,7 +33,7 @@ function isCustomHook(fn: TSESTree.Node): boolean {
 function getTypeParamsText(
   fn: TSESTree.FunctionDeclaration | TSESTree.FunctionExpression | TSESTree.ArrowFunctionExpression,
   sourceCode: TSESLint.SourceCode,
-) {
+): string {
   return fn.typeParameters ? sourceCode.getText(fn.typeParameters) : '';
 }
 
@@ -110,7 +110,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
     const wrappedFns = new WeakSet<TSESTree.Node>();
 
     return {
-      CallExpression(node) {
+      CallExpression(node): void {
         if (node.callee.type === AST_NODE_TYPES.Identifier && hooks.includes(node.callee.name)) {
           const ancestors = sourceCode.getAncestors(node);
           const fn = ancestors
@@ -147,7 +147,7 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
         }
       },
 
-      'Program:exit': function () {
+      'Program:exit': function (): void {
         for (const [fn, used] of hooksUsed) {
           if (isCustomHook(fn)) {
             continue;

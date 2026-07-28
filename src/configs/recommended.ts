@@ -276,6 +276,10 @@ const config: TSESLint.FlatConfig.ConfigArray = [
         },
       ],
 
+      /* explicit is better than implicit */
+      '@typescript-eslint/explicit-module-boundary-types': 'error',
+      '@typescript-eslint/explicit-function-return-type': ['error', { allowIIFEs: true }],
+
       // require names for tuple elements
       '@dartess/ts-named-tuple-elements': 'error',
 

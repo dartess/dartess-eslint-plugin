@@ -58,7 +58,10 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
   },
 
   create(context) {
-    const getParent = (node: TSESTree.CallExpression, allowedHocs?: Array<string>) => {
+    const getParent = (
+      node: TSESTree.CallExpression,
+      allowedHocs?: Array<string>,
+    ): TSESTree.Node => {
       let { parent } = node;
       if (!allowedHocs) {
         return parent;
@@ -76,14 +79,14 @@ export default ESLintUtils.RuleCreator(() => '')<Options, MessageIds>({
     };
 
     return {
-      CallExpression(node) {
+      CallExpression(node): void {
         if (!('name' in node.callee) || node.callee.name !== 'observer') {
           return;
         }
         const [arg] = node.arguments;
         const [options] = context.options;
 
-        const wrongArgType = () => {
+        const wrongArgType = (): void => {
           context.report({
             node: arg,
             messageId: 'observedIsFE',

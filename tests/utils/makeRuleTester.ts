@@ -7,7 +7,7 @@ type RuleTesterParams = {
   settings?: Record<string, unknown>;
 };
 
-function makeRuleTester({ jsx, parser, settings = {} }: RuleTesterParams = {}) {
+function makeRuleTester({ jsx, parser, settings = {} }: RuleTesterParams = {}): RuleTester {
   return new RuleTester({
     settings,
     languageOptions: {
