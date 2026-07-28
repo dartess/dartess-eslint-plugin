@@ -93,11 +93,6 @@ const config: TSESLint.FlatConfig.ConfigArray = [
       'jsx-a11y-x/interactive-supports-focus': 'off',
       // TODO END: try to enable this rules later (if needed)
 
-      'jsx-a11y-x/no-static-element-interactions': 'off', // TODO enable later
-      'jsx-a11y-x/no-noninteractive-tabindex': 'off', // TODO enable later
-      'jsx-a11y-x/no-noninteractive-element-interactions': 'off', // TODO enable later
-      'jsx-a11y-x/label-has-associated-control': 'off', // TODO enable later but with `assert`=`either`
-
       // disable some recommended rules
       '@eslint-react/prefer-destructuring-assignment': 'off', // can break discriminated union types
 
