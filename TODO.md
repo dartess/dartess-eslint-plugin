@@ -8,8 +8,6 @@ autofixes when possible
 
 check deprecated defaultOptions
 
-ci tests
-
 usage with other eslint-like tools (oxlint, biome?)
 
 no-unexpected-multiline should be disabled when formatting.
