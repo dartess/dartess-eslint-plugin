@@ -12,4 +12,4 @@ ci tests
 
 usage with other eslint-like tools (oxlint, biome?)
 
-Use `eslint-config-prettier` for disabling unnecessary rules. - should we use or we don't have this rules at all?
+no-unexpected-multiline should be disabled when formatting.
